@@ -1,0 +1,12 @@
+LIBRARY: LIBSVM
+EMBEDDING TYPE: EXPLICIT
+SEARCH_OPT_SVM_PARAM_IN_PAR: True
+NUM_ITER: 10
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 3
+------------------------------------------
+
+Graph loading and feature exraction took 1.1 seconds.
+
+LINEAR/RBF (OPT_PARAM)
+0.650 (+/-0.015) in 445.2 seconds

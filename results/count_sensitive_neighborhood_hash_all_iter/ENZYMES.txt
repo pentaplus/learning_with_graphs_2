@@ -1,0 +1,47 @@
+LIBRARY: LIBSVM
+NUM_ITER: 1
+------------------------------------------
+
+Total feature extraction took 0.8 seconds.
+------------------------------------------
+Parameter: 0
+
+Feature extraction took 0.0 seconds.
+
+LINEAR
+KFold: 0.238 (+/-0.000) in 2.4 seconds
+------------------------------------------
+Parameter: 1
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.278 (+/-0.000) in 8.2 seconds
+------------------------------------------
+Parameter: 2
+
+Feature extraction took 0.3 seconds.
+
+LINEAR
+KFold: 0.285 (+/-0.000) in 15.6 seconds
+------------------------------------------
+Parameter: 3
+
+Feature extraction took 0.5 seconds.
+
+LINEAR
+KFold: 0.275 (+/-0.000) in 7.5 seconds
+------------------------------------------
+Parameter: 4
+
+Feature extraction took 0.6 seconds.
+
+LINEAR
+KFold: 0.277 (+/-0.000) in 8.0 seconds
+------------------------------------------
+Parameter: 5
+
+Feature extraction took 0.8 seconds.
+
+LINEAR
+KFold: 0.285 (+/-0.000) in 4.7 seconds

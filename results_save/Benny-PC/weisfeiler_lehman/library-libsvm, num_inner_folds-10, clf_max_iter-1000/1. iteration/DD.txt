@@ -1,0 +1,85 @@
+LIBRARY: LIBSVM
+NUM_ITER: 1
+NUM_INNER_FOLDS: 10
+CLF_MAX_ITER: -1
+
+LINEAR (OPT_PARAM)
+KFold: 0.789 (+/-0.000) in 8359.7 seconds
+
+-------------------------------------------------------------
+Parameter: 0 
+
+Feature extraction took 0.3 seconds.
+
+LINEAR
+KFold: 0.785 (+/-0.000) in 73.6 seconds
+-------------------------------------------------------------
+Parameter: 1 
+
+Feature extraction took 4.9 seconds.
+
+LINEAR
+KFold: 0.792 (+/-0.000) in 15.1 seconds
+-------------------------------------------------------------
+Parameter: 2 
+
+Feature extraction took 9.5 seconds.
+
+LINEAR
+KFold: 0.789 (+/-0.000) in 31.3 seconds
+-------------------------------------------------------------
+Parameter: 3 
+
+Feature extraction took 14.4 seconds.
+
+LINEAR
+KFold: 0.789 (+/-0.000) in 49.0 seconds
+-------------------------------------------------------------
+Parameter: 4 
+
+Feature extraction took 19.3 seconds.
+
+LINEAR
+KFold: 0.789 (+/-0.000) in 65.7 seconds
+-------------------------------------------------------------
+Parameter: 5 
+
+Feature extraction took 24.4 seconds.
+
+LINEAR
+KFold: 0.787 (+/-0.000) in 82.0 seconds
+-------------------------------------------------------------
+Parameter: 6 
+
+Feature extraction took 29.5 seconds.
+
+LINEAR
+KFold: 0.788 (+/-0.000) in 98.8 seconds
+-------------------------------------------------------------
+Parameter: 7 
+
+Feature extraction took 34.6 seconds.
+
+LINEAR
+KFold: 0.789 (+/-0.000) in 116.1 seconds
+-------------------------------------------------------------
+Parameter: 8 
+
+Feature extraction took 38.8 seconds.
+
+LINEAR
+KFold: 0.789 (+/-0.000) in 132.4 seconds
+-------------------------------------------------------------
+Parameter: 9 
+
+Feature extraction took 44.2 seconds.
+
+LINEAR
+KFold: 0.789 (+/-0.000) in 149.7 seconds
+-------------------------------------------------------------
+Parameter: 10 
+
+Feature extraction took 49.0 seconds.
+
+LINEAR
+KFold: 0.789 (+/-0.000) in 166.2 seconds

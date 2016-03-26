@@ -1,0 +1,83 @@
+NUMBER OF ITERATIONS: 1
+NUMBER OF INNER FOLDS: 5
+
+LINEAR (OPT_PARAM)
+KFold: 0.856 (+/-0.000) in 7.6 seconds
+
+-------------------------------------------------------------
+Parameter: 0 
+
+Feature extraction took 0.0 seconds.
+
+LINEAR
+KFold: 0.850 (+/-0.000) in 0.0 seconds
+-------------------------------------------------------------
+Parameter: 1 
+
+Feature extraction took 0.0 seconds.
+
+LINEAR
+KFold: 0.904 (+/-0.000) in 0.0 seconds
+-------------------------------------------------------------
+Parameter: 2 
+
+Feature extraction took 0.0 seconds.
+
+LINEAR
+KFold: 0.814 (+/-0.000) in 0.1 seconds
+-------------------------------------------------------------
+Parameter: 3 
+
+Feature extraction took 0.1 seconds.
+
+LINEAR
+KFold: 0.819 (+/-0.000) in 0.1 seconds
+-------------------------------------------------------------
+Parameter: 4 
+
+Feature extraction took 0.1 seconds.
+
+LINEAR
+KFold: 0.846 (+/-0.000) in 0.1 seconds
+-------------------------------------------------------------
+Parameter: 5 
+
+Feature extraction took 0.1 seconds.
+
+LINEAR
+KFold: 0.856 (+/-0.000) in 0.1 seconds
+-------------------------------------------------------------
+Parameter: 6 
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.851 (+/-0.000) in 0.1 seconds
+-------------------------------------------------------------
+Parameter: 7 
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.856 (+/-0.000) in 0.2 seconds
+-------------------------------------------------------------
+Parameter: 8 
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.856 (+/-0.000) in 0.2 seconds
+-------------------------------------------------------------
+Parameter: 9 
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.867 (+/-0.000) in 0.2 seconds
+-------------------------------------------------------------
+Parameter: 10 
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.862 (+/-0.000) in 0.2 seconds

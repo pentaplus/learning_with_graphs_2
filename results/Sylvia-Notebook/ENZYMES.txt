@@ -1,0 +1,142 @@
+NUMBER OF ITERATIONS: 10
+
+LINEAR (OPT_PARAM)
+KFold: 0.51 (+/-0.01) in 3630.9 seconds
+Strat: 0.52 (+/-0.01) in 3628.0 seconds
+
+RBF (OPT_PARAM)
+KFold: 0.49 (+/-0.01) in 2845.3 seconds
+Strat: 0.50 (+/-0.01) in 2863.1 seconds
+
+-------------------------------------------------------------
+Parameter: 0 
+
+Feature extraction took 0.0 seconds.
+
+LINEAR
+KFold: 0.23 (+/-0.00) in 14.0 seconds
+Strat: 0.25 (+/-0.01) in 13.9 seconds
+
+RBF
+KFold: 0.31 (+/-0.00) in 2.8 seconds
+Strat: 0.42 (+/-0.01) in 2.8 seconds
+-------------------------------------------------------------
+Parameter: 1 
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.29 (+/-0.00) in 60.9 seconds
+Strat: 0.41 (+/-0.00) in 64.7 seconds
+
+RBF
+KFold: 0.35 (+/-0.00) in 6.4 seconds
+Strat: 0.49 (+/-0.01) in 6.4 seconds
+-------------------------------------------------------------
+Parameter: 2 
+
+Feature extraction took 0.3 seconds.
+
+LINEAR
+KFold: 0.33 (+/-0.00) in 17.0 seconds
+Strat: 0.52 (+/-0.01) in 17.1 seconds
+
+RBF
+KFold: 0.26 (+/-0.00) in 13.0 seconds
+Strat: 0.28 (+/-0.01) in 13.1 seconds
+-------------------------------------------------------------
+Parameter: 3 
+
+Feature extraction took 0.5 seconds.
+
+LINEAR
+KFold: 0.32 (+/-0.00) in 21.6 seconds
+Strat: 0.51 (+/-0.01) in 21.7 seconds
+
+RBF
+KFold: 0.23 (+/-0.00) in 18.8 seconds
+Strat: 0.24 (+/-0.01) in 18.9 seconds
+-------------------------------------------------------------
+Parameter: 4 
+
+Feature extraction took 0.6 seconds.
+
+LINEAR
+KFold: 0.31 (+/-0.00) in 27.8 seconds
+Strat: 0.50 (+/-0.01) in 28.0 seconds
+
+RBF
+KFold: 0.22 (+/-0.00) in 25.1 seconds
+Strat: 0.24 (+/-0.01) in 25.2 seconds
+-------------------------------------------------------------
+Parameter: 5 
+
+Feature extraction took 0.8 seconds.
+
+LINEAR
+KFold: 0.29 (+/-0.00) in 34.5 seconds
+Strat: 0.47 (+/-0.01) in 34.6 seconds
+
+RBF
+KFold: 0.23 (+/-0.00) in 31.6 seconds
+Strat: 0.24 (+/-0.01) in 31.6 seconds
+-------------------------------------------------------------
+Parameter: 6 
+
+Feature extraction took 0.9 seconds.
+
+LINEAR
+KFold: 0.28 (+/-0.00) in 40.8 seconds
+Strat: 0.46 (+/-0.01) in 40.8 seconds
+
+RBF
+KFold: 0.23 (+/-0.00) in 37.8 seconds
+Strat: 0.24 (+/-0.00) in 37.8 seconds
+-------------------------------------------------------------
+Parameter: 7 
+
+Feature extraction took 1.1 seconds.
+
+LINEAR
+KFold: 0.27 (+/-0.00) in 46.8 seconds
+Strat: 0.46 (+/-0.01) in 47.1 seconds
+
+RBF
+KFold: 0.23 (+/-0.00) in 44.1 seconds
+Strat: 0.24 (+/-0.00) in 44.1 seconds
+-------------------------------------------------------------
+Parameter: 8 
+
+Feature extraction took 1.3 seconds.
+
+LINEAR
+KFold: 0.27 (+/-0.00) in 53.1 seconds
+Strat: 0.44 (+/-0.01) in 53.1 seconds
+
+RBF
+KFold: 0.23 (+/-0.00) in 50.4 seconds
+Strat: 0.24 (+/-0.00) in 50.3 seconds
+-------------------------------------------------------------
+Parameter: 9 
+
+Feature extraction took 1.4 seconds.
+
+LINEAR
+KFold: 0.26 (+/-0.00) in 59.4 seconds
+Strat: 0.44 (+/-0.01) in 59.5 seconds
+
+RBF
+KFold: 0.23 (+/-0.00) in 56.9 seconds
+Strat: 0.24 (+/-0.00) in 56.8 seconds
+-------------------------------------------------------------
+Parameter: 10 
+
+Feature extraction took 1.6 seconds.
+
+LINEAR
+KFold: 0.26 (+/-0.00) in 65.9 seconds
+Strat: 0.43 (+/-0.01) in 66.3 seconds
+
+RBF
+KFold: 0.23 (+/-0.00) in 63.3 seconds
+Strat: 0.24 (+/-0.00) in 63.3 seconds

@@ -1,0 +1,35 @@
+
+* Forschungsprojekt
+
+** Tasks
+  [] Selection and crafting of datasets
+        [] Malware FCG/CFG/IPCFG (Android, x86)
+        [] Source code PDGs
+        [x] Chemistry
+        [] Others
+  [] Analysis and discussion of graph properties
+
+** Goals
+   - Get to know useful libraries and tools:
+        - numpy
+        - scipy
+        - matplotlib
+        - ipython
+        - networkx
+        - scikit-learn (to be used later)
+        
+   - Study the topological properties of the graphs datasets
+   to help designing expressive feature spaces.
+
+* Master Thesis
+
+  [] Review the graph similarity problem
+        [] Proposed solutions
+  [] Review the machine learning + security + explainability problem
+  [] Design explicit feature spaces for learning on graphs
+  [] Implement feature extraction algorithms for such spaces
+  [] Test the performance of such algorithms for different problems
+        [] Classification
+        [] Anomaly detection
+
+

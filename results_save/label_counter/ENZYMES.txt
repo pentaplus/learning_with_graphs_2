@@ -1,0 +1,23 @@
+Loading of the dataset took 0.5 seconds.
+
+Feature extraction took 0.0 seconds.
+
+
+OPT (LINEAR/RBF)
+KFold: 0.42 (+/-0.06) in 50.4 seconds
+Strat: 0.43 (+/-0.06) in 51.5 seconds
+
+LINEAR 
+KFold: 0.23 (+/-0.05) in 20.3 seconds
+Strat: 0.25 (+/-0.04) in 17.5 seconds
+
+RBF
+KFold: 0.41 (+/-0.06) in 3.3 seconds
+Strat: 0.42 (+/-0.05) in 3.0 seconds
+
+POLY
+did not finish within 2 hours
+
+SIGMOID
+KFold: 0.11 (+/-0.02) in 1.2 seconds
+Strat: 0.17 (+/-0.00) in 1.3 seconds

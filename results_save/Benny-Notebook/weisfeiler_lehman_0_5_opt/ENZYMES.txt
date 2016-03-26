@@ -1,0 +1,52 @@
+LIBRARY: LIBSVM
+NUM_ITER: 10
+NUM_INNER_FOLDS: 10
+------------------------------------------
+
+Total feature extraction took 0.8 seconds.
+
+LINEAR/RBF (OPT_PARAM)
+0.611 (+/-0.010) in 1727.6 seconds
+
+------------------------------------------
+Parameter: 0
+
+Feature extraction took 0.0 seconds.
+
+LINEAR/RBF
+0.422 (+/-0.009) in 232.3 seconds
+------------------------------------------
+Parameter: 1
+
+Feature extraction took 0.2 seconds.
+
+LINEAR/RBF
+0.608 (+/-0.008) in 332.6 seconds
+------------------------------------------
+Parameter: 2
+
+Feature extraction took 0.3 seconds.
+
+LINEAR/RBF
+0.404 (+/-0.033) in 130.3 seconds
+------------------------------------------
+Parameter: 3
+
+Feature extraction took 0.5 seconds.
+
+LINEAR/RBF
+0.460 (+/-0.044) in 179.5 seconds
+------------------------------------------
+Parameter: 4
+
+Feature extraction took 0.7 seconds.
+
+LINEAR/RBF
+0.484 (+/-0.021) in 235.3 seconds
+------------------------------------------
+Parameter: 5
+
+Feature extraction took 0.8 seconds.
+
+LINEAR/RBF
+0.482 (+/-0.037) in 296.6 seconds

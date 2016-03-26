@@ -1,0 +1,121 @@
+LIBRARY: LIBSVM
+NUM_ITER: 10
+NUM_INNER_FOLDS: 10
+CLF_MAX_ITER: -1 (unlimited)
+
+LINEAR (OPT_PARAM)
+KFold: 0.524 (+/-0.007) in 3635.6 seconds
+
+RBF (OPT_PARAM)
+KFold: 0.491 (+/-0.016) in 2928.8 seconds
+
+-------------------------------------------------------------
+Parameter: 0 
+
+Feature extraction took 0.0 seconds.
+
+LINEAR
+KFold: 0.231 (+/-0.010) in 14.2 seconds
+
+RBF
+KFold: 0.412 (+/-0.010) in 2.8 seconds
+-------------------------------------------------------------
+Parameter: 1 
+
+Feature extraction took 0.2 seconds.
+
+LINEAR
+KFold: 0.401 (+/-0.010) in 64.2 seconds
+
+RBF
+KFold: 0.494 (+/-0.007) in 6.6 seconds
+-------------------------------------------------------------
+Parameter: 2 
+
+Feature extraction took 0.3 seconds.
+
+LINEAR
+KFold: 0.540 (+/-0.008) in 16.7 seconds
+
+RBF
+KFold: 0.211 (+/-0.015) in 13.4 seconds
+-------------------------------------------------------------
+Parameter: 3 
+
+Feature extraction took 0.5 seconds.
+
+LINEAR
+KFold: 0.534 (+/-0.009) in 21.3 seconds
+
+RBF
+KFold: 0.140 (+/-0.008) in 19.3 seconds
+-------------------------------------------------------------
+Parameter: 4 
+
+Feature extraction took 0.6 seconds.
+
+LINEAR
+KFold: 0.530 (+/-0.007) in 27.6 seconds
+
+RBF
+KFold: 0.115 (+/-0.010) in 25.6 seconds
+-------------------------------------------------------------
+Parameter: 5 
+
+Feature extraction took 0.8 seconds.
+
+LINEAR
+KFold: 0.512 (+/-0.011) in 34.5 seconds
+
+RBF
+KFold: 0.112 (+/-0.007) in 32.0 seconds
+-------------------------------------------------------------
+Parameter: 6 
+
+Feature extraction took 1.0 seconds.
+
+LINEAR
+KFold: 0.504 (+/-0.010) in 40.8 seconds
+
+RBF
+KFold: 0.113 (+/-0.011) in 38.7 seconds
+-------------------------------------------------------------
+Parameter: 7 
+
+Feature extraction took 1.2 seconds.
+
+LINEAR
+KFold: 0.496 (+/-0.007) in 47.7 seconds
+
+RBF
+KFold: 0.110 (+/-0.009) in 45.3 seconds
+-------------------------------------------------------------
+Parameter: 8 
+
+Feature extraction took 1.3 seconds.
+
+LINEAR
+KFold: 0.487 (+/-0.010) in 53.9 seconds
+
+RBF
+KFold: 0.110 (+/-0.006) in 51.6 seconds
+-------------------------------------------------------------
+Parameter: 9 
+
+Feature extraction took 1.5 seconds.
+
+LINEAR
+KFold: 0.482 (+/-0.013) in 61.0 seconds
+
+RBF
+KFold: 0.107 (+/-0.006) in 58.6 seconds
+-------------------------------------------------------------
+Parameter: 10 
+
+Feature extraction took 1.7 seconds.
+
+LINEAR
+KFold: 0.472 (+/-0.009) in 67.8 seconds
+
+RBF
+KFold: 0.115 (+/-0.010) in 65.1 seconds

@@ -1,0 +1,18 @@
+LIBRARY: LIBSVM
+EMBEDDING TYPE: IMPLICIT
+EXPER_NUM_ITER: 5
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 3
+CLF_MAX_ITER: 1e+05
+SEARCH_OPT_SVM_PARAM_IN_PAR: FALSE
+------------------------------------------
+
+The computation of the kernel matrix took 0.0 seconds.
+
+------------------------------------------
+Parameter: None
+
+The computation of the kernel matrix took 0.0 seconds.
+Kernel matrix dimension: (188L, 188L)
+
+PRECOMPUTED

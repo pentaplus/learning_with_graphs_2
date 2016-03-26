@@ -1,0 +1,64 @@
+LIBRARY: LIBSVM
+EMBEDDING TYPE: EXPLICIT
+EXPER_NUM_ITER: 10
+SVM_PARAM_GRID: {kernel: (linear, rbf), C: (1.0e-01, 1.0e+01)}
+NUM_CROSS_VAL_JOBS: 4
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 3
+CLF_MAX_ITER: 1e+07
+SEARCH_OPT_SVM_PARAM_IN_PAR: TRUE
+------------------------------------------
+
+Graph loading and feature exraction took 15.0 seconds.
+
+LINEAR/RBF (OPT_PARAM)
+0.892 (+/-0.004) in 106.2 seconds
+
+------------------------------------------
+Parameter: 0.16666666666666666
+
+Feature extraction took 15.0 seconds.
+Feature matrix dimension: (188, 2)
+
+LINEAR/RBF
+0.856 (+/-0.004) in 15.3 seconds
+------------------------------------------
+Parameter: 0.33333333333333337
+
+Feature extraction took 15.0 seconds.
+Feature matrix dimension: (188, 5)
+
+LINEAR/RBF
+0.872 (+/-0.000) in 15.1 seconds
+------------------------------------------
+Parameter: 0.5
+
+Feature extraction took 15.0 seconds.
+Feature matrix dimension: (188, 8)
+
+LINEAR/RBF
+0.873 (+/-0.002) in 15.3 seconds
+------------------------------------------
+Parameter: 0.66666666666666663
+
+Feature extraction took 15.0 seconds.
+Feature matrix dimension: (188, 11)
+
+LINEAR/RBF
+0.864 (+/-0.008) in 15.5 seconds
+------------------------------------------
+Parameter: 0.83333333333333337
+
+Feature extraction took 15.0 seconds.
+Feature matrix dimension: (188, 14)
+
+LINEAR/RBF
+0.846 (+/-0.007) in 15.2 seconds
+------------------------------------------
+Parameter: 1.0
+
+Feature extraction took 15.0 seconds.
+Feature matrix dimension: (188, 17)
+
+LINEAR/RBF
+0.852 (+/-0.008) in 15.4 seconds

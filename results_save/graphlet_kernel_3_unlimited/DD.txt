@@ -1,0 +1,15 @@
+LIBRARY: LIBLINEAR
+EMBEDDING TYPE: EXPLICIT
+SEARCH_OPT_SVM_PARAM_IN_PAR: True
+NUM_ITER: 3
+NUM_OUTER_FOLDS: 10
+------------------------------------------
+
+Graph loading and feature exraction took 17.8 seconds.
+------------------------------------------
+Parameter: 3
+
+Feature extraction took 17.8 seconds.
+
+LINEAR
+0.562 (+/-0.031) in 6.2 seconds

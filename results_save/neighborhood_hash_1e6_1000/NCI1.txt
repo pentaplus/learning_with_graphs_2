@@ -1,0 +1,64 @@
+LIBRARY: LIBLINEAR
+EMBEDDING TYPE: EXPLICIT
+EXPER_NUM_ITER: 10
+SVM_PARAM_GRID: {C: (1.0e-02, 4.6e-01, 2.2e+01, 1.0e+03)}
+NUM_CROSS_VAL_JOBS: 4
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 2
+CLF_MAX_ITER: 1e+03
+SEARCH_OPT_SVM_PARAM_IN_PAR: TRUE
+------------------------------------------
+
+Graph loading and feature exraction took 15.9 seconds.
+
+LINEAR (OPT_PARAM)
+0.800 (+/-0.002) in 640.4 seconds
+
+------------------------------------------
+Parameter: 0
+
+Feature extraction took 1.8 seconds.
+Feature matrix dimension: (4110, 37)
+
+LINEAR
+0.646 (+/-0.006) in 101.6 seconds
+------------------------------------------
+Parameter: 1
+
+Feature extraction took 4.3 seconds.
+Feature matrix dimension: (4110, 161)
+
+LINEAR
+0.726 (+/-0.002) in 98.9 seconds
+------------------------------------------
+Parameter: 2
+
+Feature extraction took 7.4 seconds.
+Feature matrix dimension: (4110, 270)
+
+LINEAR
+0.717 (+/-0.003) in 110.4 seconds
+------------------------------------------
+Parameter: 3
+
+Feature extraction took 10.2 seconds.
+Feature matrix dimension: (4110, 4570)
+
+LINEAR
+0.800 (+/-0.002) in 79.0 seconds
+------------------------------------------
+Parameter: 4
+
+Feature extraction took 13.0 seconds.
+Feature matrix dimension: (4110, 465)
+
+LINEAR
+0.681 (+/-0.002) in 97.0 seconds
+------------------------------------------
+Parameter: 5
+
+Feature extraction took 15.7 seconds.
+Feature matrix dimension: (4110, 7167)
+
+LINEAR
+0.767 (+/-0.003) in 80.0 seconds

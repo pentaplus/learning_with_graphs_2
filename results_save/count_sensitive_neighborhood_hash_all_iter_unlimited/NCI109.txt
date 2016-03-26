@@ -1,0 +1,55 @@
+LIBRARY: LIBLINEAR
+EMBEDDING TYPE: EXPLICIT
+SEARCH_OPT_SVM_PARAM_IN_PAR: True
+NUM_ITER: 10
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 2
+------------------------------------------
+
+Graph loading and feature exraction took 19.6 seconds.
+
+LINEAR (OPT_PARAM)
+0.849 (+/-0.003) in 1853.9 seconds
+
+------------------------------------------
+Parameter: 0
+
+Feature extraction took 1.9 seconds.
+
+LINEAR
+0.637 (+/-0.004) in 89.8 seconds
+------------------------------------------
+Parameter: 1
+
+Feature extraction took 5.0 seconds.
+
+LINEAR
+0.726 (+/-0.002) in 129.3 seconds
+------------------------------------------
+Parameter: 2
+
+Feature extraction took 8.9 seconds.
+
+LINEAR
+0.788 (+/-0.002) in 180.0 seconds
+------------------------------------------
+Parameter: 3
+
+Feature extraction took 12.1 seconds.
+
+LINEAR
+0.823 (+/-0.003) in 249.3 seconds
+------------------------------------------
+Parameter: 4
+
+Feature extraction took 16.0 seconds.
+
+LINEAR
+0.841 (+/-0.002) in 345.7 seconds
+------------------------------------------
+Parameter: 5
+
+Feature extraction took 19.4 seconds.
+
+LINEAR
+0.847 (+/-0.002) in 469.6 seconds

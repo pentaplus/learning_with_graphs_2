@@ -1,0 +1,52 @@
+LIBRARY: LIBLINEAR
+NUM_ITER: 10
+NUM_INNER_FOLDS: 2
+------------------------------------------
+
+Graph loading and feature exraction took 15.4 seconds.
+
+LINEAR (OPT_PARAM)
+0.742 (+/-0.002) in 583.5 seconds
+
+------------------------------------------
+Parameter: 0
+
+Feature extraction took 1.7 seconds.
+
+LINEAR
+0.602 (+/-0.006) in 91.3 seconds
+------------------------------------------
+Parameter: 1
+
+Feature extraction took 4.0 seconds.
+
+LINEAR
+0.661 (+/-0.003) in 118.2 seconds
+------------------------------------------
+Parameter: 2
+
+Feature extraction took 6.9 seconds.
+
+LINEAR
+0.702 (+/-0.002) in 98.8 seconds
+------------------------------------------
+Parameter: 3
+
+Feature extraction took 10.4 seconds.
+
+LINEAR
+0.730 (+/-0.003) in 76.8 seconds
+------------------------------------------
+Parameter: 4
+
+Feature extraction took 12.8 seconds.
+
+LINEAR
+0.725 (+/-0.001) in 63.9 seconds
+------------------------------------------
+Parameter: 5
+
+Feature extraction took 15.2 seconds.
+
+LINEAR
+0.735 (+/-0.003) in 65.4 seconds

@@ -1,0 +1,21 @@
+Loading the dataset MUTAG took 0.1 seconds.
+
+Feature extraction took 0.0 seconds.
+
+
+OPT (LINEAR/RBF)
+KFold: 0.86 (+/-0.09) in 4.2 seconds
+Strat: 0.86 (+/-0.08) in 4.2 seconds
+
+LINEAR
+KFold: 0.86 (+/-0.07) in 0.5 seconds
+Strat: 0.86 (+/-0.08) in 0.5 seconds
+
+RBF
+KFold: 0.84 (+/-0.07) in 0.5 seconds
+Strat: 0.85 (+/-0.08) in 0.5 seconds
+
+SIGMOID
+KFold: 0.67 (+/-0.10) in 0.5 seconds
+Strat: 0.67 (+/-0.01) in 0.4 seconds
+
