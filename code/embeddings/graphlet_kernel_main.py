@@ -66,6 +66,10 @@ def extract_features(graph_meta_data_of_num, graphlet_size = 4):
     for i, (graph_path, class_lbl) in \
             enumerate(graph_meta_data_of_num.itervalues()):
                 
+        # !!        
+        if i % 10 == 0:
+            print 'i =', i
+                
         # load graph        
         G = pz.load(graph_path)
         
