@@ -141,9 +141,17 @@ EMBEDDING_PARAM_RANGES = {
 #DATASETS = [FLASH_CFG]
 DATASETS = [ANDROID_FCG_14795]
 
+# OPT_PARAM specifies whether the performance of the chosen embeddings
+# is to be eveluated, whereby at first the best embedding parameter is searched
+# for. This is only possible for embddings with more than one embedding parameter,
+# i.e., len(EMBEDDING_PARAM_RANGES[embedding_name]) > 1
 OPT_PARAM = True
 #OPT_PARAM = False
 
+# COMPARE_PARAMS specifies whether the performance of the chosen embeddings
+# is to be eveluated for its respective parameters (without optimization
+# with respect to the parameter). If EMBEDDING_PARAM_RANGES[embedding_name]
+# == [None] for an embedding, then its performance will be still evaluated.
 #COMPARE_PARAMS = True
 COMPARE_PARAMS = False
 

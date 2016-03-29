@@ -1,12 +1,16 @@
 """
-Random walk kernel.
+Shortest path kernel.
 
 This module provides the function compute_kernel_mat for the
-computation of the corresponding kernel matrix.
+computation of the corresponding kernel matrix. It is a translation of
+the MATLAB file RWkernel.m by Karsten Borgwardt and Nino Shervashidze,
+which can be downloaded from the following website:
+http://mlcb.is.tuebingen.mpg.de/Mitarbeiter/Nino/Graphkernels/
 """
 
 __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
-__date__ = "2016-03-28"
+__credits__ = ["Karsten Borgwardt", "Nino Shervashidze"]
+__date__ = "2016-02-28"
 
 
 import inspect
@@ -29,41 +33,6 @@ sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 from misc import pcg, pz
 
 
-#def get_lambda(graph_meta_data_of_num):
-#    """
-#    Determine the parameter lamda in depende of the dataset size.
-#    
-#    The parameter lamda is determined according to the rule of thumb
-#    to take the largest power of 10, which is smaller than 1/d^2,
-#    d being the largest degree in the dataset.
-#    """
-#    max_deg = 0
-#    
-#    for graph_path, class_num in graph_meta_data_of_num.itervalues():
-#        G = pz.load(graph_path)
-#            
-#        if max(G.degree().values()) > max_deg:
-#            max_deg = max(G.degree().values())
-#    
-#    return math.floor(math.log10(1./max_deg**2))
-
-def vec(M):
-    return M.reshape((M.shape[0] * M.shape[1], 1))
-    
-
-def inv_vec(M, m, n):
-    return M.reshape((m, n))
-    
-    
-def mat_vec_product(x, A_i, A_j, lambda_):
-    """
-    Calculate the matrix-vector product (I - lambda_ * A_x) * x, where A_x
-    is the adjacency matrix of the direct product graph of G_i and G_j.
-    """
-    y = vec(A_i.dot(inv_vec(x, A_i.shape[0], A_j.shape[0])).dot(A_j))
-    
-    return x - lambda_ * y
-    
 
 def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
     kernel_mat_comp_start_time = time.time()
@@ -77,9 +46,6 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
     
     kernel_mat = np.zeros((num_graphs, num_graphs), dtype = np.float64)
     
-    # decaying factor lambda_ for down_weighting longer walks
-#    lambda_ = get_lambda(graph_meta_data_of_num)
-    LAMBDA = -4
 
     #=============================================================================
     # 1) precompute the (sparse) adjacency matrices of the graphs in the dataset
@@ -114,15 +80,9 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
             # !!
 #            sys.modules['__main__'].A_j = A_j
             
-            # apply preconditioned conjugate gradient method in order to solve
-            # (I - lambda_*A_x) * x = 1_vec, where A_x is the adjacency matrix of
-            # the direct product graph of G_i and G_j, I is the identity matrix
-            # and 1_vec is vector with all entries set to 1.
+            # apply preconditioned conjugate gradient method
             b = np.ones((A_i.shape[0] * A_j.shape[0], 1))
             
-            x, flag, rel_res, iter_, res_vec \
-                = pcg.pcg(lambda x: mat_vec_product(x, A_i, A_j, LAMBDA), b,
-                          1e-6, 20)
                 
             
             kernel_mat[i,j] = np.sum(x)
@@ -135,8 +95,6 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
 #            print 'i =', i, 'j =', j
             print 'i =', i, 'j =', j, kernel_mat[i,j]
 
-        
-        
     
 
     kernel_mat_of_param[None] = kernel_mat
