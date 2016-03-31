@@ -328,4 +328,6 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
 #data = DATA_SD
 #x = data[np.logical_and(data[:,0] == 'neighborhood_hash', data[:,1] == 'MUTAG')]
 
-
+# text !!
+# ax.text(left, top, rotation=45, transform=ax.transAxes,
+#         horizontalalignment='left')
