@@ -153,6 +153,7 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
         # calculate adjacency matrix of the undirected version of G
         if nx.is_directed(G):
             A = A + A.T
+            A[A > 1] = 1
             
 #        import sys
 #        sys.modules['__main__'].A = A      

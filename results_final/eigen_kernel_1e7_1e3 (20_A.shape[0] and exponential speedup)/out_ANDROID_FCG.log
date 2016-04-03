@@ -1,0 +1,1183 @@
+LIBRARY: LIBLINEAR
+EMBEDDING TYPE: EXPLICIT
+EXPER_NUM_ITER: 5
+SVM_PARAM_GRID: {C: (1.0e-02, 4.6e-01, 2.2e+01, 1.0e+03)}
+NUM_CROSS_VAL_JOBS: 4
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 2
+CLF_MAX_ITER: 1e+03
+SEARCH_OPT_SVM_PARAM_IN_PAR: TRUE
+
+-------------------------------------------------------------
+
+i = 0 (|V| = 18), j = 0: 3.16227766017
+i = 0 (|V| = 18), j = 1: 3.16227766017
+i = 0 (|V| = 18), j = 3: 3.16227766017
+i = 0 (|V| = 18), j = 7: 3.16227766017
+
+i = 14794 (|V| = 635), j = 549: 6.55230743987
+i = 14794 (|V| = 635), j = 553: 6.55230743987
+i = 14794 (|V| = 635), j = 561: 6.3510805787
+i = 14794 (|V| = 635), j = 562: 6.3510805787
+i = 14794 (|V| = 635), j = 564: 6.3510805787
+i = 14794 (|V| = 635), j = 568: 6.3510805787
+i = 14794 (|V| = 635), j = 576: 6.24799021829
+i = 14794 (|V| = 635), j = 577: 6.24799021829
+i = 14794 (|V| = 635), j = 579: 6.24799021829
+i = 14794 (|V| = 635), j = 583: 6.14520153286
+i = 14794 (|V| = 635), j = 584: 6.02404408226
+i = 14794 (|V| = 635), j = 585: 6.02404408226
+i = 14794 (|V| = 635), j = 587: 6.02404408226
+i = 14794 (|V| = 635), j = 591: 5.4534086587
+i = 14794 (|V| = 635), j = 592: 5.4534086587
+i = 14794 (|V| = 635), j = 594: 5.24141528722
+i = 14794 (|V| = 635), j = 595: 5.24141528722
+i = 14794 (|V| = 635), j = 597: 5.13612235086
+i = 14794 (|V| = 635), j = 598: 5.13612235086
+i = 14794 (|V| = 635), j = 600: 5.03846301473
+i = 14794 (|V| = 635), j = 601: 5.03846301473
+i = 14794 (|V| = 635), j = 603: 5.01095408916
+i = 14794 (|V| = 635), j = 604: 5.01095408916
+i = 14794 (|V| = 635), j = 606: 4.82784362731
+i = 14794 (|V| = 635), j = 607: 4.82784362731
+i = 14794 (|V| = 635), j = 609: 4.82784362731
+i = 14794 (|V| = 635), j = 613: 4.28765311633
+i = 14794 (|V| = 635), j = 614: 4.11232207869
+i = 14794 (|V| = 635), j = 615: 3.39234434563
+i = 14794 (|V| = 635), j = 616: 2.85577250664
+i = 14794 (|V| = 635), j = 617: 2.85577250664
+i = 14794 (|V| = 635), j = 619: 2.85577250664
+i = 14794 (|V| = 635), j = 623: 1.41421356237
+i = 14794 (|V| = 635), j = 624: 1.41421356237
+i = 14794 (|V| = 635), j = 626: 1.0
+i = 14794 (|V| = 635), j = 627: 1.0
+i = 14794 (|V| = 635), j = 629: 1.0
+
+Convergence ratio: 1.000
+
+Graph loading and feature exraction took 59154.0 seconds.
+
+EIGEN_KERNEL with LINEAR kernel (OPT_PARAM) on ANDROID FCG 14795
+
+param = 0.17, i = 0, j = 0: params = {'C': 0.46415888336127797}
+param = 0.17, i = 0, j = 0: score = 0.91
+param = 0.33, i = 0, j = 0: params = {'C': 0.01}
+param = 0.33, i = 0, j = 0: score = 0.91
+param = 0.50, i = 0, j = 0: params = {'C': 0.01}
+param = 0.50, i = 0, j = 0: score = 0.91
+param = 0.67, i = 0, j = 0: params = {'C': 0.01}
+param = 0.67, i = 0, j = 0: score = 0.91
+param = 0.83, i = 0, j = 0: params = {'C': 0.01}
+param = 0.83, i = 0, j = 0: score = 0.91
+param = 1.00, i = 0, j = 0: params = {'C': 0.01}
+param = 1.00, i = 0, j = 0: score = 0.91
+-> score on test data = 0.91 (best param = 0.17)
+
+param = 0.17, i = 0, j = 1: params = {'C': 0.01}
+param = 0.17, i = 0, j = 1: score = 0.93
+param = 0.33, i = 0, j = 1: params = {'C': 0.01}
+param = 0.33, i = 0, j = 1: score = 0.93
+param = 0.50, i = 0, j = 1: params = {'C': 0.01}
+param = 0.50, i = 0, j = 1: score = 0.93
+param = 0.67, i = 0, j = 1: params = {'C': 0.01}
+param = 0.67, i = 0, j = 1: score = 0.93
+param = 0.83, i = 0, j = 1: params = {'C': 1000.0}
+param = 0.83, i = 0, j = 1: score = 0.92
+param = 1.00, i = 0, j = 1: params = {'C': 0.01}
+param = 1.00, i = 0, j = 1: score = 0.93
+-> score on test data = 0.93 (best param = 0.17)
+
+param = 0.17, i = 0, j = 2: params = {'C': 0.01}
+param = 0.17, i = 0, j = 2: score = 0.90
+param = 0.33, i = 0, j = 2: params = {'C': 1000.0}
+param = 0.33, i = 0, j = 2: score = 0.87
+param = 0.50, i = 0, j = 2: params = {'C': 0.01}
+param = 0.50, i = 0, j = 2: score = 0.90
+param = 0.67, i = 0, j = 2: params = {'C': 0.46415888336127797}
+param = 0.67, i = 0, j = 2: score = 0.90
+param = 0.83, i = 0, j = 2: params = {'C': 0.46415888336127797}
+param = 0.83, i = 0, j = 2: score = 0.89
+param = 1.00, i = 0, j = 2: params = {'C': 0.01}
+param = 1.00, i = 0, j = 2: score = 0.90
+-> score on test data = 0.70 (best param = 0.67)
+
+param = 0.17, i = 0, j = 3: params = {'C': 0.01}
+param = 0.17, i = 0, j = 3: score = 0.92
+param = 0.33, i = 0, j = 3: params = {'C': 0.01}
+param = 0.33, i = 0, j = 3: score = 0.92
+param = 0.50, i = 0, j = 3: params = {'C': 1000.0}
+param = 0.50, i = 0, j = 3: score = 0.88
+param = 0.67, i = 0, j = 3: params = {'C': 0.01}
+param = 0.67, i = 0, j = 3: score = 0.92
+param = 0.83, i = 0, j = 3: params = {'C': 0.01}
+param = 0.83, i = 0, j = 3: score = 0.92
+param = 1.00, i = 0, j = 3: params = {'C': 0.01}
+param = 1.00, i = 0, j = 3: score = 0.92
+-> score on test data = 0.92 (best param = 0.67)
+
+param = 0.17, i = 0, j = 4: params = {'C': 0.01}
+param = 0.17, i = 0, j = 4: score = 0.91
+param = 0.33, i = 0, j = 4: params = {'C': 0.46415888336127797}
+param = 0.33, i = 0, j = 4: score = 0.84
+param = 0.50, i = 0, j = 4: params = {'C': 0.01}
+param = 0.50, i = 0, j = 4: score = 0.91
+param = 0.67, i = 0, j = 4: params = {'C': 0.01}
+param = 0.67, i = 0, j = 4: score = 0.92
+param = 0.83, i = 0, j = 4: params = {'C': 0.01}
+param = 0.83, i = 0, j = 4: score = 0.92
+param = 1.00, i = 0, j = 4: params = {'C': 0.46415888336127797}
+param = 1.00, i = 0, j = 4: score = 0.92
+-> score on test data = 0.92 (best param = 0.67)
+
+param = 0.17, i = 0, j = 5: params = {'C': 0.01}
+param = 0.17, i = 0, j = 5: score = 0.92
+param = 0.33, i = 0, j = 5: params = {'C': 0.01}
+param = 0.33, i = 0, j = 5: score = 0.92
+param = 0.50, i = 0, j = 5: params = {'C': 0.01}
+param = 0.50, i = 0, j = 5: score = 0.77
+param = 0.67, i = 0, j = 5: params = {'C': 0.46415888336127797}
+param = 0.67, i = 0, j = 5: score = 0.92
+param = 0.83, i = 0, j = 5: params = {'C': 21.544346900318846}
+param = 0.83, i = 0, j = 5: score = 0.45
+param = 1.00, i = 0, j = 5: params = {'C': 0.46415888336127797}
+param = 1.00, i = 0, j = 5: score = 0.53
+-> score on test data = 0.92 (best param = 0.67)
+
+param = 0.17, i = 0, j = 6: params = {'C': 0.01}
+param = 0.17, i = 0, j = 6: score = 0.92
+param = 0.33, i = 0, j = 6: params = {'C': 0.01}
+param = 0.33, i = 0, j = 6: score = 0.92
+param = 0.50, i = 0, j = 6: params = {'C': 0.46415888336127797}
+param = 0.50, i = 0, j = 6: score = 0.55
+param = 0.67, i = 0, j = 6: params = {'C': 0.01}
+param = 0.67, i = 0, j = 6: score = 0.92
+param = 0.83, i = 0, j = 6: params = {'C': 0.01}
+param = 0.83, i = 0, j = 6: score = 0.92
+param = 1.00, i = 0, j = 6: params = {'C': 0.01}
+param = 1.00, i = 0, j = 6: score = 0.92
+-> score on test data = 0.66 (best param = 0.67)
+
+param = 0.17, i = 0, j = 7: params = {'C': 0.46415888336127797}
+param = 0.17, i = 0, j = 7: score = 0.32
+param = 0.33, i = 0, j = 7: params = {'C': 0.01}
+param = 0.33, i = 0, j = 7: score = 0.93
+param = 0.50, i = 0, j = 7: params = {'C': 0.01}
+param = 0.50, i = 0, j = 7: score = 0.93
+param = 0.67, i = 0, j = 7: params = {'C': 0.01}
+param = 0.67, i = 0, j = 7: score = 0.93
+param = 0.83, i = 0, j = 7: params = {'C': 0.01}
+param = 0.83, i = 0, j = 7: score = 0.93
+param = 1.00, i = 0, j = 7: params = {'C': 0.01}
+param = 1.00, i = 0, j = 7: score = 0.93
+-> score on test data = 0.93 (best param = 0.33)
+
+param = 0.17, i = 0, j = 8: params = {'C': 0.01}
+param = 0.17, i = 0, j = 8: score = 0.92
+param = 0.33, i = 0, j = 8: params = {'C': 0.01}
+param = 0.33, i = 0, j = 8: score = 0.92
+param = 0.50, i = 0, j = 8: params = {'C': 0.46415888336127797}
+param = 0.50, i = 0, j = 8: score = 0.82
+param = 0.67, i = 0, j = 8: params = {'C': 0.01}
+param = 0.67, i = 0, j = 8: score = 0.92
+param = 0.83, i = 0, j = 8: params = {'C': 0.01}
+param = 0.83, i = 0, j = 8: score = 0.92
+param = 1.00, i = 0, j = 8: params = {'C': 0.01}
+param = 1.00, i = 0, j = 8: score = 0.92
+-> score on test data = 0.92 (best param = 0.17)
+
+param = 0.17, i = 0, j = 9: params = {'C': 0.01}
+param = 0.17, i = 0, j = 9: score = 0.91
+param = 0.33, i = 0, j = 9: params = {'C': 0.01}
+param = 0.33, i = 0, j = 9: score = 0.65
+param = 0.50, i = 0, j = 9: params = {'C': 0.46415888336127797}
+param = 0.50, i = 0, j = 9: score = 0.91
+param = 0.67, i = 0, j = 9: params = {'C': 0.01}
+param = 0.67, i = 0, j = 9: score = 0.91
+param = 0.83, i = 0, j = 9: params = {'C': 21.544346900318846}
+param = 0.83, i = 0, j = 9: score = 0.89
+param = 1.00, i = 0, j = 9: params = {'C': 0.01}
+param = 1.00, i = 0, j = 9: score = 0.91
+-> score on test data = 0.91 (best param = 0.50)
+
+-------------------------------------------------------------
+RESULT for i = 0: 0.8727263
+-------------------------------------------------------------
+
+param = 0.17, i = 1, j = 0: params = {'C': 0.01}
+param = 0.17, i = 1, j = 0: score = 0.93
+param = 0.33, i = 1, j = 0: params = {'C': 0.01}
+param = 0.33, i = 1, j = 0: score = 0.93
+param = 0.50, i = 1, j = 0: params = {'C': 0.01}
+param = 0.50, i = 1, j = 0: score = 0.93
+param = 0.67, i = 1, j = 0: params = {'C': 0.01}
+param = 0.67, i = 1, j = 0: score = 0.93
+param = 0.83, i = 1, j = 0: params = {'C': 0.01}
+param = 0.83, i = 1, j = 0: score = 0.93
+param = 1.00, i = 1, j = 0: params = {'C': 0.01}
+param = 1.00, i = 1, j = 0: score = 0.93
+-> score on test data = 0.93 (best param = 0.50)
+
+param = 0.17, i = 1, j = 1: params = {'C': 0.46415888336127797}
+param = 0.17, i = 1, j = 1: score = 0.92
+param = 0.33, i = 1, j = 1: params = {'C': 0.01}
+param = 0.33, i = 1, j = 1: score = 0.92
+param = 0.50, i = 1, j = 1: params = {'C': 0.01}
+param = 0.50, i = 1, j = 1: score = 0.93
+param = 0.67, i = 1, j = 1: params = {'C': 0.46415888336127797}
+param = 0.67, i = 1, j = 1: score = 0.93
+param = 0.83, i = 1, j = 1: params = {'C': 0.46415888336127797}
+param = 0.83, i = 1, j = 1: score = 0.91
+param = 1.00, i = 1, j = 1: params = {'C': 0.01}
+param = 1.00, i = 1, j = 1: score = 0.93
+-> score on test data = 0.93 (best param = 0.67)
+
+param = 0.17, i = 1, j = 2: params = {'C': 0.46415888336127797}
+param = 0.17, i = 1, j = 2: score = 0.92
+param = 0.33, i = 1, j = 2: params = {'C': 0.46415888336127797}
+param = 0.33, i = 1, j = 2: score = 0.50
+param = 0.50, i = 1, j = 2: params = {'C': 0.01}
+param = 0.50, i = 1, j = 2: score = 0.92
+param = 0.67, i = 1, j = 2: params = {'C': 0.46415888336127797}
+param = 0.67, i = 1, j = 2: score = 0.93
+param = 0.83, i = 1, j = 2: params = {'C': 0.01}
+param = 0.83, i = 1, j = 2: score = 0.92
+param = 1.00, i = 1, j = 2: params = {'C': 0.01}
+param = 1.00, i = 1, j = 2: score = 0.92
+-> score on test data = 0.92 (best param = 0.67)
+
+param = 0.17, i = 1, j = 3: params = {'C': 0.46415888336127797}
+param = 0.17, i = 1, j = 3: score = 0.92
+param = 0.33, i = 1, j = 3: params = {'C': 0.01}
+param = 0.33, i = 1, j = 3: score = 0.91
+param = 0.50, i = 1, j = 3: params = {'C': 0.46415888336127797}
+param = 0.50, i = 1, j = 3: score = 0.92
+param = 0.67, i = 1, j = 3: params = {'C': 1000.0}
+param = 0.67, i = 1, j = 3: score = 0.88
+param = 0.83, i = 1, j = 3: params = {'C': 0.46415888336127797}
+param = 0.83, i = 1, j = 3: score = 0.92
+param = 1.00, i = 1, j = 3: params = {'C': 0.01}
+param = 1.00, i = 1, j = 3: score = 0.91
+-> score on test data = 0.87 (best param = 0.50)
+
+param = 0.17, i = 1, j = 4: params = {'C': 0.01}
+param = 0.17, i = 1, j = 4: score = 0.92
+param = 0.33, i = 1, j = 4: params = {'C': 0.46415888336127797}
+param = 0.33, i = 1, j = 4: score = 0.92
+param = 0.50, i = 1, j = 4: params = {'C': 0.01}
+param = 0.50, i = 1, j = 4: score = 0.92
+param = 0.67, i = 1, j = 4: params = {'C': 0.01}
+param = 0.67, i = 1, j = 4: score = 0.92
+param = 0.83, i = 1, j = 4: params = {'C': 21.544346900318846}
+param = 0.83, i = 1, j = 4: score = 0.93
+param = 1.00, i = 1, j = 4: params = {'C': 0.01}
+param = 1.00, i = 1, j = 4: score = 0.92
+-> score on test data = 0.92 (best param = 0.83)
+
+param = 0.17, i = 1, j = 5: params = {'C': 0.46415888336127797}
+param = 0.17, i = 1, j = 5: score = 0.93
+param = 0.33, i = 1, j = 5: params = {'C': 0.01}
+param = 0.33, i = 1, j = 5: score = 0.93
+param = 0.50, i = 1, j = 5: params = {'C': 0.01}
+param = 0.50, i = 1, j = 5: score = 0.93
+param = 0.67, i = 1, j = 5: params = {'C': 0.01}
+param = 0.67, i = 1, j = 5: score = 0.93
+param = 0.83, i = 1, j = 5: params = {'C': 0.46415888336127797}
+param = 0.83, i = 1, j = 5: score = 0.93
+param = 1.00, i = 1, j = 5: params = {'C': 0.01}
+param = 1.00, i = 1, j = 5: score = 0.93
+-> score on test data = 0.93 (best param = 0.83)
+
+param = 0.17, i = 1, j = 6: params = {'C': 0.01}
+param = 0.17, i = 1, j = 6: score = 0.92
+param = 0.33, i = 1, j = 6: params = {'C': 0.01}
+param = 0.33, i = 1, j = 6: score = 0.92
+param = 0.50, i = 1, j = 6: params = {'C': 0.46415888336127797}
+param = 0.50, i = 1, j = 6: score = 0.92
+param = 0.67, i = 1, j = 6: params = {'C': 0.01}
+param = 0.67, i = 1, j = 6: score = 0.92
+param = 0.83, i = 1, j = 6: params = {'C': 0.01}
+param = 0.83, i = 1, j = 6: score = 0.92
+param = 1.00, i = 1, j = 6: params = {'C': 0.01}
+param = 1.00, i = 1, j = 6: score = 0.92
+-> score on test data = 0.92 (best param = 0.50)
+
+param = 0.17, i = 1, j = 7: params = {'C': 0.46415888336127797}
+param = 0.17, i = 1, j = 7: score = 0.92
+param = 0.33, i = 1, j = 7: params = {'C': 0.01}
+param = 0.33, i = 1, j = 7: score = 0.91
+param = 0.50, i = 1, j = 7: params = {'C': 0.01}
+param = 0.50, i = 1, j = 7: score = 0.91
+param = 0.67, i = 1, j = 7: params = {'C': 0.01}
+param = 0.67, i = 1, j = 7: score = 0.91
+param = 0.83, i = 1, j = 7: params = {'C': 0.01}
+param = 0.83, i = 1, j = 7: score = 0.67
+param = 1.00, i = 1, j = 7: params = {'C': 0.01}
+param = 1.00, i = 1, j = 7: score = 0.91
+-> score on test data = 0.91 (best param = 0.17)
+
+param = 0.17, i = 1, j = 8: params = {'C': 0.01}
+param = 0.17, i = 1, j = 8: score = 0.89
+param = 0.33, i = 1, j = 8: params = {'C': 0.01}
+param = 0.33, i = 1, j = 8: score = 0.90
+param = 0.50, i = 1, j = 8: params = {'C': 0.01}
+param = 0.50, i = 1, j = 8: score = 0.90
+param = 0.67, i = 1, j = 8: params = {'C': 0.46415888336127797}
+param = 0.67, i = 1, j = 8: score = 0.90
+param = 0.83, i = 1, j = 8: params = {'C': 21.544346900318846}
+param = 0.83, i = 1, j = 8: score = 0.77
+param = 1.00, i = 1, j = 8: params = {'C': 0.46415888336127797}
+param = 1.00, i = 1, j = 8: score = 0.89
+-> score on test data = 0.90 (best param = 0.67)
+
+param = 0.17, i = 1, j = 9: params = {'C': 0.01}
+param = 0.17, i = 1, j = 9: score = 0.91
+param = 0.33, i = 1, j = 9: params = {'C': 0.46415888336127797}
+param = 0.33, i = 1, j = 9: score = 0.91
+param = 0.50, i = 1, j = 9: params = {'C': 0.01}
+param = 0.50, i = 1, j = 9: score = 0.91
+param = 0.67, i = 1, j = 9: params = {'C': 0.46415888336127797}
+param = 0.67, i = 1, j = 9: score = 0.91
+param = 0.83, i = 1, j = 9: params = {'C': 1000.0}
+param = 0.83, i = 1, j = 9: score = 0.91
+param = 1.00, i = 1, j = 9: params = {'C': 0.01}
+param = 1.00, i = 1, j = 9: score = 0.91
+-> score on test data = 0.91 (best param = 0.67)
+
+-------------------------------------------------------------
+RESULT for i = 1: 0.9134843
+-------------------------------------------------------------
+
+param = 0.17, i = 2, j = 0: params = {'C': 0.46415888336127797}
+param = 0.17, i = 2, j = 0: score = 0.91
+param = 0.33, i = 2, j = 0: params = {'C': 0.01}
+param = 0.33, i = 2, j = 0: score = 0.90
+param = 0.50, i = 2, j = 0: params = {'C': 0.46415888336127797}
+param = 0.50, i = 2, j = 0: score = 0.91
+param = 0.67, i = 2, j = 0: params = {'C': 21.544346900318846}
+param = 0.67, i = 2, j = 0: score = 0.56
+param = 0.83, i = 2, j = 0: params = {'C': 0.46415888336127797}
+param = 0.83, i = 2, j = 0: score = 0.91
+param = 1.00, i = 2, j = 0: params = {'C': 0.01}
+param = 1.00, i = 2, j = 0: score = 0.91
+-> score on test data = 0.91 (best param = 0.83)
+
+param = 0.17, i = 2, j = 1: params = {'C': 0.46415888336127797}
+param = 0.17, i = 2, j = 1: score = 0.92
+param = 0.33, i = 2, j = 1: params = {'C': 0.46415888336127797}
+param = 0.33, i = 2, j = 1: score = 0.92
+param = 0.50, i = 2, j = 1: params = {'C': 0.46415888336127797}
+param = 0.50, i = 2, j = 1: score = 0.92
+param = 0.67, i = 2, j = 1: params = {'C': 0.01}
+param = 0.67, i = 2, j = 1: score = 0.91
+param = 0.83, i = 2, j = 1: params = {'C': 0.01}
+param = 0.83, i = 2, j = 1: score = 0.78
+param = 1.00, i = 2, j = 1: params = {'C': 0.01}
+param = 1.00, i = 2, j = 1: score = 0.91
+-> score on test data = 0.92 (best param = 0.17)
+
+param = 0.17, i = 2, j = 2: params = {'C': 0.46415888336127797}
+param = 0.17, i = 2, j = 2: score = 0.91
+param = 0.33, i = 2, j = 2: params = {'C': 0.01}
+param = 0.33, i = 2, j = 2: score = 0.91
+param = 0.50, i = 2, j = 2: params = {'C': 0.46415888336127797}
+param = 0.50, i = 2, j = 2: score = 0.92
+param = 0.67, i = 2, j = 2: params = {'C': 0.01}
+param = 0.67, i = 2, j = 2: score = 0.91
+param = 0.83, i = 2, j = 2: params = {'C': 0.01}
+param = 0.83, i = 2, j = 2: score = 0.91
+param = 1.00, i = 2, j = 2: params = {'C': 0.01}
+param = 1.00, i = 2, j = 2: score = 0.91
+-> score on test data = 0.91 (best param = 0.50)
+
+param = 0.17, i = 2, j = 3: params = {'C': 0.46415888336127797}
+param = 0.17, i = 2, j = 3: score = 0.92
+param = 0.33, i = 2, j = 3: params = {'C': 0.01}
+param = 0.33, i = 2, j = 3: score = 0.92
+param = 0.50, i = 2, j = 3: params = {'C': 0.01}
+param = 0.50, i = 2, j = 3: score = 0.92
+param = 0.67, i = 2, j = 3: params = {'C': 0.01}
+param = 0.67, i = 2, j = 3: score = 0.92
+param = 0.83, i = 2, j = 3: params = {'C': 0.01}
+param = 0.83, i = 2, j = 3: score = 0.92
+param = 1.00, i = 2, j = 3: params = {'C': 0.01}
+param = 1.00, i = 2, j = 3: score = 0.92
+-> score on test data = 0.92 (best param = 0.17)
+
+param = 0.17, i = 2, j = 4: params = {'C': 0.01}
+param = 0.17, i = 2, j = 4: score = 0.91
+param = 0.33, i = 2, j = 4: params = {'C': 0.46415888336127797}
+param = 0.33, i = 2, j = 4: score = 0.91
+param = 0.50, i = 2, j = 4: params = {'C': 0.46415888336127797}
+param = 0.50, i = 2, j = 4: score = 0.91
+param = 0.67, i = 2, j = 4: params = {'C': 0.01}
+param = 0.67, i = 2, j = 4: score = 0.91
+param = 0.83, i = 2, j = 4: params = {'C': 0.01}
+param = 0.83, i = 2, j = 4: score = 0.91
+param = 1.00, i = 2, j = 4: params = {'C': 0.01}
+param = 1.00, i = 2, j = 4: score = 0.90
+-> score on test data = 0.91 (best param = 0.33)
+
+param = 0.17, i = 2, j = 5: params = {'C': 0.01}
+param = 0.17, i = 2, j = 5: score = 0.93
+param = 0.33, i = 2, j = 5: params = {'C': 0.01}
+param = 0.33, i = 2, j = 5: score = 0.93
+param = 0.50, i = 2, j = 5: params = {'C': 0.01}
+param = 0.50, i = 2, j = 5: score = 0.93
+param = 0.67, i = 2, j = 5: params = {'C': 0.46415888336127797}
+param = 0.67, i = 2, j = 5: score = 0.56
+param = 0.83, i = 2, j = 5: params = {'C': 0.01}
+param = 0.83, i = 2, j = 5: score = 0.93
+param = 1.00, i = 2, j = 5: params = {'C': 0.01}
+param = 1.00, i = 2, j = 5: score = 0.93
+-> score on test data = 0.81 (best param = 0.83)
+
+param = 0.17, i = 2, j = 6: params = {'C': 0.46415888336127797}
+param = 0.17, i = 2, j = 6: score = 0.93
+param = 0.33, i = 2, j = 6: params = {'C': 0.46415888336127797}
+param = 0.33, i = 2, j = 6: score = 0.93
+param = 0.50, i = 2, j = 6: params = {'C': 0.01}
+param = 0.50, i = 2, j = 6: score = 0.92
+param = 0.67, i = 2, j = 6: params = {'C': 0.46415888336127797}
+param = 0.67, i = 2, j = 6: score = 0.93
+param = 0.83, i = 2, j = 6: params = {'C': 0.01}
+param = 0.83, i = 2, j = 6: score = 0.92
+param = 1.00, i = 2, j = 6: params = {'C': 0.46415888336127797}
+param = 1.00, i = 2, j = 6: score = 0.93
+-> score on test data = 0.90 (best param = 0.67)
+
+param = 0.17, i = 2, j = 7: params = {'C': 0.46415888336127797}
+param = 0.17, i = 2, j = 7: score = 0.92
+param = 0.33, i = 2, j = 7: params = {'C': 0.46415888336127797}
+param = 0.33, i = 2, j = 7: score = 0.92
+param = 0.50, i = 2, j = 7: params = {'C': 0.46415888336127797}
+param = 0.50, i = 2, j = 7: score = 0.92
+param = 0.67, i = 2, j = 7: params = {'C': 0.01}
+param = 0.67, i = 2, j = 7: score = 0.92
+param = 0.83, i = 2, j = 7: params = {'C': 0.46415888336127797}
+param = 0.83, i = 2, j = 7: score = 0.88
+param = 1.00, i = 2, j = 7: params = {'C': 0.01}
+param = 1.00, i = 2, j = 7: score = 0.61
+-> score on test data = 0.92 (best param = 0.33)
+
+param = 0.17, i = 2, j = 8: params = {'C': 0.01}
+param = 0.17, i = 2, j = 8: score = 0.91
+param = 0.33, i = 2, j = 8: params = {'C': 0.01}
+param = 0.33, i = 2, j = 8: score = 0.92
+param = 0.50, i = 2, j = 8: params = {'C': 0.01}
+param = 0.50, i = 2, j = 8: score = 0.92
+param = 0.67, i = 2, j = 8: params = {'C': 0.46415888336127797}
+param = 0.67, i = 2, j = 8: score = 0.81
+param = 0.83, i = 2, j = 8: params = {'C': 0.01}
+param = 0.83, i = 2, j = 8: score = 0.92
+param = 1.00, i = 2, j = 8: params = {'C': 0.01}
+param = 1.00, i = 2, j = 8: score = 0.92
+-> score on test data = 0.62 (best param = 0.50)
+
+param = 0.17, i = 2, j = 9: params = {'C': 0.01}
+param = 0.17, i = 2, j = 9: score = 0.92
+param = 0.33, i = 2, j = 9: params = {'C': 21.544346900318846}
+param = 0.33, i = 2, j = 9: score = 0.32
+param = 0.50, i = 2, j = 9: params = {'C': 0.46415888336127797}
+param = 0.50, i = 2, j = 9: score = 0.92
+param = 0.67, i = 2, j = 9: params = {'C': 0.46415888336127797}
+param = 0.67, i = 2, j = 9: score = 0.57
+param = 0.83, i = 2, j = 9: params = {'C': 0.46415888336127797}
+param = 0.83, i = 2, j = 9: score = 0.91
+param = 1.00, i = 2, j = 9: params = {'C': 0.01}
+param = 1.00, i = 2, j = 9: score = 0.92
+-> score on test data = 0.91 (best param = 0.50)
+
+-------------------------------------------------------------
+RESULT for i = 2: 0.8718349
+-------------------------------------------------------------
+
+param = 0.17, i = 3, j = 0: params = {'C': 21.544346900318846}
+param = 0.17, i = 3, j = 0: score = 0.91
+param = 0.33, i = 3, j = 0: params = {'C': 0.46415888336127797}
+param = 0.33, i = 3, j = 0: score = 0.39
+param = 0.50, i = 3, j = 0: params = {'C': 1000.0}
+param = 0.50, i = 3, j = 0: score = 0.47
+param = 0.67, i = 3, j = 0: params = {'C': 0.01}
+param = 0.67, i = 3, j = 0: score = 0.92
+param = 0.83, i = 3, j = 0: params = {'C': 0.01}
+param = 0.83, i = 3, j = 0: score = 0.92
+param = 1.00, i = 3, j = 0: params = {'C': 0.01}
+param = 1.00, i = 3, j = 0: score = 0.93
+-> score on test data = 0.93 (best param = 1.00)
+
+param = 0.17, i = 3, j = 1: params = {'C': 0.46415888336127797}
+param = 0.17, i = 3, j = 1: score = 0.93
+param = 0.33, i = 3, j = 1: params = {'C': 0.01}
+param = 0.33, i = 3, j = 1: score = 0.92
+param = 0.50, i = 3, j = 1: params = {'C': 1000.0}
+param = 0.50, i = 3, j = 1: score = 0.92
+param = 0.67, i = 3, j = 1: params = {'C': 0.01}
+param = 0.67, i = 3, j = 1: score = 0.92
+param = 0.83, i = 3, j = 1: params = {'C': 0.01}
+param = 0.83, i = 3, j = 1: score = 0.92
+param = 1.00, i = 3, j = 1: params = {'C': 0.01}
+param = 1.00, i = 3, j = 1: score = 0.92
+-> score on test data = 0.92 (best param = 0.17)
+
+param = 0.17, i = 3, j = 2: params = {'C': 0.01}
+param = 0.17, i = 3, j = 2: score = 0.91
+param = 0.33, i = 3, j = 2: params = {'C': 0.46415888336127797}
+param = 0.33, i = 3, j = 2: score = 0.91
+param = 0.50, i = 3, j = 2: params = {'C': 0.01}
+param = 0.50, i = 3, j = 2: score = 0.72
+param = 0.67, i = 3, j = 2: params = {'C': 0.46415888336127797}
+param = 0.67, i = 3, j = 2: score = 0.91
+param = 0.83, i = 3, j = 2: params = {'C': 0.01}
+param = 0.83, i = 3, j = 2: score = 0.91
+param = 1.00, i = 3, j = 2: params = {'C': 0.46415888336127797}
+param = 1.00, i = 3, j = 2: score = 0.91
+-> score on test data = 0.91 (best param = 0.17)
+
+param = 0.17, i = 3, j = 3: params = {'C': 0.01}
+param = 0.17, i = 3, j = 3: score = 0.93
+param = 0.33, i = 3, j = 3: params = {'C': 0.01}
+param = 0.33, i = 3, j = 3: score = 0.93
+param = 0.50, i = 3, j = 3: params = {'C': 0.01}
+param = 0.50, i = 3, j = 3: score = 0.92
+param = 0.67, i = 3, j = 3: params = {'C': 0.46415888336127797}
+param = 0.67, i = 3, j = 3: score = 0.93
+param = 0.83, i = 3, j = 3: params = {'C': 0.01}
+param = 0.83, i = 3, j = 3: score = 0.93
+param = 1.00, i = 3, j = 3: params = {'C': 0.01}
+param = 1.00, i = 3, j = 3: score = 0.93
+-> score on test data = 0.93 (best param = 0.67)
+
+param = 0.17, i = 3, j = 4: params = {'C': 0.01}
+param = 0.17, i = 3, j = 4: score = 0.91
+param = 0.33, i = 3, j = 4: params = {'C': 0.46415888336127797}
+param = 0.33, i = 3, j = 4: score = 0.42
+param = 0.50, i = 3, j = 4: params = {'C': 0.46415888336127797}
+param = 0.50, i = 3, j = 4: score = 0.77
+param = 0.67, i = 3, j = 4: params = {'C': 0.01}
+param = 0.67, i = 3, j = 4: score = 0.91
+param = 0.83, i = 3, j = 4: params = {'C': 0.46415888336127797}
+param = 0.83, i = 3, j = 4: score = 0.91
+param = 1.00, i = 3, j = 4: params = {'C': 0.46415888336127797}
+param = 1.00, i = 3, j = 4: score = 0.90
+-> score on test data = 0.91 (best param = 0.83)
+
+param = 0.17, i = 3, j = 5: params = {'C': 0.01}
+param = 0.17, i = 3, j = 5: score = 0.91
+param = 0.33, i = 3, j = 5: params = {'C': 0.01}
+param = 0.33, i = 3, j = 5: score = 0.91
+param = 0.50, i = 3, j = 5: params = {'C': 0.46415888336127797}
+param = 0.50, i = 3, j = 5: score = 0.91
+param = 0.67, i = 3, j = 5: params = {'C': 0.01}
+param = 0.67, i = 3, j = 5: score = 0.91
+param = 0.83, i = 3, j = 5: params = {'C': 0.01}
+param = 0.83, i = 3, j = 5: score = 0.91
+param = 1.00, i = 3, j = 5: params = {'C': 0.01}
+param = 1.00, i = 3, j = 5: score = 0.91
+-> score on test data = 0.91 (best param = 0.50)
+
+param = 0.17, i = 3, j = 6: params = {'C': 0.01}
+param = 0.17, i = 3, j = 6: score = 0.91
+param = 0.33, i = 3, j = 6: params = {'C': 0.01}
+param = 0.33, i = 3, j = 6: score = 0.91
+param = 0.50, i = 3, j = 6: params = {'C': 0.01}
+param = 0.50, i = 3, j = 6: score = 0.91
+param = 0.67, i = 3, j = 6: params = {'C': 0.01}
+param = 0.67, i = 3, j = 6: score = 0.92
+param = 0.83, i = 3, j = 6: params = {'C': 0.01}
+param = 0.83, i = 3, j = 6: score = 0.91
+param = 1.00, i = 3, j = 6: params = {'C': 0.01}
+param = 1.00, i = 3, j = 6: score = 0.91
+-> score on test data = 0.91 (best param = 0.67)
+
+param = 0.17, i = 3, j = 7: params = {'C': 0.46415888336127797}
+param = 0.17, i = 3, j = 7: score = 0.92
+param = 0.33, i = 3, j = 7: params = {'C': 1000.0}
+param = 0.33, i = 3, j = 7: score = 0.92
+param = 0.50, i = 3, j = 7: params = {'C': 0.46415888336127797}
+param = 0.50, i = 3, j = 7: score = 0.92
+param = 0.67, i = 3, j = 7: params = {'C': 0.01}
+param = 0.67, i = 3, j = 7: score = 0.92
+param = 0.83, i = 3, j = 7: params = {'C': 0.01}
+param = 0.83, i = 3, j = 7: score = 0.92
+param = 1.00, i = 3, j = 7: params = {'C': 0.01}
+param = 1.00, i = 3, j = 7: score = 0.92
+-> score on test data = 0.92 (best param = 0.17)
+
+param = 0.17, i = 3, j = 8: params = {'C': 0.01}
+param = 0.17, i = 3, j = 8: score = 0.92
+param = 0.33, i = 3, j = 8: params = {'C': 0.01}
+param = 0.33, i = 3, j = 8: score = 0.92
+param = 0.50, i = 3, j = 8: params = {'C': 0.01}
+param = 0.50, i = 3, j = 8: score = 0.92
+param = 0.67, i = 3, j = 8: params = {'C': 0.01}
+param = 0.67, i = 3, j = 8: score = 0.92
+param = 0.83, i = 3, j = 8: params = {'C': 0.46415888336127797}
+param = 0.83, i = 3, j = 8: score = 0.92
+param = 1.00, i = 3, j = 8: params = {'C': 1000.0}
+param = 1.00, i = 3, j = 8: score = 0.92
+-> score on test data = 0.92 (best param = 0.83)
+
+param = 0.17, i = 3, j = 9: params = {'C': 0.01}
+param = 0.17, i = 3, j = 9: score = 0.92
+param = 0.33, i = 3, j = 9: params = {'C': 0.01}
+param = 0.33, i = 3, j = 9: score = 0.92
+param = 0.50, i = 3, j = 9: params = {'C': 1000.0}
+param = 0.50, i = 3, j = 9: score = 0.92
+param = 0.67, i = 3, j = 9: params = {'C': 0.01}
+param = 0.67, i = 3, j = 9: score = 0.92
+param = 0.83, i = 3, j = 9: params = {'C': 0.01}
+param = 0.83, i = 3, j = 9: score = 0.66
+param = 1.00, i = 3, j = 9: params = {'C': 0.01}
+param = 1.00, i = 3, j = 9: score = 0.92
+-> score on test data = 0.92 (best param = 0.17)
+
+-------------------------------------------------------------
+RESULT for i = 3: 0.9178768
+-------------------------------------------------------------
+
+param = 0.17, i = 4, j = 0: params = {'C': 21.544346900318846}
+param = 0.17, i = 4, j = 0: score = 0.92
+param = 0.33, i = 4, j = 0: params = {'C': 0.01}
+param = 0.33, i = 4, j = 0: score = 0.92
+param = 0.50, i = 4, j = 0: params = {'C': 0.01}
+param = 0.50, i = 4, j = 0: score = 0.93
+param = 0.67, i = 4, j = 0: params = {'C': 0.01}
+param = 0.67, i = 4, j = 0: score = 0.93
+param = 0.83, i = 4, j = 0: params = {'C': 0.01}
+param = 0.83, i = 4, j = 0: score = 0.92
+param = 1.00, i = 4, j = 0: params = {'C': 0.01}
+param = 1.00, i = 4, j = 0: score = 0.92
+-> score on test data = 0.93 (best param = 0.50)
+
+param = 0.17, i = 4, j = 1: params = {'C': 0.01}
+param = 0.17, i = 4, j = 1: score = 0.92
+param = 0.33, i = 4, j = 1: params = {'C': 0.46415888336127797}
+param = 0.33, i = 4, j = 1: score = 0.92
+param = 0.50, i = 4, j = 1: params = {'C': 0.01}
+param = 0.50, i = 4, j = 1: score = 0.64
+param = 0.67, i = 4, j = 1: params = {'C': 0.01}
+param = 0.67, i = 4, j = 1: score = 0.92
+param = 0.83, i = 4, j = 1: params = {'C': 0.01}
+param = 0.83, i = 4, j = 1: score = 0.92
+param = 1.00, i = 4, j = 1: params = {'C': 0.01}
+param = 1.00, i = 4, j = 1: score = 0.92
+-> score on test data = 0.92 (best param = 0.33)
+
+param = 0.17, i = 4, j = 2: params = {'C': 0.46415888336127797}
+param = 0.17, i = 4, j = 2: score = 0.93
+param = 0.33, i = 4, j = 2: params = {'C': 0.01}
+param = 0.33, i = 4, j = 2: score = 0.93
+param = 0.50, i = 4, j = 2: params = {'C': 0.01}
+param = 0.50, i = 4, j = 2: score = 0.93
+param = 0.67, i = 4, j = 2: params = {'C': 0.01}
+param = 0.67, i = 4, j = 2: score = 0.93
+param = 0.83, i = 4, j = 2: params = {'C': 0.01}
+param = 0.83, i = 4, j = 2: score = 0.92
+param = 1.00, i = 4, j = 2: params = {'C': 0.01}
+param = 1.00, i = 4, j = 2: score = 0.93
+-> score on test data = 0.93 (best param = 0.17)
+
+param = 0.17, i = 4, j = 3: params = {'C': 0.46415888336127797}
+param = 0.17, i = 4, j = 3: score = 0.91
+param = 0.33, i = 4, j = 3: params = {'C': 0.46415888336127797}
+param = 0.33, i = 4, j = 3: score = 0.92
+param = 0.50, i = 4, j = 3: params = {'C': 0.01}
+param = 0.50, i = 4, j = 3: score = 0.92
+param = 0.67, i = 4, j = 3: params = {'C': 0.46415888336127797}
+param = 0.67, i = 4, j = 3: score = 0.92
+param = 0.83, i = 4, j = 3: params = {'C': 0.01}
+param = 0.83, i = 4, j = 3: score = 0.92
+param = 1.00, i = 4, j = 3: params = {'C': 0.01}
+param = 1.00, i = 4, j = 3: score = 0.92
+-> score on test data = 0.92 (best param = 0.67)
+
+param = 0.17, i = 4, j = 4: params = {'C': 0.46415888336127797}
+param = 0.17, i = 4, j = 4: score = 0.91
+param = 0.33, i = 4, j = 4: params = {'C': 0.01}
+param = 0.33, i = 4, j = 4: score = 0.91
+param = 0.50, i = 4, j = 4: params = {'C': 0.01}
+param = 0.50, i = 4, j = 4: score = 0.91
+param = 0.67, i = 4, j = 4: params = {'C': 0.01}
+param = 0.67, i = 4, j = 4: score = 0.91
+param = 0.83, i = 4, j = 4: params = {'C': 0.01}
+param = 0.83, i = 4, j = 4: score = 0.91
+param = 1.00, i = 4, j = 4: params = {'C': 0.01}
+param = 1.00, i = 4, j = 4: score = 0.67
+-> score on test data = 0.91 (best param = 0.17)
+
+param = 0.17, i = 4, j = 5: params = {'C': 0.46415888336127797}
+param = 0.17, i = 4, j = 5: score = 0.92
+param = 0.33, i = 4, j = 5: params = {'C': 0.46415888336127797}
+param = 0.33, i = 4, j = 5: score = 0.92
+param = 0.50, i = 4, j = 5: params = {'C': 0.46415888336127797}
+param = 0.50, i = 4, j = 5: score = 0.92
+param = 0.67, i = 4, j = 5: params = {'C': 0.01}
+param = 0.67, i = 4, j = 5: score = 0.92
+param = 0.83, i = 4, j = 5: params = {'C': 0.01}
+param = 0.83, i = 4, j = 5: score = 0.92
+param = 1.00, i = 4, j = 5: params = {'C': 0.46415888336127797}
+param = 1.00, i = 4, j = 5: score = 0.29
+-> score on test data = 0.92 (best param = 0.17)
+
+param = 0.17, i = 4, j = 6: params = {'C': 0.46415888336127797}
+param = 0.17, i = 4, j = 6: score = 0.32
+param = 0.33, i = 4, j = 6: params = {'C': 0.01}
+param = 0.33, i = 4, j = 6: score = 0.92
+param = 0.50, i = 4, j = 6: params = {'C': 0.01}
+param = 0.50, i = 4, j = 6: score = 0.92
+param = 0.67, i = 4, j = 6: params = {'C': 0.01}
+param = 0.67, i = 4, j = 6: score = 0.91
+param = 0.83, i = 4, j = 6: params = {'C': 0.01}
+param = 0.83, i = 4, j = 6: score = 0.92
+param = 1.00, i = 4, j = 6: params = {'C': 21.544346900318846}
+param = 1.00, i = 4, j = 6: score = 0.52
+-> score on test data = 0.92 (best param = 0.33)
+
+param = 0.17, i = 4, j = 7: params = {'C': 0.46415888336127797}
+param = 0.17, i = 4, j = 7: score = 0.91
+param = 0.33, i = 4, j = 7: params = {'C': 0.46415888336127797}
+param = 0.33, i = 4, j = 7: score = 0.91
+param = 0.50, i = 4, j = 7: params = {'C': 0.01}
+param = 0.50, i = 4, j = 7: score = 0.91
+param = 0.67, i = 4, j = 7: params = {'C': 0.46415888336127797}
+param = 0.67, i = 4, j = 7: score = 0.91
+param = 0.83, i = 4, j = 7: params = {'C': 0.01}
+param = 0.83, i = 4, j = 7: score = 0.91
+param = 1.00, i = 4, j = 7: params = {'C': 0.01}
+param = 1.00, i = 4, j = 7: score = 0.91
+-> score on test data = 0.91 (best param = 0.17)
+
+param = 0.17, i = 4, j = 8: params = {'C': 0.46415888336127797}
+param = 0.17, i = 4, j = 8: score = 0.92
+param = 0.33, i = 4, j = 8: params = {'C': 0.01}
+param = 0.33, i = 4, j = 8: score = 0.92
+param = 0.50, i = 4, j = 8: params = {'C': 0.01}
+param = 0.50, i = 4, j = 8: score = 0.92
+param = 0.67, i = 4, j = 8: params = {'C': 0.01}
+param = 0.67, i = 4, j = 8: score = 0.92
+param = 0.83, i = 4, j = 8: params = {'C': 0.01}
+param = 0.83, i = 4, j = 8: score = 0.82
+param = 1.00, i = 4, j = 8: params = {'C': 0.01}
+param = 1.00, i = 4, j = 8: score = 0.92
+-> score on test data = 0.92 (best param = 0.50)
+
+param = 0.17, i = 4, j = 9: params = {'C': 0.01}
+param = 0.17, i = 4, j = 9: score = 0.90
+param = 0.33, i = 4, j = 9: params = {'C': 0.01}
+param = 0.33, i = 4, j = 9: score = 0.91
+param = 0.50, i = 4, j = 9: params = {'C': 0.01}
+param = 0.50, i = 4, j = 9: score = 0.91
+param = 0.67, i = 4, j = 9: params = {'C': 0.01}
+param = 0.67, i = 4, j = 9: score = 0.91
+param = 0.83, i = 4, j = 9: params = {'C': 0.01}
+param = 0.83, i = 4, j = 9: score = 0.91
+param = 1.00, i = 4, j = 9: params = {'C': 0.01}
+param = 1.00, i = 4, j = 9: score = 0.91
+-> score on test data = 0.91 (best param = 0.50)
+
+-------------------------------------------------------------
+RESULT for i = 4: 0.9187553
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+TOTAL RESULT: 0.899 (+/-0.022) in 35149.8 seconds
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+Parameter: 0.16666666666666666
+
+Feature extraction took 59154.0 seconds.
+Feature matrix dimension: (14795, 307)
+
+EIGEN_KERNEL with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.46415888336127797}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 1000.0}
+i = 0, j = 5: params = {'C': 0.01}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.46415888336127797}
+i = 0, j = 8: params = {'C': 0.46415888336127797}
+i = 0, j = 9: params = {'C': 0.46415888336127797}
+0) score: 0.8579048
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.46415888336127797}
+i = 1, j = 2: params = {'C': 0.46415888336127797}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.46415888336127797}
+i = 1, j = 6: params = {'C': 0.46415888336127797}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.46415888336127797}
+i = 1, j = 9: params = {'C': 0.46415888336127797}
+1) score: 0.9184193
+i = 2, j = 0: params = {'C': 21.544346900318846}
+i = 2, j = 1: params = {'C': 0.46415888336127797}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.46415888336127797}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.46415888336127797}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9167968
+i = 3, j = 0: params = {'C': 0.46415888336127797}
+i = 3, j = 1: params = {'C': 21.544346900318846}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.46415888336127797}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.46415888336127797}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.46415888336127797}
+i = 3, j = 9: params = {'C': 0.46415888336127797}
+3) score: 0.9183504
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.46415888336127797}
+i = 4, j = 4: params = {'C': 0.46415888336127797}
+i = 4, j = 5: params = {'C': 0.46415888336127797}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.9027403
+
+RESULT: 0.903 (+/-0.023) in 2332.2 seconds
+
+-------------------------------------------------------------
+Parameter: 0.33333333333333337
+
+Feature extraction took 59154.0 seconds.
+Feature matrix dimension: (14795, 615)
+
+EIGEN_KERNEL with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 21.544346900318846}
+i = 0, j = 3: params = {'C': 21.544346900318846}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.46415888336127797}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.8180441
+i = 1, j = 0: params = {'C': 0.46415888336127797}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.46415888336127797}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 21.544346900318846}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.46415888336127797}
+1) score: 0.8623357
+i = 2, j = 0: params = {'C': 0.46415888336127797}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.46415888336127797}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.46415888336127797}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9180126
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.46415888336127797}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.46415888336127797}
+i = 3, j = 7: params = {'C': 0.46415888336127797}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.46415888336127797}
+3) score: 0.8539932
+i = 4, j = 0: params = {'C': 21.544346900318846}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.46415888336127797}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.46415888336127797}
+i = 4, j = 7: params = {'C': 0.46415888336127797}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.46415888336127797}
+4) score: 0.9159860
+
+RESULT: 0.874 (+/-0.038) in 3806.3 seconds
+
+-------------------------------------------------------------
+Parameter: 0.5
+
+Feature extraction took 59154.0 seconds.
+Feature matrix dimension: (14795, 923)
+
+EIGEN_KERNEL with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.46415888336127797}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.46415888336127797}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.8819067
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.46415888336127797}
+i = 1, j = 3: params = {'C': 0.46415888336127797}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.46415888336127797}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.46415888336127797}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.8749479
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 21.544346900318846}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.46415888336127797}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.46415888336127797}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.46415888336127797}
+2) score: 0.9128104
+i = 3, j = 0: params = {'C': 0.46415888336127797}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.46415888336127797}
+i = 3, j = 3: params = {'C': 0.46415888336127797}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.46415888336127797}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9184858
+i = 4, j = 0: params = {'C': 0.46415888336127797}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.46415888336127797}
+i = 4, j = 4: params = {'C': 0.46415888336127797}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 1000.0}
+i = 4, j = 7: params = {'C': 0.46415888336127797}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.8768442
+
+RESULT: 0.893 (+/-0.019) in 4939.4 seconds
+
+-------------------------------------------------------------
+Parameter: 0.66666666666666663
+
+Feature extraction took 59154.0 seconds.
+Feature matrix dimension: (14795, 1231)
+
+EIGEN_KERNEL with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 1000.0}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 21.544346900318846}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 21.544346900318846}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.8391205
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.46415888336127797}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.46415888336127797}
+i = 1, j = 8: params = {'C': 1000.0}
+i = 1, j = 9: params = {'C': 0.46415888336127797}
+1) score: 0.8950243
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.46415888336127797}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 1000.0}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.46415888336127797}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.46415888336127797}
+2) score: 0.8485446
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 1000.0}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.46415888336127797}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 21.544346900318846}
+i = 3, j = 7: params = {'C': 0.46415888336127797}
+i = 3, j = 8: params = {'C': 0.46415888336127797}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.8359323
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.46415888336127797}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.46415888336127797}
+4) score: 0.8638193
+
+RESULT: 0.856 (+/-0.022) in 5694.9 seconds
+
+-------------------------------------------------------------
+Parameter: 0.83333333333333337
+
+Feature extraction took 59154.0 seconds.
+Feature matrix dimension: (14795, 1539)
+
+EIGEN_KERNEL with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.46415888336127797}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.46415888336127797}
+i = 0, j = 4: params = {'C': 0.46415888336127797}
+i = 0, j = 5: params = {'C': 0.46415888336127797}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.9186879
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.46415888336127797}
+1) score: 0.8936712
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.46415888336127797}
+i = 2, j = 4: params = {'C': 0.46415888336127797}
+i = 2, j = 5: params = {'C': 1000.0}
+i = 2, j = 6: params = {'C': 0.46415888336127797}
+i = 2, j = 7: params = {'C': 21.544346900318846}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9094968
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 1000.0}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.46415888336127797}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9091604
+i = 4, j = 0: params = {'C': 21.544346900318846}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 21.544346900318846}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.46415888336127797}
+4) score: 0.9174718
+
+RESULT: 0.910 (+/-0.009) in 6468.5 seconds
+
+-------------------------------------------------------------
+Parameter: 1.0
+
+Feature extraction took 59154.0 seconds.
+Feature matrix dimension: (14795, 1847)
+
+EIGEN_KERNEL with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.46415888336127797}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.46415888336127797}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.46415888336127797}
+i = 0, j = 9: params = {'C': 0.46415888336127797}
+0) score: 0.9138907
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.46415888336127797}
+i = 1, j = 4: params = {'C': 21.544346900318846}
+i = 1, j = 5: params = {'C': 0.46415888336127797}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.46415888336127797}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.8660999
+i = 2, j = 0: params = {'C': 0.46415888336127797}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.46415888336127797}
+i = 2, j = 3: params = {'C': 0.46415888336127797}
+i = 2, j = 4: params = {'C': 0.46415888336127797}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.46415888336127797}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.8859751
+i = 3, j = 0: params = {'C': 1000.0}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 21.544346900318846}
+i = 3, j = 3: params = {'C': 0.46415888336127797}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.46415888336127797}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.8221782
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.8924547
+
+RESULT: 0.876 (+/-0.031) in 7168.6 seconds
+
+
+The evaluation of the emedding method(s) took 124714.1 seconds.
