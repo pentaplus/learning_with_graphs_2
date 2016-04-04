@@ -41,7 +41,8 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
     
     h_max = max(h_range)                         
                         
-    BIT_LBL_LEN = 16
+#    BIT_LBL_LEN = 16
+    BIT_LBL_LEN = 24
     
     # rotate left
     rot_left = lambda val, r_bits: \
