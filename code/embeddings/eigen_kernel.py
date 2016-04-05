@@ -122,8 +122,6 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
         submat_col_count_of_node_del_frac[node_del_frac] \
             = int(node_del_frac * avg_nodes_count)
             
-    node_del_fracs_desc_order = sorted(node_del_fracs, reverse = True)
-    
 #    first_eig_val_no_conv = False
     
     conv_count = 0
@@ -249,7 +247,7 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
                 inner_loop_end_time = time.time()
                 inner_loop_time = inner_loop_end_time - inner_loop_start_time
                     
-                for node_del_frac in node_del_fracs_desc_order:
+                for node_del_frac in sorted(node_del_fracs):
                     if k >= submat_col_count_of_node_del_frac[node_del_frac]:
                         time_to_subtract_of_param[node_del_frac] \
                             += inner_loop_time
