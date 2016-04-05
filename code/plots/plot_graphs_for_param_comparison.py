@@ -155,7 +155,7 @@ DATA = np.array(
      [WEISFEILER_LEHMAN, NCI109, H_3, 84.9, 0.2, 345.2/10 + 10.9, 27749],
      [WEISFEILER_LEHMAN, NCI109, H_4, 85.9, 0.3, 516.8/10 + 14.2, 72767],
      [WEISFEILER_LEHMAN, NCI109, H_5, 86.0, 0.3, 690.3/10 + 17.3, 132194],
-     [WEISFEILER_LEHMAN, FLASH_CFG, H_0, 74.2, 3.4, 44.2/10 + 12.1, 4,
+     [WEISFEILER_LEHMAN, FLASH_CFG, H_0, 74.2, 3.4, 44.2/10 + 12.1, 4],
      [WEISFEILER_LEHMAN, FLASH_CFG, H_1, 77.1, 3.2, 54.2/10 + 36.1, 71],
      [WEISFEILER_LEHMAN, FLASH_CFG, H_2, 82.7, 0.8, 63.7/10 + 58.4, 583],
      [WEISFEILER_LEHMAN, FLASH_CFG, H_3, 85.4, 0.9, 78.0/10 + 81.4, 2158],
@@ -179,7 +179,7 @@ DATA = np.array(
      [COUNT_SENS_NEIGH_HASH, PTC_MR, H_3, 55.9, 1.9, 22.5/10 + 0.8, 2066],
      [COUNT_SENS_NEIGH_HASH, PTC_MR, H_4, 55.1, 0.8, 18.5/10 + 1.0, 3271],
      [COUNT_SENS_NEIGH_HASH, PTC_MR, H_5, 54.6, 1.4, 21.2/10 + 1.2, 4336],
-     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_0, 40.6, 1.5, 167.0/10 + 0.3, 3,
+     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_0, 40.6, 1.5, 167.0/10 + 0.3, 3],
      [COUNT_SENS_NEIGH_HASH, ENZYMES, H_1, 55.9, 2.0, 110.8/10 + 0.8, 196],
      [COUNT_SENS_NEIGH_HASH, ENZYMES, H_2, 46.0, 1.2, 69.7/10 + 1.2, 5406],
      [COUNT_SENS_NEIGH_HASH, ENZYMES, H_3, 39.5, 2.7, 57.7/10 + 1.8, 11452],
@@ -383,7 +383,13 @@ for dataset, embedding, mode in itertools.product([MUTAG], EMBEDDINGS, MODES):
     else:
         plt.plot(params, y, linestyle = 'dashed', marker = 'o', color = BLUE)
     
-    ax.set_xticks(params)
+    if embedding != EIGEN_KERNEL:
+        ax.set_xticks(params)
+    else:
+#        x_labels = [u'$\\frac{1}{6}$', u'$\\frac{2}{6}$', u'$\\frac{3}{6}$',
+#                    u'$\\frac{4}{6}$', u'$\\frac{5}{6}$', u'$\\frac{6}{6}$']
+        x_labels = [0.17, 0.33, 0.50, 0.67, 0.83, 1.00]
+        plt.xticks(params, x_labels)
 
                
     
