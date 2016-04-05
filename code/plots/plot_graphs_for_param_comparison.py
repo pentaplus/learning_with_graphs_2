@@ -388,8 +388,10 @@ for dataset, embedding, mode in itertools.product([MUTAG], EMBEDDINGS, MODES):
     else:
 #        x_labels = [u'$\\frac{1}{6}$', u'$\\frac{2}{6}$', u'$\\frac{3}{6}$',
 #                    u'$\\frac{4}{6}$', u'$\\frac{5}{6}$', u'$\\frac{6}{6}$']
-        x_labels = [0.17, 0.33, 0.50, 0.67, 0.83, 1.00]
+        x_labels = ['0.17', '0.33', '0.50', '0.67', '0.83', '1.00']
         plt.xticks(params, x_labels)
+        
+        ax.set_xlim(0, 7/6)
 
                
     
