@@ -44,6 +44,14 @@ LABEL_COUNTER = 'label_counter'
 RANDOM_WALK_KERNEL = 'random_walk_kernel'
 EIGEN_KERNEL = 'eigen_kernel'
 
+DISPLAY_NAME_OF_EMBEDDING = {
+    WEISFEILER_LEHMAN: 'Weisfeiler-Lehman subtree kernel',
+    COUNT_SENS_NEIGH_HASH: 'Count-sensitive neighborhood hash kernel',
+    COUNT_SENS_NEIGH_HASH_ALL_ITER: 'Count-sensitive neighborhood hash kernel '
+                                    + '(all it.)',
+    EIGEN_KERNEL: 'Eigen graph kernel'
+}
+
 # datasets
 MUTAG = 'MUTAG'
 PTC_MR = 'PTC(MR)'
@@ -87,8 +95,9 @@ EMBEDDING_ABBRVS = {
     EIGEN_KERNEL: 'EGK'}
     
     
-FONT_SIZE = 10
+FONT_SIZE = 8
 LEGEND_FONT_SIZE = 6
+MARKER_SIZE = 4
 
 
     
@@ -334,7 +343,11 @@ DATASETS = [DATA[:,1][idx] for idx in sorted(idxs)]
 
 
 #for dataset, embedding, mode in itertools.product(DATASETS, EMBEDDINGS, MODES):
-for dataset, embedding, mode in itertools.product([MUTAG], EMBEDDINGS, MODES):
+#for dataset, embedding, mode in itertools.product([MUTAG], EMBEDDINGS, MODES):
+for dataset, embedding in itertools.product(
+        [MUTAG],
+        [WEISFEILER_LEHMAN, COUNT_SENS_NEIGH_HASH,
+         COUNT_SENS_NEIGH_HASH_ALL_ITER, EIGEN_KERNEL]):
     
 #    if embedding != EIGEN_KERNEL:
 #        continue
@@ -353,83 +366,109 @@ for dataset, embedding, mode in itertools.product([MUTAG], EMBEDDINGS, MODES):
         params = params.astype(int)
         
     
-    if mode == SCORES:
-        figsize = (5.58, 3)
-    elif mode == RUNTIMES:
-        figsize = (5.8, 3)
-    elif mode == FEATURES_COUNT:
-        figsize = (5.8, 3)
+#    if mode == SCORES:
+#        figsize = (5.8, 3)
+#    elif mode == RUNTIMES:
+#        figsize = (5.8, 3)
+#    elif mode == FEATURES_COUNT:
+#        figsize = (5.8, 3)
+        
+    figsize = (5.8, 1.89)
         
         
-    fig = plt.figure(figsize = figsize)
-    ax = fig.add_subplot(111)
+#    fig = plt.figure(figsize = figsize)
+#    fig = plt.figure()
+#    ax = fig.add_subplot(111)
     
+    fig, ((ax0, ax1, ax2)) = plt.subplots(nrows = 1, ncols = 3, figsize = figsize)
+    
+#    fig.suptitle(DISPLAY_NAME_OF_EMBEDDING[embedding] + ' on ' + dataset)
 
-    if mode == SCORES:
-        y = data_of_dataset_and_embedding[:, 3].astype(float)
-        y_err = data_of_dataset_and_embedding[:, 4].astype(float)
+    
+    ax_of_mode = {SCORES: ax0, RUNTIMES: ax1, FEATURES_COUNT: ax2}
+    
+    for mode in MODES:
+        ax = ax_of_mode[mode]
+        plt.sca(ax)
         
-    elif mode == RUNTIMES:
-        y = data_of_dataset_and_embedding[:, 5].astype(float)
-
-
-    elif mode == FEATURES_COUNT:
-        y = data_of_dataset_and_embedding[:, 6].astype(float)    
+        plt.tick_params(axis = 'both', which = 'major', length = 3)
+        plt.tick_params(axis = 'both', which = 'minor', length = 2)
     
-    if mode == SCORES:
-        plt.plot(params, y, linestyle = 'dashed', marker = 'o', color = BLUE)
-        plt.errorbar(params, y, yerr = y_err, linestyle = 'None', marker = 'None',
-                     color = BLUE)
-    else:
-        plt.plot(params, y, linestyle = 'dashed', marker = 'o', color = BLUE)
-    
-    if embedding != EIGEN_KERNEL:
-        ax.set_xticks(params)
-    else:
-#        x_labels = [u'$\\frac{1}{6}$', u'$\\frac{2}{6}$', u'$\\frac{3}{6}$',
-#                    u'$\\frac{4}{6}$', u'$\\frac{5}{6}$', u'$\\frac{6}{6}$']
-        x_labels = ['0.17', '0.33', '0.50', '0.67', '0.83', '1.00']
-        plt.xticks(params, x_labels)
+        if mode == SCORES:
+            y = data_of_dataset_and_embedding[:, 3].astype(float)
+            y_err = data_of_dataset_and_embedding[:, 4].astype(float)
+        elif mode == RUNTIMES:
+            y = data_of_dataset_and_embedding[:, 5].astype(float)
+        elif mode == FEATURES_COUNT:
+            y = data_of_dataset_and_embedding[:, 6].astype(float)    
         
-        ax.set_xlim(0, 7/6)
-
-               
+        # make plot
+        if mode == SCORES:
+            plt.plot(params, y, linestyle = 'dashed', marker = 'o', color = BLUE,
+                     markersize = MARKER_SIZE)
+            plt.errorbar(params, y, yerr = y_err, linestyle = 'None', marker = 'None',
+                         color = BLUE)
+        else:
+            plt.plot(params, y, linestyle = 'dashed', marker = 'o', color = BLUE,
+                     markersize = MARKER_SIZE)
+        
+        if embedding != EIGEN_KERNEL:
+                ax.set_xticks(params)
+        else:
+            x_labels = ['%.2f' % param for param in params]
+            plt.xticks(params, x_labels)
     
-    plt.tight_layout(0.5)
+        # set x range and y range
+        min_param, max_param = min(params), max(params)
+        hor_space = (max_param - min_param)/10
+        ax.set_xlim(min_param - hor_space, max_param + hor_space)
+        
+        min_y, max_y = min(ax.get_yticks()), max(ax.get_yticks())
+        if mode != FEATURES_COUNT:
+            ver_space = (max_y - min_y)/10
+            ax.set_ylim(min_y - ver_space, max_y + ver_space)
+        else:
+            if min_y < 10:
+                min_y = 1
+            ax.set_ylim(min_y, 3*max_y)
     
-    output_file_name = 'figure_' + dataset + '_' + embedding + '_'+ mode
+        # set label of x-axis
+        if embedding != EIGEN_KERNEL:
+            ax.set_xlabel('h')
+        else:
+            # embeeding == EIGEN_KERNEL
+            ax.set_xlabel('fraction of used features')
+        
+    #    if mode == RUNTIMES:    
+    #        ax.set_title('bla') # !!!!
+    #        ax2 = ax.twiny()
+    #        ax2.set_xlabel('\\textbf{' + DISPLAY_NAME_OF_EMBEDDING[embedding] + '}')
+    #        ax2.get_xaxis().set_ticks([])
+    #    else:
+    #        ax2 = ax.twiny()
+    #        ax2.set_xlabel('\\phantom{' + DISPLAY_NAME_OF_EMBEDDING[embedding] + '}')
+    #        ax2.get_xaxis().set_ticks([])
+        
+        # set label of y-axis    
+        if mode == SCORES:
+            ax.set_ylabel('classification accuracy')
+        elif mode == RUNTIMES:
+            ax.set_ylabel('runtime in seconds')
+        elif mode == FEATURES_COUNT:
+            ax.set_ylabel('length of feature vectors')
+            
+        if mode == FEATURES_COUNT:
+            plt.yscale('log')
+            
+#        if mode == FEATURES_COUNT and ax.get_ylim()[0] < 5:
+#            ax.set_ylim([0, ax.get_ylim()[1]])
+        
+        plt.tight_layout(w_pad = 2)
+        
+    output_file_name = 'figure_' + dataset + '_' + embedding
     plt.savefig(output_file_name + '.pdf')
     plt.savefig(join(TARGET_PATH, output_file_name + '.pgf'))
+    
+    
 
 
-
-
-
-#
-##import matplotlib libary
-#import matplotlib.pyplot as plt
-#
-##error data
-#y_error = [0.12, 0.13, 0.2, 0.1]
-#
-##define some data
-#x = [1,2,3,4]
-#y = [20, 21, 20.5, 20.8]
-#
-##plot data
-#plt.plot(x, y, linestyle = 'dashed', marker = 'o', color = BLUE)
-#
-##plot only errorbars
-#plt.errorbar(x, y, yerr = y_error, linestyle = 'None', marker = 'None',
-#             color = BLUE)
-#
-##configure  X axes
-#plt.xlim(0.5,4.5)
-#plt.xticks([1,2,3,4])
-#
-##configure  Y axes
-#plt.ylim(19.8,21.2)
-#plt.yticks([20, 21, 20.5, 20.8])
-#
-##show plot
-#plt.show()
