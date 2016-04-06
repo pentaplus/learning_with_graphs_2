@@ -28,6 +28,7 @@ __date__ = "2016-03-27"
 # at Benny-Notebook:
 #
 # 01. test CSNH_ALL on ANDROID FCG 14795
+# 02. test NH methods on DD again (24 bit labels)
 # 02. get feature extraction times of EGK on all datasets
 # 03. test NH and CSNH on ANDROID FCG 14795
 

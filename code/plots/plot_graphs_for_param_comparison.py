@@ -176,54 +176,54 @@ DATA = np.array(
      [WEISFEILER_LEHMAN, ANDROID_FCG, H_3, 93.3, 0.2, 16799.5, 3175014],
      [WEISFEILER_LEHMAN, ANDROID_FCG, H_4, 93.6, 0.1, 23409.4, 4418993],
      [WEISFEILER_LEHMAN, ANDROID_FCG, H_5, 93.5, 0.3, 32145.7, 5673882],
-     [COUNT_SENS_NEIGH_HASH, MUTAG, H_0, 85.3, 0.8, 16.2/10 + 0.1, 7],
-     [COUNT_SENS_NEIGH_HASH, MUTAG, H_1, 87.3, 1.6, 15.8/10 + 0.2, 29],
-     [COUNT_SENS_NEIGH_HASH, MUTAG, H_2, 86.1, 0.9, 15.8/10 + 0.3, 117],
-     [COUNT_SENS_NEIGH_HASH, MUTAG, H_3, 86.7, 1.1, 15.9/10 + 0.4, 424],
-     [COUNT_SENS_NEIGH_HASH, MUTAG, H_4, 83.9, 1.0, 16.0/10 + 0.5, 912],
-     [COUNT_SENS_NEIGH_HASH, MUTAG, H_5, 84.1, 1.4, 16.0/10 + 0.6, 1447],
-     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_0, 56.4, 1.4, 59.6/10 + 0.2, 19],
-     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_1, 60.1, 1.8, 87.8/10 + 0.4, 149],
-     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_2, 57.7, 2.8, 28.7/10 + 0.6, 758],
-     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_3, 55.9, 1.9, 22.5/10 + 0.8, 2066],
-     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_4, 55.1, 0.8, 18.5/10 + 1.0, 3271],
-     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_5, 54.6, 1.4, 21.2/10 + 1.2, 4336],
-     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_0, 40.6, 1.5, 167.0/10 + 0.3, 3],
-     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_1, 55.9, 2.0, 110.8/10 + 0.8, 196],
-     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_2, 46.0, 1.2, 69.7/10 + 1.2, 5406],
-     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_3, 39.5, 2.7, 57.7/10 + 1.8, 11452],
-     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_4, 20.0, 2.5, 52.1/10 + 2.2, 13543],
-     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_5, 32.2, 2.7, 51.4/10 + 2.8, 14239],
-     [COUNT_SENS_NEIGH_HASH, DD, H_0, 76.7, 1.6, 47.3/10 + 2.7, 82],
-     [COUNT_SENS_NEIGH_HASH, DD, H_1, 74.2, 0.6, 40.5/10 + 10.3, 59931],
-     [COUNT_SENS_NEIGH_HASH, DD, H_2, 73.6, 0.5, 33.3/10 + 17.8, 64911],
-     [COUNT_SENS_NEIGH_HASH, DD, H_3, 72.4, 0.6, 33.3/10 + 25.2, 65075],
-     [COUNT_SENS_NEIGH_HASH, DD, H_4, 73.2, 0.4, 33.4/10 + 32.6, 65117],
-     [COUNT_SENS_NEIGH_HASH, DD, H_5, 72.0, 0.5, 33.1/10 + 40.1, 65103],
-     [COUNT_SENS_NEIGH_HASH, NCI1, H_0, 64.8, 0.4, 95.8/10 + 2.7, 37],
-     [COUNT_SENS_NEIGH_HASH, NCI1, H_1, 73.6, 0.4, 115.6/10 + 6.3, 230],
-     [COUNT_SENS_NEIGH_HASH, NCI1, H_2, 79.1, 0.2, 94.7/10 + 9.5, 1560],
-     [COUNT_SENS_NEIGH_HASH, NCI1, H_3, 81.9, 0.1, 90.2/10 + 13.1, 8343],
-     [COUNT_SENS_NEIGH_HASH, NCI1, H_4, 83.5, 0.3, 113.4/10 + 16.8, 17567],
-     [COUNT_SENS_NEIGH_HASH, NCI1, H_5, 83.1, 0.2, 126.7/10 + 19.7, 28656],
-     [COUNT_SENS_NEIGH_HASH, NCI109, H_0, 63.7, 0.3, 100.4/10 + 2.6, 38],
-     [COUNT_SENS_NEIGH_HASH, NCI109, H_1, 72.7, 0.2, 96.1/10 + 5.6, 220],
-     [COUNT_SENS_NEIGH_HASH, NCI109, H_2, 77.7, 0.2, 94.4/10 + 9.2, 1566],
-     [COUNT_SENS_NEIGH_HASH, NCI109, H_3, 81.1, 0.2, 89.9/10 + 12.8, 8407],
-     [COUNT_SENS_NEIGH_HASH, NCI109, H_4, 82.7, 0.2, 108.5/10 + 16.5, 18031],
-     [COUNT_SENS_NEIGH_HASH, NCI109, H_5, 83.0, 0.3, 140.7/10 + 19.9, 28322],
-     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_0, 76.0, 3.2, 49.2/10 + 12.3, 4],
-     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_1, 76.6, 2.2, 54.4/10 + 38.4, 67],
-     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_2, 83.1, 0.6, 56.5/10 + 64.2, 510],
-     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_3, 84.4, 0.5, 57.6/10 + 90.6, 1441],
-     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_4, 84.4, 0.5, 67.0/10 + 116.7, 4360],
-     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_5, 85.0, 0.3, 79.5/10 + 142.5, 9628],
-     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_0, 90.0, 0.0, 3600.0, 100],
-     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_1, 90.0, 0.0, 3600.0, 100],
-     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_2, 90.0, 0.0, 3600.0, 100],
-     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_3, 90.0, 0.0, 3600.0, 100],
-     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_4, 90.0, 0.0, 3600.0, 100],
-     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_5, 90.0, 0.0, 3600.0, 100],
+#     [COUNT_SENS_NEIGH_HASH, MUTAG, H_0, 85.3, 0.8, 16.2/10 + 0.1, 7],
+#     [COUNT_SENS_NEIGH_HASH, MUTAG, H_1, 87.3, 1.6, 15.8/10 + 0.2, 29],
+#     [COUNT_SENS_NEIGH_HASH, MUTAG, H_2, 86.1, 0.9, 15.8/10 + 0.3, 117],
+#     [COUNT_SENS_NEIGH_HASH, MUTAG, H_3, 86.7, 1.1, 15.9/10 + 0.4, 424],
+#     [COUNT_SENS_NEIGH_HASH, MUTAG, H_4, 83.9, 1.0, 16.0/10 + 0.5, 912],
+#     [COUNT_SENS_NEIGH_HASH, MUTAG, H_5, 84.1, 1.4, 16.0/10 + 0.6, 1447],
+#     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_0, 56.4, 1.4, 59.6/10 + 0.2, 19],
+#     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_1, 60.1, 1.8, 87.8/10 + 0.4, 149],
+#     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_2, 57.7, 2.8, 28.7/10 + 0.6, 758],
+#     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_3, 55.9, 1.9, 22.5/10 + 0.8, 2066],
+#     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_4, 55.1, 0.8, 18.5/10 + 1.0, 3271],
+#     [COUNT_SENS_NEIGH_HASH, PTC_MR, H_5, 54.6, 1.4, 21.2/10 + 1.2, 4336],
+#     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_0, 40.6, 1.5, 167.0/10 + 0.3, 3],
+#     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_1, 55.9, 2.0, 110.8/10 + 0.8, 196],
+#     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_2, 46.0, 1.2, 69.7/10 + 1.2, 5406],
+#     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_3, 39.5, 2.7, 57.7/10 + 1.8, 11452],
+#     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_4, 20.0, 2.5, 52.1/10 + 2.2, 13543],
+#     [COUNT_SENS_NEIGH_HASH, ENZYMES, H_5, 32.2, 2.7, 51.4/10 + 2.8, 14239],
+#     [COUNT_SENS_NEIGH_HASH, DD, H_0, 76.7, 1.6, 47.3/10 + 2.7, 82],
+#     [COUNT_SENS_NEIGH_HASH, DD, H_1, 74.2, 0.6, 40.5/10 + 10.3, 59931],
+#     [COUNT_SENS_NEIGH_HASH, DD, H_2, 73.6, 0.5, 33.3/10 + 17.8, 64911],
+#     [COUNT_SENS_NEIGH_HASH, DD, H_3, 72.4, 0.6, 33.3/10 + 25.2, 65075],
+#     [COUNT_SENS_NEIGH_HASH, DD, H_4, 73.2, 0.4, 33.4/10 + 32.6, 65117],
+#     [COUNT_SENS_NEIGH_HASH, DD, H_5, 72.0, 0.5, 33.1/10 + 40.1, 65103],
+#     [COUNT_SENS_NEIGH_HASH, NCI1, H_0, 64.8, 0.4, 95.8/10 + 2.7, 37],
+#     [COUNT_SENS_NEIGH_HASH, NCI1, H_1, 73.6, 0.4, 115.6/10 + 6.3, 230],
+#     [COUNT_SENS_NEIGH_HASH, NCI1, H_2, 79.1, 0.2, 94.7/10 + 9.5, 1560],
+#     [COUNT_SENS_NEIGH_HASH, NCI1, H_3, 81.9, 0.1, 90.2/10 + 13.1, 8343],
+#     [COUNT_SENS_NEIGH_HASH, NCI1, H_4, 83.5, 0.3, 113.4/10 + 16.8, 17567],
+#     [COUNT_SENS_NEIGH_HASH, NCI1, H_5, 83.1, 0.2, 126.7/10 + 19.7, 28656],
+#     [COUNT_SENS_NEIGH_HASH, NCI109, H_0, 63.7, 0.3, 100.4/10 + 2.6, 38],
+#     [COUNT_SENS_NEIGH_HASH, NCI109, H_1, 72.7, 0.2, 96.1/10 + 5.6, 220],
+#     [COUNT_SENS_NEIGH_HASH, NCI109, H_2, 77.7, 0.2, 94.4/10 + 9.2, 1566],
+#     [COUNT_SENS_NEIGH_HASH, NCI109, H_3, 81.1, 0.2, 89.9/10 + 12.8, 8407],
+#     [COUNT_SENS_NEIGH_HASH, NCI109, H_4, 82.7, 0.2, 108.5/10 + 16.5, 18031],
+#     [COUNT_SENS_NEIGH_HASH, NCI109, H_5, 83.0, 0.3, 140.7/10 + 19.9, 28322],
+#     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_0, 76.0, 3.2, 49.2/10 + 12.3, 4],
+#     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_1, 76.6, 2.2, 54.4/10 + 38.4, 67],
+#     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_2, 83.1, 0.6, 56.5/10 + 64.2, 510],
+#     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_3, 84.4, 0.5, 57.6/10 + 90.6, 1441],
+#     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_4, 84.4, 0.5, 67.0/10 + 116.7, 4360],
+#     [COUNT_SENS_NEIGH_HASH, FLASH_CFG, H_5, 85.0, 0.3, 79.5/10 + 142.5, 9628],
+#     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_0, 90.0, 0.0, 3600.0, 100],
+#     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_1, 90.0, 0.0, 3600.0, 100],
+#     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_2, 90.0, 0.0, 3600.0, 100],
+#     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_3, 90.0, 0.0, 3600.0, 100],
+#     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_4, 90.0, 0.0, 3600.0, 100],
+#     [COUNT_SENS_NEIGH_HASH, ANDROID_FCG, H_5, 90.0, 0.0, 3600.0, 100],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, MUTAG, H_0, 85.4, 0.6, 16.1/10 + 0.1, 7],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, MUTAG, H_1, 87.8, 1.9, 16.1/10 + 0.2, 36],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, MUTAG, H_2, 85.8, 1.0, 16.0/10 + 0.3, 153],
@@ -322,15 +322,10 @@ DATA = np.array(
      [EIGEN_KERNEL, ANDROID_FCG, R_5_6, 91.0, 0.9, 6468.5/10 + 59154.0, 1539],
      [EIGEN_KERNEL, ANDROID_FCG, R_6_6, 87.6, 3.1, 7168.6/10 + 59154.0, 1847]])
      
-     
-      
-# order according to the sequence of the embeddings in the data matrices
-COLORS = ['#00008F', '#0020FF', '#00AFFF', '#40FFBF', '#CFFF30', '#FF9F00',
-          '#FF1000', '#800000']
+    
           
 BLUE = '#3F3D99'
           
-# #87FF77 can be used between #40FFBF and #CFFF30
          
 
 # embeddings ordered according to their sequence in the data matrix
@@ -346,8 +341,7 @@ DATASETS = [DATA[:,1][idx] for idx in sorted(idxs)]
 #for dataset, embedding, mode in itertools.product([MUTAG], EMBEDDINGS, MODES):
 for dataset, embedding in itertools.product(
         [MUTAG],
-        [WEISFEILER_LEHMAN, COUNT_SENS_NEIGH_HASH,
-         COUNT_SENS_NEIGH_HASH_ALL_ITER, EIGEN_KERNEL]):
+        [WEISFEILER_LEHMAN, COUNT_SENS_NEIGH_HASH_ALL_ITER, EIGEN_KERNEL]):
     
 #    if embedding != EIGEN_KERNEL:
 #        continue
@@ -373,21 +367,22 @@ for dataset, embedding in itertools.product(
 #    elif mode == FEATURES_COUNT:
 #        figsize = (5.8, 3)
         
-    figsize = (5.8, 1.89)
-        
-        
-#    fig = plt.figure(figsize = figsize)
-#    fig = plt.figure()
-#    ax = fig.add_subplot(111)
+    if embedding != EIGEN_KERNEL:
+        figsize = (5.8, 1.89)
+    else:
+        figsize = (5.88, 1.89)
     
     fig, ((ax0, ax1, ax2)) = plt.subplots(nrows = 1, ncols = 3, figsize = figsize)
-    
-#    fig.suptitle(DISPLAY_NAME_OF_EMBEDDING[embedding] + ' on ' + dataset)
 
     
     ax_of_mode = {SCORES: ax0, RUNTIMES: ax1, FEATURES_COUNT: ax2}
     
     for mode in MODES:
+#        if embedding == EIGEN_KERNEL and dataset == MUTAG and mode == RUNTIMES:
+#            x = 0
+#        else:
+#            continue
+        
         ax = ax_of_mode[mode]
         plt.sca(ax)
         
@@ -415,7 +410,7 @@ for dataset, embedding in itertools.product(
         if embedding != EIGEN_KERNEL:
                 ax.set_xticks(params)
         else:
-            x_labels = ['%.2f' % param for param in params]
+            x_labels = ['1/6', '2/6', '3/6', '4/6', '5/6', '6/6']
             plt.xticks(params, x_labels)
     
         # set x range and y range
@@ -439,15 +434,6 @@ for dataset, embedding in itertools.product(
             # embeeding == EIGEN_KERNEL
             ax.set_xlabel('fraction of used features')
         
-    #    if mode == RUNTIMES:    
-    #        ax.set_title('bla') # !!!!
-    #        ax2 = ax.twiny()
-    #        ax2.set_xlabel('\\textbf{' + DISPLAY_NAME_OF_EMBEDDING[embedding] + '}')
-    #        ax2.get_xaxis().set_ticks([])
-    #    else:
-    #        ax2 = ax.twiny()
-    #        ax2.set_xlabel('\\phantom{' + DISPLAY_NAME_OF_EMBEDDING[embedding] + '}')
-    #        ax2.get_xaxis().set_ticks([])
         
         # set label of y-axis    
         if mode == SCORES:
@@ -460,9 +446,6 @@ for dataset, embedding in itertools.product(
         if mode == FEATURES_COUNT:
             plt.yscale('log')
             
-#        if mode == FEATURES_COUNT and ax.get_ylim()[0] < 5:
-#            ax.set_ylim([0, ax.get_ylim()[1]])
-        
         plt.tight_layout(w_pad = 2)
         
     output_file_name = 'figure_' + dataset + '_' + embedding
