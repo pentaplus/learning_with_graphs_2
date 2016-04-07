@@ -9,56 +9,56 @@ CLF_MAX_ITER: 1e+03
 SEARCH_OPT_SVM_PARAM_IN_PAR: TRUE
 ------------------------------------------
 
-Graph loading and feature exraction took 37.9 seconds.
+Graph loading and feature exraction took 42.6 seconds.
 
 LINEAR (OPT_PARAM)
-0.763 (+/-0.011) in 263.5 seconds
+0.788 (+/-0.005) in 2178.7 seconds
 
 ------------------------------------------
 Parameter: 0
 
-Feature extraction took 2.6 seconds.
+Feature extraction took 2.5 seconds.
 Feature matrix dimension: (1178, 82)
 
 LINEAR
-0.768 (+/-0.011) in 51.3 seconds
+0.764 (+/-0.017) in 48.5 seconds
 ------------------------------------------
 Parameter: 1
 
-Feature extraction took 9.5 seconds.
-Feature matrix dimension: (1178, 164726)
+Feature extraction took 9.9 seconds.
+Feature matrix dimension: (1178, 60516)
 
 LINEAR
-0.718 (+/-0.004) in 44.6 seconds
+0.773 (+/-0.005) in 355.1 seconds
 ------------------------------------------
 Parameter: 2
 
-Feature extraction took 16.3 seconds.
-Feature matrix dimension: (1178, 301015)
+Feature extraction took 17.8 seconds.
+Feature matrix dimension: (1178, 65486)
 
 LINEAR
-0.513 (+/-0.004) in 31.3 seconds
+0.768 (+/-0.008) in 341.4 seconds
 ------------------------------------------
 Parameter: 3
 
-Feature extraction took 23.2 seconds.
-Feature matrix dimension: (1178, 322998)
+Feature extraction took 25.8 seconds.
+Feature matrix dimension: (1178, 65534)
 
 LINEAR
-0.430 (+/-0.002) in 31.5 seconds
+0.758 (+/-0.004) in 382.9 seconds
 ------------------------------------------
 Parameter: 4
 
-Feature extraction took 30.1 seconds.
-Feature matrix dimension: (1178, 324659)
+Feature extraction took 33.8 seconds.
+Feature matrix dimension: (1178, 65536)
 
 LINEAR
-0.426 (+/-0.003) in 31.4 seconds
+0.750 (+/-0.005) in 413.0 seconds
 ------------------------------------------
 Parameter: 5
 
-Feature extraction took 37.0 seconds.
-Feature matrix dimension: (1178, 324858)
+Feature extraction took 41.6 seconds.
+Feature matrix dimension: (1178, 65536)
 
 LINEAR
-0.420 (+/-0.001) in 31.6 seconds
+0.744 (+/-0.005) in 423.7 seconds

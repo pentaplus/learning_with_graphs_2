@@ -13,7 +13,7 @@ from __future__ import division
 
 
 __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
-__date__ = "2016-03-27"
+__date__ = "2016-04-07"
 
 
 # planed procedure:
@@ -27,9 +27,8 @@ __date__ = "2016-03-27"
 
 # at Benny-Notebook:
 #
-# 01. test NH methods on DD again (24 bit labels)
-# 02. get feature extraction times of EGK on all datasets
-# 03. test NH and CSNH on ANDROID FCG 14795
+# 01. get feature extraction times of EGK on all datasets
+# 02. test NH and CSNH on ANDROID FCG 14795
 
 # at Sylvia-Notebook:
 #
@@ -124,7 +123,7 @@ EMBEDDING_PARAM_RANGES = {
 
 
 # sorted by number of graphs in ascending order
-#DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109, FLASH_CFG]
+DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109, FLASH_CFG]
 #DATASETS = [NCI109, FLASH_CFG]
 #DATASETS = [MUTAG, PTC_MR, ENZYMES, NCI1, NCI109]
 #DATASETS = [DD, NCI1, NCI109, FLASH_CFG]
@@ -133,7 +132,7 @@ EMBEDDING_PARAM_RANGES = {
 #DATASETS = [MUTAG]
 #DATASETS = [PTC_MR]
 #DATASETS = [ENZYMES]
-DATASETS = [DD]
+#DATASETS = [DD]
 #DATASETS = [NCI1]
 #DATASETS = [NCI109]
 #DATASETS = [FLASH_CFG]

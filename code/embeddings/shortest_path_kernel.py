@@ -30,7 +30,7 @@ SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
 # of the script's parent directory
 sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
-from misc import pcg, pz
+from misc import pz
 
 
 

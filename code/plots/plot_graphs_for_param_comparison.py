@@ -12,12 +12,10 @@ __date__ = "2016-04-03"
 
 
 import inspect
-import itertools
 import matplotlib as mpl
 import numpy as np
 import sys
 
-from collections import defaultdict
 from os.path import abspath, dirname, join
 
 # determine script path
@@ -243,12 +241,12 @@ DATA = np.array(
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, ENZYMES, H_3, 44.9, 2.9, 107.9/10 + 2.0, 15838],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, ENZYMES, H_4, 48.8, 3.3, 129.3/10 + 2.5, 26006],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, ENZYMES, H_5, 48.6, 1.5, 148.9/10 + 3.1, 34453],
-     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_0, 76.4, 1.7, 48.5/10 + 2.5, 82],
-     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_1, 77.3, 0.5, 355.1/10 + 9.9, 60516],
-     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_2, 76.8, 0.8, 341.4/10 + 17.8, 65486],
-     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_3, 75.8, 0.4, 382.9/10 + 25.8, 65534],
-     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_4, 75.0, 0.5, 413.0/10 + 33.8, 65536],
-     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_5, 74.4, 0.5, 423.7/10 + 41.6, 65536],
+     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_0, 77.0, 0.7, 46.9/10 + 2.1, 82],
+     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_1, 77.7, 0.2, 403.0/10 + 10.9, 164450],
+     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_2, 77.1, 0.3, 371.2/10 + 18.2, 462671],
+     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_3, 76.5, 0.3, 391.2/10 + 25.8, 776554],
+     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_4, 75.9, 0.4, 401.9/10 + 33.5, 1086010],
+     [COUNT_SENS_NEIGH_HASH_ALL_ITER, DD, H_5, 75.5, 0.2, 431.1/10 + 41.3, 1389887],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, NCI1, H_0, 64.3, 0.5, 94.8/10 + 2.0, 37],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, NCI1, H_1, 73.4, 0.4, 153.9/10 + 5.6, 266],
      [COUNT_SENS_NEIGH_HASH_ALL_ITER, NCI1, H_2, 80.3, 0.2, 218.2/10 + 8.7, 1800],
@@ -339,21 +337,11 @@ DATASETS = [DATA[:,1][idx] for idx in sorted(idxs)]
 
 
 figsize = (5.9, 6.32)
-#    else:
-#        figsize = (5.88, 1.89)
 
 
-
-
-
-#for dataset, embedding, mode in itertools.product(DATASETS, EMBEDDINGS, MODES):
-#for dataset, embedding, mode in itertools.product([MUTAG], EMBEDDINGS, MODES):
-for dataset in [MUTAG]:
+#for dataset in [MUTAG]:
+for dataset in DATASETS:
     fig, axes_mat = plt.subplots(nrows = 3, ncols = 3, figsize = figsize)
-#    plt.subplots_adjust(bottom = 0.4)
-#    fig.subplots_adjust(bottom = 0.4)
-    
-#    plt.tight_layout(w_pad = 2, h_pad = 2, rect = (0, 0.2, 1, 1))
 
     ax_of_mode_of_embedding = dict()
     for i, embedding in enumerate(EMBEDDINGS):
@@ -376,52 +364,10 @@ for dataset in [MUTAG]:
             params = params.astype(int)
             
         
-    #    if mode == SCORES:
-    #        figsize = (5.8, 3)
-    #    elif mode == RUNTIMES:
-    #        figsize = (5.8, 3)
-    #    elif mode == FEATURES_COUNT:
-    #        figsize = (5.8, 3)
-            
-    #    if embedding != EIGEN_KERNEL:
-    
-        
         for mode in MODES:
-    #        if embedding == EIGEN_KERNEL and dataset == MUTAG and mode == RUNTIMES:
-    #            x = 0
-    #        else:
-    #            continue
             
             ax = ax_of_mode_of_embedding[embedding][mode]
             plt.sca(ax)
-            
-            
-#            if embedding == EMBEDDINGS[0] and mode == RUNTIMES:                        
-#                ax_left_bottom_corner_y = ax.get_position().get_points()[0, 1]
-#                
-#            if embedding == EMBEDDINGS[1] and mode == RUNTIMES:
-#                ax_left_top_corner_y = ax.get_position().get_points()[1, 1]
-#                y_offset = abs(ax_left_top_corner_y - ax_left_bottom_corner_y)/2
-#                y = ax_left_top_corner_y + y_offset
-#                ax.text(0.5, y, '\\normalsize \\textit{centered title}',
-#                        horizontalalignment = 'center',
-#                        verticalalignment = 'center',
-#                        transform = fig.transFigure)
-#                        
-#                ax_left_bottom_corner_y = ax.get_position().get_points()[0, 1]
-#                y = ax_left_bottom_corner_y - y_offset
-#                ax.text(0.5, y, '\\normalsize \\textit{centered title}',
-#                        horizontalalignment = 'center',
-#                        verticalalignment = 'center',
-#                        transform = fig.transFigure)
-#                        
-#            if embedding == EMBEDDINGS[2] and mode == RUNTIMES:
-#                ax_left_bottom_corner_y = ax.get_position().get_points()[0, 1]
-#                y = ax_left_bottom_corner_y - y_offset
-#                ax.text(0.5, y, '\\normalsize \\textit{centered title}',
-#                        horizontalalignment = 'center',
-#                        verticalalignment = 'center',
-#                        transform = fig.transFigure)
             
             plt.tick_params(axis = 'both', which = 'major', length = 3)
             plt.tick_params(axis = 'both', which = 'minor', length = 2)
@@ -487,6 +433,7 @@ for dataset in [MUTAG]:
     plt.tight_layout(w_pad = 2, h_pad = 4.7, rect = (0, 0.05, 1, 1))
 #            plt.tight_layout(w_pad = 2, h_pad = 2, rect = (0, 0.2, 1, 1))
 
+    # add captions
     y_first_ax_bottom = axes_mat[0, 0].get_position().get_points()[0, 1]
     y_second_ax_top = axes_mat[1, 0].get_position().get_points()[1, 1]
     y_second_ax_bottom = axes_mat[1, 0].get_position().get_points()[0, 1]
