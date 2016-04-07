@@ -1,0 +1,2026 @@
+LIBRARY: LIBLINEAR
+EMBEDDING TYPE: EXPLICIT
+EXPER_NUM_ITER: 5
+SVM_PARAM_GRID: {C: (1.0e-02, 4.6e-01, 2.2e+01, 1.0e+03)}
+NUM_CROSS_VAL_JOBS: 4
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 2
+CLF_MAX_ITER: 1e+03
+SEARCH_OPT_SVM_PARAM_IN_PAR: TRUE
+
+-------------------------------------------------------------
+
+h = 0, graph_num = 0
+h = 0, graph_num = 100
+h = 0, graph_num = 200
+h = 0, graph_num = 300
+h = 0, graph_num = 400
+h = 0, graph_num = 500
+h = 0, graph_num = 600
+h = 0, graph_num = 700
+h = 0, graph_num = 800
+h = 0, graph_num = 900
+h = 0, graph_num = 1000
+h = 0, graph_num = 1100
+h = 0, graph_num = 1200
+h = 0, graph_num = 1300
+h = 0, graph_num = 1400
+h = 0, graph_num = 1500
+h = 0, graph_num = 1600
+h = 0, graph_num = 1700
+h = 0, graph_num = 1800
+h = 0, graph_num = 1900
+h = 0, graph_num = 2000
+h = 0, graph_num = 2100
+h = 0, graph_num = 2200
+h = 0, graph_num = 2300
+h = 0, graph_num = 2400
+h = 0, graph_num = 2500
+h = 0, graph_num = 2600
+h = 0, graph_num = 2700
+h = 0, graph_num = 2800
+h = 0, graph_num = 2900
+h = 0, graph_num = 3000
+h = 0, graph_num = 3100
+h = 0, graph_num = 3200
+h = 0, graph_num = 3300
+h = 0, graph_num = 3400
+h = 0, graph_num = 3500
+h = 0, graph_num = 3600
+h = 0, graph_num = 3700
+h = 0, graph_num = 3800
+h = 0, graph_num = 3900
+h = 0, graph_num = 4000
+h = 0, graph_num = 4100
+h = 0, graph_num = 4200
+h = 0, graph_num = 4300
+h = 0, graph_num = 4400
+h = 0, graph_num = 4500
+h = 0, graph_num = 4600
+h = 0, graph_num = 4700
+h = 0, graph_num = 4800
+h = 0, graph_num = 4900
+h = 0, graph_num = 5000
+h = 0, graph_num = 5100
+h = 0, graph_num = 5200
+h = 0, graph_num = 5300
+h = 0, graph_num = 5400
+h = 0, graph_num = 5500
+h = 0, graph_num = 5600
+h = 0, graph_num = 5700
+h = 0, graph_num = 5800
+h = 0, graph_num = 5900
+h = 0, graph_num = 6000
+h = 0, graph_num = 6100
+h = 0, graph_num = 6200
+h = 0, graph_num = 6300
+h = 0, graph_num = 6400
+h = 0, graph_num = 6500
+h = 0, graph_num = 6600
+h = 0, graph_num = 6700
+h = 0, graph_num = 6800
+h = 0, graph_num = 6900
+h = 0, graph_num = 7000
+h = 0, graph_num = 7100
+h = 0, graph_num = 7200
+h = 0, graph_num = 7300
+h = 0, graph_num = 7400
+h = 0, graph_num = 7500
+h = 0, graph_num = 7600
+h = 0, graph_num = 7700
+h = 0, graph_num = 7800
+h = 0, graph_num = 7900
+h = 0, graph_num = 8000
+h = 0, graph_num = 8100
+h = 0, graph_num = 8200
+h = 0, graph_num = 8300
+h = 0, graph_num = 8400
+h = 0, graph_num = 8500
+h = 0, graph_num = 8600
+h = 0, graph_num = 8700
+h = 0, graph_num = 8800
+h = 0, graph_num = 8900
+h = 0, graph_num = 9000
+h = 0, graph_num = 9100
+h = 0, graph_num = 9200
+h = 0, graph_num = 9300
+h = 0, graph_num = 9400
+h = 0, graph_num = 9500
+h = 0, graph_num = 9600
+h = 0, graph_num = 9700
+h = 0, graph_num = 9800
+h = 0, graph_num = 9900
+h = 0, graph_num = 10000
+h = 0, graph_num = 10100
+h = 0, graph_num = 10200
+h = 0, graph_num = 10300
+h = 0, graph_num = 10400
+h = 0, graph_num = 10500
+h = 0, graph_num = 10600
+h = 0, graph_num = 10700
+h = 0, graph_num = 10800
+h = 0, graph_num = 10900
+h = 0, graph_num = 11000
+h = 0, graph_num = 11100
+h = 0, graph_num = 11200
+h = 0, graph_num = 11300
+h = 0, graph_num = 11400
+h = 0, graph_num = 11500
+h = 0, graph_num = 11600
+h = 0, graph_num = 11700
+h = 0, graph_num = 11800
+h = 0, graph_num = 11900
+h = 0, graph_num = 12000
+h = 0, graph_num = 12100
+h = 0, graph_num = 12200
+h = 0, graph_num = 12300
+h = 0, graph_num = 12400
+h = 0, graph_num = 12500
+h = 0, graph_num = 12600
+h = 0, graph_num = 12700
+h = 0, graph_num = 12800
+h = 0, graph_num = 12900
+h = 0, graph_num = 13000
+h = 0, graph_num = 13100
+h = 0, graph_num = 13200
+h = 0, graph_num = 13300
+h = 0, graph_num = 13400
+h = 0, graph_num = 13500
+h = 0, graph_num = 13600
+h = 0, graph_num = 13700
+h = 0, graph_num = 13800
+h = 0, graph_num = 13900
+h = 0, graph_num = 14000
+h = 0, graph_num = 14100
+h = 0, graph_num = 14200
+h = 0, graph_num = 14300
+h = 0, graph_num = 14400
+h = 0, graph_num = 14500
+h = 0, graph_num = 14600
+h = 0, graph_num = 14700
+h = 1, graph_num = 0
+h = 1, graph_num = 100
+h = 1, graph_num = 200
+h = 1, graph_num = 300
+h = 1, graph_num = 400
+h = 1, graph_num = 500
+h = 1, graph_num = 600
+h = 1, graph_num = 700
+h = 1, graph_num = 800
+h = 1, graph_num = 900
+h = 1, graph_num = 1000
+h = 1, graph_num = 1100
+h = 1, graph_num = 1200
+h = 1, graph_num = 1300
+h = 1, graph_num = 1400
+h = 1, graph_num = 1500
+h = 1, graph_num = 1600
+h = 1, graph_num = 1700
+h = 1, graph_num = 1800
+h = 1, graph_num = 1900
+h = 1, graph_num = 2000
+h = 1, graph_num = 2100
+h = 1, graph_num = 2200
+h = 1, graph_num = 2300
+h = 1, graph_num = 2400
+h = 1, graph_num = 2500
+h = 1, graph_num = 2600
+h = 1, graph_num = 2700
+h = 1, graph_num = 2800
+h = 1, graph_num = 2900
+h = 1, graph_num = 3000
+h = 1, graph_num = 3100
+h = 1, graph_num = 3200
+h = 1, graph_num = 3300
+h = 1, graph_num = 3400
+h = 1, graph_num = 3500
+h = 1, graph_num = 3600
+h = 1, graph_num = 3700
+h = 1, graph_num = 3800
+h = 1, graph_num = 3900
+h = 1, graph_num = 4000
+h = 1, graph_num = 4100
+h = 1, graph_num = 4200
+h = 1, graph_num = 4300
+h = 1, graph_num = 4400
+h = 1, graph_num = 4500
+h = 1, graph_num = 4600
+h = 1, graph_num = 4700
+h = 1, graph_num = 4800
+h = 1, graph_num = 4900
+h = 1, graph_num = 5000
+h = 1, graph_num = 5100
+h = 1, graph_num = 5200
+h = 1, graph_num = 5300
+h = 1, graph_num = 5400
+h = 1, graph_num = 5500
+h = 1, graph_num = 5600
+h = 1, graph_num = 5700
+h = 1, graph_num = 5800
+h = 1, graph_num = 5900
+h = 1, graph_num = 6000
+h = 1, graph_num = 6100
+h = 1, graph_num = 6200
+h = 1, graph_num = 6300
+h = 1, graph_num = 6400
+h = 1, graph_num = 6500
+h = 1, graph_num = 6600
+h = 1, graph_num = 6700
+h = 1, graph_num = 6800
+h = 1, graph_num = 6900
+h = 1, graph_num = 7000
+h = 1, graph_num = 7100
+h = 1, graph_num = 7200
+h = 1, graph_num = 7300
+h = 1, graph_num = 7400
+h = 1, graph_num = 7500
+h = 1, graph_num = 7600
+h = 1, graph_num = 7700
+h = 1, graph_num = 7800
+h = 1, graph_num = 7900
+h = 1, graph_num = 8000
+h = 1, graph_num = 8100
+h = 1, graph_num = 8200
+h = 1, graph_num = 8300
+h = 1, graph_num = 8400
+h = 1, graph_num = 8500
+h = 1, graph_num = 8600
+h = 1, graph_num = 8700
+h = 1, graph_num = 8800
+h = 1, graph_num = 8900
+h = 1, graph_num = 9000
+h = 1, graph_num = 9100
+h = 1, graph_num = 9200
+h = 1, graph_num = 9300
+h = 1, graph_num = 9400
+h = 1, graph_num = 9500
+h = 1, graph_num = 9600
+h = 1, graph_num = 9700
+h = 1, graph_num = 9800
+h = 1, graph_num = 9900
+h = 1, graph_num = 10000
+h = 1, graph_num = 10100
+h = 1, graph_num = 10200
+h = 1, graph_num = 10300
+h = 1, graph_num = 10400
+h = 1, graph_num = 10500
+h = 1, graph_num = 10600
+h = 1, graph_num = 10700
+h = 1, graph_num = 10800
+h = 1, graph_num = 10900
+h = 1, graph_num = 11000
+h = 1, graph_num = 11100
+h = 1, graph_num = 11200
+h = 1, graph_num = 11300
+h = 1, graph_num = 11400
+h = 1, graph_num = 11500
+h = 1, graph_num = 11600
+h = 1, graph_num = 11700
+h = 1, graph_num = 11800
+h = 1, graph_num = 11900
+h = 1, graph_num = 12000
+h = 1, graph_num = 12100
+h = 1, graph_num = 12200
+h = 1, graph_num = 12300
+h = 1, graph_num = 12400
+h = 1, graph_num = 12500
+h = 1, graph_num = 12600
+h = 1, graph_num = 12700
+h = 1, graph_num = 12800
+h = 1, graph_num = 12900
+h = 1, graph_num = 13000
+h = 1, graph_num = 13100
+h = 1, graph_num = 13200
+h = 1, graph_num = 13300
+h = 1, graph_num = 13400
+h = 1, graph_num = 13500
+h = 1, graph_num = 13600
+h = 1, graph_num = 13700
+h = 1, graph_num = 13800
+h = 1, graph_num = 13900
+h = 1, graph_num = 14000
+h = 1, graph_num = 14100
+h = 1, graph_num = 14200
+h = 1, graph_num = 14300
+h = 1, graph_num = 14400
+h = 1, graph_num = 14500
+h = 1, graph_num = 14600
+h = 1, graph_num = 14700
+h = 2, graph_num = 0
+h = 2, graph_num = 100
+h = 2, graph_num = 200
+h = 2, graph_num = 300
+h = 2, graph_num = 400
+h = 2, graph_num = 500
+h = 2, graph_num = 600
+h = 2, graph_num = 700
+h = 2, graph_num = 800
+h = 2, graph_num = 900
+h = 2, graph_num = 1000
+h = 2, graph_num = 1100
+h = 2, graph_num = 1200
+h = 2, graph_num = 1300
+h = 2, graph_num = 1400
+h = 2, graph_num = 1500
+h = 2, graph_num = 1600
+h = 2, graph_num = 1700
+h = 2, graph_num = 1800
+h = 2, graph_num = 1900
+h = 2, graph_num = 2000
+h = 2, graph_num = 2100
+h = 2, graph_num = 2200
+h = 2, graph_num = 2300
+h = 2, graph_num = 2400
+h = 2, graph_num = 2500
+h = 2, graph_num = 2600
+h = 2, graph_num = 2700
+h = 2, graph_num = 2800
+h = 2, graph_num = 2900
+h = 2, graph_num = 3000
+h = 2, graph_num = 3100
+h = 2, graph_num = 3200
+h = 2, graph_num = 3300
+h = 2, graph_num = 3400
+h = 2, graph_num = 3500
+h = 2, graph_num = 3600
+h = 2, graph_num = 3700
+h = 2, graph_num = 3800
+h = 2, graph_num = 3900
+h = 2, graph_num = 4000
+h = 2, graph_num = 4100
+h = 2, graph_num = 4200
+h = 2, graph_num = 4300
+h = 2, graph_num = 4400
+h = 2, graph_num = 4500
+h = 2, graph_num = 4600
+h = 2, graph_num = 4700
+h = 2, graph_num = 4800
+h = 2, graph_num = 4900
+h = 2, graph_num = 5000
+h = 2, graph_num = 5100
+h = 2, graph_num = 5200
+h = 2, graph_num = 5300
+h = 2, graph_num = 5400
+h = 2, graph_num = 5500
+h = 2, graph_num = 5600
+h = 2, graph_num = 5700
+h = 2, graph_num = 5800
+h = 2, graph_num = 5900
+h = 2, graph_num = 6000
+h = 2, graph_num = 6100
+h = 2, graph_num = 6200
+h = 2, graph_num = 6300
+h = 2, graph_num = 6400
+h = 2, graph_num = 6500
+h = 2, graph_num = 6600
+h = 2, graph_num = 6700
+h = 2, graph_num = 6800
+h = 2, graph_num = 6900
+h = 2, graph_num = 7000
+h = 2, graph_num = 7100
+h = 2, graph_num = 7200
+h = 2, graph_num = 7300
+h = 2, graph_num = 7400
+h = 2, graph_num = 7500
+h = 2, graph_num = 7600
+h = 2, graph_num = 7700
+h = 2, graph_num = 7800
+h = 2, graph_num = 7900
+h = 2, graph_num = 8000
+h = 2, graph_num = 8100
+h = 2, graph_num = 8200
+h = 2, graph_num = 8300
+h = 2, graph_num = 8400
+h = 2, graph_num = 8500
+h = 2, graph_num = 8600
+h = 2, graph_num = 8700
+h = 2, graph_num = 8800
+h = 2, graph_num = 8900
+h = 2, graph_num = 9000
+h = 2, graph_num = 9100
+h = 2, graph_num = 9200
+h = 2, graph_num = 9300
+h = 2, graph_num = 9400
+h = 2, graph_num = 9500
+h = 2, graph_num = 9600
+h = 2, graph_num = 9700
+h = 2, graph_num = 9800
+h = 2, graph_num = 9900
+h = 2, graph_num = 10000
+h = 2, graph_num = 10100
+h = 2, graph_num = 10200
+h = 2, graph_num = 10300
+h = 2, graph_num = 10400
+h = 2, graph_num = 10500
+h = 2, graph_num = 10600
+h = 2, graph_num = 10700
+h = 2, graph_num = 10800
+h = 2, graph_num = 10900
+h = 2, graph_num = 11000
+h = 2, graph_num = 11100
+h = 2, graph_num = 11200
+h = 2, graph_num = 11300
+h = 2, graph_num = 11400
+h = 2, graph_num = 11500
+h = 2, graph_num = 11600
+h = 2, graph_num = 11700
+h = 2, graph_num = 11800
+h = 2, graph_num = 11900
+h = 2, graph_num = 12000
+h = 2, graph_num = 12100
+h = 2, graph_num = 12200
+h = 2, graph_num = 12300
+h = 2, graph_num = 12400
+h = 2, graph_num = 12500
+h = 2, graph_num = 12600
+h = 2, graph_num = 12700
+h = 2, graph_num = 12800
+h = 2, graph_num = 12900
+h = 2, graph_num = 13000
+h = 2, graph_num = 13100
+h = 2, graph_num = 13200
+h = 2, graph_num = 13300
+h = 2, graph_num = 13400
+h = 2, graph_num = 13500
+h = 2, graph_num = 13600
+h = 2, graph_num = 13700
+h = 2, graph_num = 13800
+h = 2, graph_num = 13900
+h = 2, graph_num = 14000
+h = 2, graph_num = 14100
+h = 2, graph_num = 14200
+h = 2, graph_num = 14300
+h = 2, graph_num = 14400
+h = 2, graph_num = 14500
+h = 2, graph_num = 14600
+h = 2, graph_num = 14700
+h = 3, graph_num = 0
+h = 3, graph_num = 100
+h = 3, graph_num = 200
+h = 3, graph_num = 300
+h = 3, graph_num = 400
+h = 3, graph_num = 500
+h = 3, graph_num = 600
+h = 3, graph_num = 700
+h = 3, graph_num = 800
+h = 3, graph_num = 900
+h = 3, graph_num = 1000
+h = 3, graph_num = 1100
+h = 3, graph_num = 1200
+h = 3, graph_num = 1300
+h = 3, graph_num = 1400
+h = 3, graph_num = 1500
+h = 3, graph_num = 1600
+h = 3, graph_num = 1700
+h = 3, graph_num = 1800
+h = 3, graph_num = 1900
+h = 3, graph_num = 2000
+h = 3, graph_num = 2100
+h = 3, graph_num = 2200
+h = 3, graph_num = 2300
+h = 3, graph_num = 2400
+h = 3, graph_num = 2500
+h = 3, graph_num = 2600
+h = 3, graph_num = 2700
+h = 3, graph_num = 2800
+h = 3, graph_num = 2900
+h = 3, graph_num = 3000
+h = 3, graph_num = 3100
+h = 3, graph_num = 3200
+h = 3, graph_num = 3300
+h = 3, graph_num = 3400
+h = 3, graph_num = 3500
+h = 3, graph_num = 3600
+h = 3, graph_num = 3700
+h = 3, graph_num = 3800
+h = 3, graph_num = 3900
+h = 3, graph_num = 4000
+h = 3, graph_num = 4100
+h = 3, graph_num = 4200
+h = 3, graph_num = 4300
+h = 3, graph_num = 4400
+h = 3, graph_num = 4500
+h = 3, graph_num = 4600
+h = 3, graph_num = 4700
+h = 3, graph_num = 4800
+h = 3, graph_num = 4900
+h = 3, graph_num = 5000
+h = 3, graph_num = 5100
+h = 3, graph_num = 5200
+h = 3, graph_num = 5300
+h = 3, graph_num = 5400
+h = 3, graph_num = 5500
+h = 3, graph_num = 5600
+h = 3, graph_num = 5700
+h = 3, graph_num = 5800
+h = 3, graph_num = 5900
+h = 3, graph_num = 6000
+h = 3, graph_num = 6100
+h = 3, graph_num = 6200
+h = 3, graph_num = 6300
+h = 3, graph_num = 6400
+h = 3, graph_num = 6500
+h = 3, graph_num = 6600
+h = 3, graph_num = 6700
+h = 3, graph_num = 6800
+h = 3, graph_num = 6900
+h = 3, graph_num = 7000
+h = 3, graph_num = 7100
+h = 3, graph_num = 7200
+h = 3, graph_num = 7300
+h = 3, graph_num = 7400
+h = 3, graph_num = 7500
+h = 3, graph_num = 7600
+h = 3, graph_num = 7700
+h = 3, graph_num = 7800
+h = 3, graph_num = 7900
+h = 3, graph_num = 8000
+h = 3, graph_num = 8100
+h = 3, graph_num = 8200
+h = 3, graph_num = 8300
+h = 3, graph_num = 8400
+h = 3, graph_num = 8500
+h = 3, graph_num = 8600
+h = 3, graph_num = 8700
+h = 3, graph_num = 8800
+h = 3, graph_num = 8900
+h = 3, graph_num = 9000
+h = 3, graph_num = 9100
+h = 3, graph_num = 9200
+h = 3, graph_num = 9300
+h = 3, graph_num = 9400
+h = 3, graph_num = 9500
+h = 3, graph_num = 9600
+h = 3, graph_num = 9700
+h = 3, graph_num = 9800
+h = 3, graph_num = 9900
+h = 3, graph_num = 10000
+h = 3, graph_num = 10100
+h = 3, graph_num = 10200
+h = 3, graph_num = 10300
+h = 3, graph_num = 10400
+h = 3, graph_num = 10500
+h = 3, graph_num = 10600
+h = 3, graph_num = 10700
+h = 3, graph_num = 10800
+h = 3, graph_num = 10900
+h = 3, graph_num = 11000
+h = 3, graph_num = 11100
+h = 3, graph_num = 11200
+h = 3, graph_num = 11300
+h = 3, graph_num = 11400
+h = 3, graph_num = 11500
+h = 3, graph_num = 11600
+h = 3, graph_num = 11700
+h = 3, graph_num = 11800
+h = 3, graph_num = 11900
+h = 3, graph_num = 12000
+h = 3, graph_num = 12100
+h = 3, graph_num = 12200
+h = 3, graph_num = 12300
+h = 3, graph_num = 12400
+h = 3, graph_num = 12500
+h = 3, graph_num = 12600
+h = 3, graph_num = 12700
+h = 3, graph_num = 12800
+h = 3, graph_num = 12900
+h = 3, graph_num = 13000
+h = 3, graph_num = 13100
+h = 3, graph_num = 13200
+h = 3, graph_num = 13300
+h = 3, graph_num = 13400
+h = 3, graph_num = 13500
+h = 3, graph_num = 13600
+h = 3, graph_num = 13700
+h = 3, graph_num = 13800
+h = 3, graph_num = 13900
+h = 3, graph_num = 14000
+h = 3, graph_num = 14100
+h = 3, graph_num = 14200
+h = 3, graph_num = 14300
+h = 3, graph_num = 14400
+h = 3, graph_num = 14500
+h = 3, graph_num = 14600
+h = 3, graph_num = 14700
+h = 4, graph_num = 0
+h = 4, graph_num = 100
+h = 4, graph_num = 200
+h = 4, graph_num = 300
+h = 4, graph_num = 400
+h = 4, graph_num = 500
+h = 4, graph_num = 600
+h = 4, graph_num = 700
+h = 4, graph_num = 800
+h = 4, graph_num = 900
+h = 4, graph_num = 1000
+h = 4, graph_num = 1100
+h = 4, graph_num = 1200
+h = 4, graph_num = 1300
+h = 4, graph_num = 1400
+h = 4, graph_num = 1500
+h = 4, graph_num = 1600
+h = 4, graph_num = 1700
+h = 4, graph_num = 1800
+h = 4, graph_num = 1900
+h = 4, graph_num = 2000
+h = 4, graph_num = 2100
+h = 4, graph_num = 2200
+h = 4, graph_num = 2300
+h = 4, graph_num = 2400
+h = 4, graph_num = 2500
+h = 4, graph_num = 2600
+h = 4, graph_num = 2700
+h = 4, graph_num = 2800
+h = 4, graph_num = 2900
+h = 4, graph_num = 3000
+h = 4, graph_num = 3100
+h = 4, graph_num = 3200
+h = 4, graph_num = 3300
+h = 4, graph_num = 3400
+h = 4, graph_num = 3500
+h = 4, graph_num = 3600
+h = 4, graph_num = 3700
+h = 4, graph_num = 3800
+h = 4, graph_num = 3900
+h = 4, graph_num = 4000
+h = 4, graph_num = 4100
+h = 4, graph_num = 4200
+h = 4, graph_num = 4300
+h = 4, graph_num = 4400
+h = 4, graph_num = 4500
+h = 4, graph_num = 4600
+h = 4, graph_num = 4700
+h = 4, graph_num = 4800
+h = 4, graph_num = 4900
+h = 4, graph_num = 5000
+h = 4, graph_num = 5100
+h = 4, graph_num = 5200
+h = 4, graph_num = 5300
+h = 4, graph_num = 5400
+h = 4, graph_num = 5500
+h = 4, graph_num = 5600
+h = 4, graph_num = 5700
+h = 4, graph_num = 5800
+h = 4, graph_num = 5900
+h = 4, graph_num = 6000
+h = 4, graph_num = 6100
+h = 4, graph_num = 6200
+h = 4, graph_num = 6300
+h = 4, graph_num = 6400
+h = 4, graph_num = 6500
+h = 4, graph_num = 6600
+h = 4, graph_num = 6700
+h = 4, graph_num = 6800
+h = 4, graph_num = 6900
+h = 4, graph_num = 7000
+h = 4, graph_num = 7100
+h = 4, graph_num = 7200
+h = 4, graph_num = 7300
+h = 4, graph_num = 7400
+h = 4, graph_num = 7500
+h = 4, graph_num = 7600
+h = 4, graph_num = 7700
+h = 4, graph_num = 7800
+h = 4, graph_num = 7900
+h = 4, graph_num = 8000
+h = 4, graph_num = 8100
+h = 4, graph_num = 8200
+h = 4, graph_num = 8300
+h = 4, graph_num = 8400
+h = 4, graph_num = 8500
+h = 4, graph_num = 8600
+h = 4, graph_num = 8700
+h = 4, graph_num = 8800
+h = 4, graph_num = 8900
+h = 4, graph_num = 9000
+h = 4, graph_num = 9100
+h = 4, graph_num = 9200
+h = 4, graph_num = 9300
+h = 4, graph_num = 9400
+h = 4, graph_num = 9500
+h = 4, graph_num = 9600
+h = 4, graph_num = 9700
+h = 4, graph_num = 9800
+h = 4, graph_num = 9900
+h = 4, graph_num = 10000
+h = 4, graph_num = 10100
+h = 4, graph_num = 10200
+h = 4, graph_num = 10300
+h = 4, graph_num = 10400
+h = 4, graph_num = 10500
+h = 4, graph_num = 10600
+h = 4, graph_num = 10700
+h = 4, graph_num = 10800
+h = 4, graph_num = 10900
+h = 4, graph_num = 11000
+h = 4, graph_num = 11100
+h = 4, graph_num = 11200
+h = 4, graph_num = 11300
+h = 4, graph_num = 11400
+h = 4, graph_num = 11500
+h = 4, graph_num = 11600
+h = 4, graph_num = 11700
+h = 4, graph_num = 11800
+h = 4, graph_num = 11900
+h = 4, graph_num = 12000
+h = 4, graph_num = 12100
+h = 4, graph_num = 12200
+h = 4, graph_num = 12300
+h = 4, graph_num = 12400
+h = 4, graph_num = 12500
+h = 4, graph_num = 12600
+h = 4, graph_num = 12700
+h = 4, graph_num = 12800
+h = 4, graph_num = 12900
+h = 4, graph_num = 13000
+h = 4, graph_num = 13100
+h = 4, graph_num = 13200
+h = 4, graph_num = 13300
+h = 4, graph_num = 13400
+h = 4, graph_num = 13500
+h = 4, graph_num = 13600
+h = 4, graph_num = 13700
+h = 4, graph_num = 13800
+h = 4, graph_num = 13900
+h = 4, graph_num = 14000
+h = 4, graph_num = 14100
+h = 4, graph_num = 14200
+h = 4, graph_num = 14300
+h = 4, graph_num = 14400
+h = 4, graph_num = 14500
+h = 4, graph_num = 14600
+h = 4, graph_num = 14700
+h = 5, graph_num = 0
+h = 5, graph_num = 100
+h = 5, graph_num = 200
+h = 5, graph_num = 300
+h = 5, graph_num = 400
+h = 5, graph_num = 500
+h = 5, graph_num = 600
+h = 5, graph_num = 700
+h = 5, graph_num = 800
+h = 5, graph_num = 900
+h = 5, graph_num = 1000
+h = 5, graph_num = 1100
+h = 5, graph_num = 1200
+h = 5, graph_num = 1300
+h = 5, graph_num = 1400
+h = 5, graph_num = 1500
+h = 5, graph_num = 1600
+h = 5, graph_num = 1700
+h = 5, graph_num = 1800
+h = 5, graph_num = 1900
+h = 5, graph_num = 2000
+h = 5, graph_num = 2100
+h = 5, graph_num = 2200
+h = 5, graph_num = 2300
+h = 5, graph_num = 2400
+h = 5, graph_num = 2500
+h = 5, graph_num = 2600
+h = 5, graph_num = 2700
+h = 5, graph_num = 2800
+h = 5, graph_num = 2900
+h = 5, graph_num = 3000
+h = 5, graph_num = 3100
+h = 5, graph_num = 3200
+h = 5, graph_num = 3300
+h = 5, graph_num = 3400
+h = 5, graph_num = 3500
+h = 5, graph_num = 3600
+h = 5, graph_num = 3700
+h = 5, graph_num = 3800
+h = 5, graph_num = 3900
+h = 5, graph_num = 4000
+h = 5, graph_num = 4100
+h = 5, graph_num = 4200
+h = 5, graph_num = 4300
+h = 5, graph_num = 4400
+h = 5, graph_num = 4500
+h = 5, graph_num = 4600
+h = 5, graph_num = 4700
+h = 5, graph_num = 4800
+h = 5, graph_num = 4900
+h = 5, graph_num = 5000
+h = 5, graph_num = 5100
+h = 5, graph_num = 5200
+h = 5, graph_num = 5300
+h = 5, graph_num = 5400
+h = 5, graph_num = 5500
+h = 5, graph_num = 5600
+h = 5, graph_num = 5700
+h = 5, graph_num = 5800
+h = 5, graph_num = 5900
+h = 5, graph_num = 6000
+h = 5, graph_num = 6100
+h = 5, graph_num = 6200
+h = 5, graph_num = 6300
+h = 5, graph_num = 6400
+h = 5, graph_num = 6500
+h = 5, graph_num = 6600
+h = 5, graph_num = 6700
+h = 5, graph_num = 6800
+h = 5, graph_num = 6900
+h = 5, graph_num = 7000
+h = 5, graph_num = 7100
+h = 5, graph_num = 7200
+h = 5, graph_num = 7300
+h = 5, graph_num = 7400
+h = 5, graph_num = 7500
+h = 5, graph_num = 7600
+h = 5, graph_num = 7700
+h = 5, graph_num = 7800
+h = 5, graph_num = 7900
+h = 5, graph_num = 8000
+h = 5, graph_num = 8100
+h = 5, graph_num = 8200
+h = 5, graph_num = 8300
+h = 5, graph_num = 8400
+h = 5, graph_num = 8500
+h = 5, graph_num = 8600
+h = 5, graph_num = 8700
+h = 5, graph_num = 8800
+h = 5, graph_num = 8900
+h = 5, graph_num = 9000
+h = 5, graph_num = 9100
+h = 5, graph_num = 9200
+h = 5, graph_num = 9300
+h = 5, graph_num = 9400
+h = 5, graph_num = 9500
+h = 5, graph_num = 9600
+h = 5, graph_num = 9700
+h = 5, graph_num = 9800
+h = 5, graph_num = 9900
+h = 5, graph_num = 10000
+h = 5, graph_num = 10100
+h = 5, graph_num = 10200
+h = 5, graph_num = 10300
+h = 5, graph_num = 10400
+h = 5, graph_num = 10500
+h = 5, graph_num = 10600
+h = 5, graph_num = 10700
+h = 5, graph_num = 10800
+h = 5, graph_num = 10900
+h = 5, graph_num = 11000
+h = 5, graph_num = 11100
+h = 5, graph_num = 11200
+h = 5, graph_num = 11300
+h = 5, graph_num = 11400
+h = 5, graph_num = 11500
+h = 5, graph_num = 11600
+h = 5, graph_num = 11700
+h = 5, graph_num = 11800
+h = 5, graph_num = 11900
+h = 5, graph_num = 12000
+h = 5, graph_num = 12100
+h = 5, graph_num = 12200
+h = 5, graph_num = 12300
+h = 5, graph_num = 12400
+h = 5, graph_num = 12500
+h = 5, graph_num = 12600
+h = 5, graph_num = 12700
+h = 5, graph_num = 12800
+h = 5, graph_num = 12900
+h = 5, graph_num = 13000
+h = 5, graph_num = 13100
+h = 5, graph_num = 13200
+h = 5, graph_num = 13300
+h = 5, graph_num = 13400
+h = 5, graph_num = 13500
+h = 5, graph_num = 13600
+h = 5, graph_num = 13700
+h = 5, graph_num = 13800
+h = 5, graph_num = 13900
+h = 5, graph_num = 14000
+h = 5, graph_num = 14100
+h = 5, graph_num = 14200
+h = 5, graph_num = 14300
+h = 5, graph_num = 14400
+h = 5, graph_num = 14500
+h = 5, graph_num = 14600
+h = 5, graph_num = 14700
+Graph loading and feature exraction took 12801.0 seconds.
+
+COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER with LINEAR kernel (OPT_PARAM) on ANDROID FCG 14795
+
+param = 0, i = 0, j = 0: params = {'C': 0.01}
+param = 0, i = 0, j = 0: score = 0.94
+param = 1, i = 0, j = 0: params = {'C': 0.01}
+param = 1, i = 0, j = 0: score = 0.94
+param = 2, i = 0, j = 0: params = {'C': 0.01}
+param = 2, i = 0, j = 0: score = 0.94
+param = 3, i = 0, j = 0: params = {'C': 0.01}
+param = 3, i = 0, j = 0: score = 0.94
+param = 4, i = 0, j = 0: params = {'C': 0.01}
+param = 4, i = 0, j = 0: score = 0.94
+param = 5, i = 0, j = 0: params = {'C': 0.01}
+param = 5, i = 0, j = 0: score = 0.94
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 0, j = 1: params = {'C': 0.01}
+param = 0, i = 0, j = 1: score = 0.94
+param = 1, i = 0, j = 1: params = {'C': 0.46415888336127797}
+param = 1, i = 0, j = 1: score = 0.92
+param = 2, i = 0, j = 1: params = {'C': 0.01}
+param = 2, i = 0, j = 1: score = 0.93
+param = 3, i = 0, j = 1: params = {'C': 0.01}
+param = 3, i = 0, j = 1: score = 0.95
+param = 4, i = 0, j = 1: params = {'C': 0.01}
+param = 4, i = 0, j = 1: score = 0.94
+param = 5, i = 0, j = 1: params = {'C': 0.01}
+param = 5, i = 0, j = 1: score = 0.94
+-> score on test data = 0.95 (best param = 3)
+
+param = 0, i = 0, j = 2: params = {'C': 0.01}
+param = 0, i = 0, j = 2: score = 0.93
+param = 1, i = 0, j = 2: params = {'C': 0.01}
+param = 1, i = 0, j = 2: score = 0.94
+param = 2, i = 0, j = 2: params = {'C': 0.01}
+param = 2, i = 0, j = 2: score = 0.94
+param = 3, i = 0, j = 2: params = {'C': 0.01}
+param = 3, i = 0, j = 2: score = 0.93
+param = 4, i = 0, j = 2: params = {'C': 0.01}
+param = 4, i = 0, j = 2: score = 0.93
+param = 5, i = 0, j = 2: params = {'C': 0.01}
+param = 5, i = 0, j = 2: score = 0.93
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 0, j = 3: params = {'C': 0.01}
+param = 0, i = 0, j = 3: score = 0.93
+param = 1, i = 0, j = 3: params = {'C': 0.01}
+param = 1, i = 0, j = 3: score = 0.94
+param = 2, i = 0, j = 3: params = {'C': 0.01}
+param = 2, i = 0, j = 3: score = 0.94
+param = 3, i = 0, j = 3: params = {'C': 0.01}
+param = 3, i = 0, j = 3: score = 0.94
+param = 4, i = 0, j = 3: params = {'C': 0.01}
+param = 4, i = 0, j = 3: score = 0.93
+param = 5, i = 0, j = 3: params = {'C': 0.01}
+param = 5, i = 0, j = 3: score = 0.93
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 0, j = 4: params = {'C': 0.01}
+param = 0, i = 0, j = 4: score = 0.94
+param = 1, i = 0, j = 4: params = {'C': 0.01}
+param = 1, i = 0, j = 4: score = 0.94
+param = 2, i = 0, j = 4: params = {'C': 0.01}
+param = 2, i = 0, j = 4: score = 0.94
+param = 3, i = 0, j = 4: params = {'C': 0.01}
+param = 3, i = 0, j = 4: score = 0.94
+param = 4, i = 0, j = 4: params = {'C': 0.01}
+param = 4, i = 0, j = 4: score = 0.94
+param = 5, i = 0, j = 4: params = {'C': 0.01}
+param = 5, i = 0, j = 4: score = 0.93
+-> score on test data = 0.94 (best param = 2)
+
+param = 0, i = 0, j = 5: params = {'C': 0.01}
+param = 0, i = 0, j = 5: score = 0.94
+param = 1, i = 0, j = 5: params = {'C': 0.01}
+param = 1, i = 0, j = 5: score = 0.94
+param = 2, i = 0, j = 5: params = {'C': 0.01}
+param = 2, i = 0, j = 5: score = 0.94
+param = 3, i = 0, j = 5: params = {'C': 0.01}
+param = 3, i = 0, j = 5: score = 0.94
+param = 4, i = 0, j = 5: params = {'C': 0.01}
+param = 4, i = 0, j = 5: score = 0.94
+param = 5, i = 0, j = 5: params = {'C': 0.01}
+param = 5, i = 0, j = 5: score = 0.93
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 0, j = 6: params = {'C': 0.01}
+param = 0, i = 0, j = 6: score = 0.93
+param = 1, i = 0, j = 6: params = {'C': 0.01}
+param = 1, i = 0, j = 6: score = 0.94
+param = 2, i = 0, j = 6: params = {'C': 0.01}
+param = 2, i = 0, j = 6: score = 0.93
+param = 3, i = 0, j = 6: params = {'C': 0.01}
+param = 3, i = 0, j = 6: score = 0.93
+param = 4, i = 0, j = 6: params = {'C': 0.01}
+param = 4, i = 0, j = 6: score = 0.94
+param = 5, i = 0, j = 6: params = {'C': 0.01}
+param = 5, i = 0, j = 6: score = 0.94
+-> score on test data = 0.94 (best param = 5)
+
+param = 0, i = 0, j = 7: params = {'C': 0.01}
+param = 0, i = 0, j = 7: score = 0.94
+param = 1, i = 0, j = 7: params = {'C': 0.01}
+param = 1, i = 0, j = 7: score = 0.94
+param = 2, i = 0, j = 7: params = {'C': 0.01}
+param = 2, i = 0, j = 7: score = 0.94
+param = 3, i = 0, j = 7: params = {'C': 0.01}
+param = 3, i = 0, j = 7: score = 0.94
+param = 4, i = 0, j = 7: params = {'C': 0.01}
+param = 4, i = 0, j = 7: score = 0.94
+param = 5, i = 0, j = 7: params = {'C': 0.01}
+param = 5, i = 0, j = 7: score = 0.93
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 0, j = 8: params = {'C': 0.01}
+param = 0, i = 0, j = 8: score = 0.93
+param = 1, i = 0, j = 8: params = {'C': 0.01}
+param = 1, i = 0, j = 8: score = 0.93
+param = 2, i = 0, j = 8: params = {'C': 0.01}
+param = 2, i = 0, j = 8: score = 0.93
+param = 3, i = 0, j = 8: params = {'C': 0.01}
+param = 3, i = 0, j = 8: score = 0.93
+param = 4, i = 0, j = 8: params = {'C': 0.01}
+param = 4, i = 0, j = 8: score = 0.93
+param = 5, i = 0, j = 8: params = {'C': 0.01}
+param = 5, i = 0, j = 8: score = 0.93
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 0, j = 9: params = {'C': 0.01}
+param = 0, i = 0, j = 9: score = 0.94
+param = 1, i = 0, j = 9: params = {'C': 0.01}
+param = 1, i = 0, j = 9: score = 0.95
+param = 2, i = 0, j = 9: params = {'C': 0.01}
+param = 2, i = 0, j = 9: score = 0.95
+param = 3, i = 0, j = 9: params = {'C': 0.01}
+param = 3, i = 0, j = 9: score = 0.95
+param = 4, i = 0, j = 9: params = {'C': 0.01}
+param = 4, i = 0, j = 9: score = 0.94
+param = 5, i = 0, j = 9: params = {'C': 0.01}
+param = 5, i = 0, j = 9: score = 0.94
+-> score on test data = 0.95 (best param = 2)
+
+-------------------------------------------------------------
+RESULT for i = 0: 0.9401821
+-------------------------------------------------------------
+
+param = 0, i = 1, j = 0: params = {'C': 0.01}
+param = 0, i = 1, j = 0: score = 0.93
+param = 1, i = 1, j = 0: params = {'C': 0.01}
+param = 1, i = 1, j = 0: score = 0.94
+param = 2, i = 1, j = 0: params = {'C': 0.01}
+param = 2, i = 1, j = 0: score = 0.94
+param = 3, i = 1, j = 0: params = {'C': 0.01}
+param = 3, i = 1, j = 0: score = 0.93
+param = 4, i = 1, j = 0: params = {'C': 0.01}
+param = 4, i = 1, j = 0: score = 0.93
+param = 5, i = 1, j = 0: params = {'C': 0.01}
+param = 5, i = 1, j = 0: score = 0.94
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 1, j = 1: params = {'C': 0.01}
+param = 0, i = 1, j = 1: score = 0.93
+param = 1, i = 1, j = 1: params = {'C': 0.01}
+param = 1, i = 1, j = 1: score = 0.95
+param = 2, i = 1, j = 1: params = {'C': 0.01}
+param = 2, i = 1, j = 1: score = 0.95
+param = 3, i = 1, j = 1: params = {'C': 0.01}
+param = 3, i = 1, j = 1: score = 0.95
+param = 4, i = 1, j = 1: params = {'C': 0.01}
+param = 4, i = 1, j = 1: score = 0.95
+param = 5, i = 1, j = 1: params = {'C': 0.01}
+param = 5, i = 1, j = 1: score = 0.94
+-> score on test data = 0.94 (best param = 4)
+
+param = 0, i = 1, j = 2: params = {'C': 0.01}
+param = 0, i = 1, j = 2: score = 0.93
+param = 1, i = 1, j = 2: params = {'C': 0.01}
+param = 1, i = 1, j = 2: score = 0.94
+param = 2, i = 1, j = 2: params = {'C': 0.01}
+param = 2, i = 1, j = 2: score = 0.94
+param = 3, i = 1, j = 2: params = {'C': 0.01}
+param = 3, i = 1, j = 2: score = 0.93
+param = 4, i = 1, j = 2: params = {'C': 0.01}
+param = 4, i = 1, j = 2: score = 0.93
+param = 5, i = 1, j = 2: params = {'C': 0.01}
+param = 5, i = 1, j = 2: score = 0.92
+-> score on test data = 0.88 (best param = 1)
+
+param = 0, i = 1, j = 3: params = {'C': 0.01}
+param = 0, i = 1, j = 3: score = 0.93
+param = 1, i = 1, j = 3: params = {'C': 0.01}
+param = 1, i = 1, j = 3: score = 0.94
+param = 2, i = 1, j = 3: params = {'C': 0.01}
+param = 2, i = 1, j = 3: score = 0.93
+param = 3, i = 1, j = 3: params = {'C': 0.01}
+param = 3, i = 1, j = 3: score = 0.94
+param = 4, i = 1, j = 3: params = {'C': 0.01}
+param = 4, i = 1, j = 3: score = 0.94
+param = 5, i = 1, j = 3: params = {'C': 0.01}
+param = 5, i = 1, j = 3: score = 0.94
+-> score on test data = 0.94 (best param = 3)
+
+param = 0, i = 1, j = 4: params = {'C': 0.01}
+param = 0, i = 1, j = 4: score = 0.95
+param = 1, i = 1, j = 4: params = {'C': 0.01}
+param = 1, i = 1, j = 4: score = 0.94
+param = 2, i = 1, j = 4: params = {'C': 0.01}
+param = 2, i = 1, j = 4: score = 0.94
+param = 3, i = 1, j = 4: params = {'C': 0.01}
+param = 3, i = 1, j = 4: score = 0.94
+param = 4, i = 1, j = 4: params = {'C': 0.01}
+param = 4, i = 1, j = 4: score = 0.94
+param = 5, i = 1, j = 4: params = {'C': 0.01}
+param = 5, i = 1, j = 4: score = 0.94
+-> score on test data = 0.95 (best param = 0)
+
+param = 0, i = 1, j = 5: params = {'C': 0.01}
+param = 0, i = 1, j = 5: score = 0.92
+param = 1, i = 1, j = 5: params = {'C': 0.01}
+param = 1, i = 1, j = 5: score = 0.93
+param = 2, i = 1, j = 5: params = {'C': 0.01}
+param = 2, i = 1, j = 5: score = 0.93
+param = 3, i = 1, j = 5: params = {'C': 0.01}
+param = 3, i = 1, j = 5: score = 0.94
+param = 4, i = 1, j = 5: params = {'C': 0.01}
+param = 4, i = 1, j = 5: score = 0.93
+param = 5, i = 1, j = 5: params = {'C': 0.01}
+param = 5, i = 1, j = 5: score = 0.93
+-> score on test data = 0.93 (best param = 3)
+
+param = 0, i = 1, j = 6: params = {'C': 0.01}
+param = 0, i = 1, j = 6: score = 0.93
+param = 1, i = 1, j = 6: params = {'C': 0.01}
+param = 1, i = 1, j = 6: score = 0.93
+param = 2, i = 1, j = 6: params = {'C': 0.01}
+param = 2, i = 1, j = 6: score = 0.93
+param = 3, i = 1, j = 6: params = {'C': 0.01}
+param = 3, i = 1, j = 6: score = 0.93
+param = 4, i = 1, j = 6: params = {'C': 0.01}
+param = 4, i = 1, j = 6: score = 0.93
+param = 5, i = 1, j = 6: params = {'C': 0.01}
+param = 5, i = 1, j = 6: score = 0.93
+-> score on test data = 0.80 (best param = 0)
+
+param = 0, i = 1, j = 7: params = {'C': 0.01}
+param = 0, i = 1, j = 7: score = 0.89
+param = 1, i = 1, j = 7: params = {'C': 0.01}
+param = 1, i = 1, j = 7: score = 0.95
+param = 2, i = 1, j = 7: params = {'C': 0.01}
+param = 2, i = 1, j = 7: score = 0.95
+param = 3, i = 1, j = 7: params = {'C': 0.01}
+param = 3, i = 1, j = 7: score = 0.94
+param = 4, i = 1, j = 7: params = {'C': 0.01}
+param = 4, i = 1, j = 7: score = 0.94
+param = 5, i = 1, j = 7: params = {'C': 0.01}
+param = 5, i = 1, j = 7: score = 0.94
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 1, j = 8: params = {'C': 0.01}
+param = 0, i = 1, j = 8: score = 0.92
+param = 1, i = 1, j = 8: params = {'C': 0.01}
+param = 1, i = 1, j = 8: score = 0.95
+param = 2, i = 1, j = 8: params = {'C': 0.46415888336127797}
+param = 2, i = 1, j = 8: score = 0.92
+param = 3, i = 1, j = 8: params = {'C': 0.01}
+param = 3, i = 1, j = 8: score = 0.94
+param = 4, i = 1, j = 8: params = {'C': 0.01}
+param = 4, i = 1, j = 8: score = 0.93
+param = 5, i = 1, j = 8: params = {'C': 0.01}
+param = 5, i = 1, j = 8: score = 0.94
+-> score on test data = 0.95 (best param = 1)
+
+param = 0, i = 1, j = 9: params = {'C': 0.01}
+param = 0, i = 1, j = 9: score = 0.94
+param = 1, i = 1, j = 9: params = {'C': 0.01}
+param = 1, i = 1, j = 9: score = 0.92
+param = 2, i = 1, j = 9: params = {'C': 0.01}
+param = 2, i = 1, j = 9: score = 0.94
+param = 3, i = 1, j = 9: params = {'C': 0.01}
+param = 3, i = 1, j = 9: score = 0.94
+param = 4, i = 1, j = 9: params = {'C': 0.01}
+param = 4, i = 1, j = 9: score = 0.94
+param = 5, i = 1, j = 9: params = {'C': 0.01}
+param = 5, i = 1, j = 9: score = 0.94
+-> score on test data = 0.92 (best param = 2)
+
+-------------------------------------------------------------
+RESULT for i = 1: 0.9188202
+-------------------------------------------------------------
+
+param = 0, i = 2, j = 0: params = {'C': 0.01}
+param = 0, i = 2, j = 0: score = 0.94
+param = 1, i = 2, j = 0: params = {'C': 0.01}
+param = 1, i = 2, j = 0: score = 0.94
+param = 2, i = 2, j = 0: params = {'C': 0.01}
+param = 2, i = 2, j = 0: score = 0.94
+param = 3, i = 2, j = 0: params = {'C': 0.01}
+param = 3, i = 2, j = 0: score = 0.94
+param = 4, i = 2, j = 0: params = {'C': 0.01}
+param = 4, i = 2, j = 0: score = 0.94
+param = 5, i = 2, j = 0: params = {'C': 0.01}
+param = 5, i = 2, j = 0: score = 0.94
+-> score on test data = 0.94 (best param = 0)
+
+param = 0, i = 2, j = 1: params = {'C': 0.01}
+param = 0, i = 2, j = 1: score = 0.94
+param = 1, i = 2, j = 1: params = {'C': 0.01}
+param = 1, i = 2, j = 1: score = 0.94
+param = 2, i = 2, j = 1: params = {'C': 0.01}
+param = 2, i = 2, j = 1: score = 0.94
+param = 3, i = 2, j = 1: params = {'C': 0.01}
+param = 3, i = 2, j = 1: score = 0.94
+param = 4, i = 2, j = 1: params = {'C': 0.01}
+param = 4, i = 2, j = 1: score = 0.94
+param = 5, i = 2, j = 1: params = {'C': 0.01}
+param = 5, i = 2, j = 1: score = 0.93
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 2, j = 2: params = {'C': 0.01}
+param = 0, i = 2, j = 2: score = 0.92
+param = 1, i = 2, j = 2: params = {'C': 0.01}
+param = 1, i = 2, j = 2: score = 0.93
+param = 2, i = 2, j = 2: params = {'C': 0.01}
+param = 2, i = 2, j = 2: score = 0.93
+param = 3, i = 2, j = 2: params = {'C': 0.01}
+param = 3, i = 2, j = 2: score = 0.92
+param = 4, i = 2, j = 2: params = {'C': 0.01}
+param = 4, i = 2, j = 2: score = 0.92
+param = 5, i = 2, j = 2: params = {'C': 0.01}
+param = 5, i = 2, j = 2: score = 0.93
+-> score on test data = 0.92 (best param = 1)
+
+param = 0, i = 2, j = 3: params = {'C': 0.01}
+param = 0, i = 2, j = 3: score = 0.93
+param = 1, i = 2, j = 3: params = {'C': 0.01}
+param = 1, i = 2, j = 3: score = 0.94
+param = 2, i = 2, j = 3: params = {'C': 0.01}
+param = 2, i = 2, j = 3: score = 0.94
+param = 3, i = 2, j = 3: params = {'C': 0.01}
+param = 3, i = 2, j = 3: score = 0.94
+param = 4, i = 2, j = 3: params = {'C': 0.01}
+param = 4, i = 2, j = 3: score = 0.94
+param = 5, i = 2, j = 3: params = {'C': 0.01}
+param = 5, i = 2, j = 3: score = 0.94
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 2, j = 4: params = {'C': 0.01}
+param = 0, i = 2, j = 4: score = 0.93
+param = 1, i = 2, j = 4: params = {'C': 0.01}
+param = 1, i = 2, j = 4: score = 0.94
+param = 2, i = 2, j = 4: params = {'C': 0.01}
+param = 2, i = 2, j = 4: score = 0.92
+param = 3, i = 2, j = 4: params = {'C': 0.01}
+param = 3, i = 2, j = 4: score = 0.94
+param = 4, i = 2, j = 4: params = {'C': 0.01}
+param = 4, i = 2, j = 4: score = 0.91
+param = 5, i = 2, j = 4: params = {'C': 0.01}
+param = 5, i = 2, j = 4: score = 0.93
+-> score on test data = 0.94 (best param = 3)
+
+param = 0, i = 2, j = 5: params = {'C': 0.01}
+param = 0, i = 2, j = 5: score = 0.93
+param = 1, i = 2, j = 5: params = {'C': 0.01}
+param = 1, i = 2, j = 5: score = 0.93
+param = 2, i = 2, j = 5: params = {'C': 0.01}
+param = 2, i = 2, j = 5: score = 0.91
+param = 3, i = 2, j = 5: params = {'C': 0.01}
+param = 3, i = 2, j = 5: score = 0.93
+param = 4, i = 2, j = 5: params = {'C': 0.01}
+param = 4, i = 2, j = 5: score = 0.94
+param = 5, i = 2, j = 5: params = {'C': 0.01}
+param = 5, i = 2, j = 5: score = 0.93
+-> score on test data = 0.93 (best param = 4)
+
+param = 0, i = 2, j = 6: params = {'C': 0.01}
+param = 0, i = 2, j = 6: score = 0.94
+param = 1, i = 2, j = 6: params = {'C': 0.01}
+param = 1, i = 2, j = 6: score = 0.94
+param = 2, i = 2, j = 6: params = {'C': 0.01}
+param = 2, i = 2, j = 6: score = 0.93
+param = 3, i = 2, j = 6: params = {'C': 0.01}
+param = 3, i = 2, j = 6: score = 0.94
+param = 4, i = 2, j = 6: params = {'C': 0.01}
+param = 4, i = 2, j = 6: score = 0.94
+param = 5, i = 2, j = 6: params = {'C': 0.01}
+param = 5, i = 2, j = 6: score = 0.94
+-> score on test data = 0.94 (best param = 0)
+
+param = 0, i = 2, j = 7: params = {'C': 0.01}
+param = 0, i = 2, j = 7: score = 0.94
+param = 1, i = 2, j = 7: params = {'C': 0.01}
+param = 1, i = 2, j = 7: score = 0.93
+param = 2, i = 2, j = 7: params = {'C': 0.01}
+param = 2, i = 2, j = 7: score = 0.95
+param = 3, i = 2, j = 7: params = {'C': 0.01}
+param = 3, i = 2, j = 7: score = 0.94
+param = 4, i = 2, j = 7: params = {'C': 0.01}
+param = 4, i = 2, j = 7: score = 0.94
+param = 5, i = 2, j = 7: params = {'C': 0.01}
+param = 5, i = 2, j = 7: score = 0.93
+-> score on test data = 0.94 (best param = 2)
+
+param = 0, i = 2, j = 8: params = {'C': 0.01}
+param = 0, i = 2, j = 8: score = 0.93
+param = 1, i = 2, j = 8: params = {'C': 0.01}
+param = 1, i = 2, j = 8: score = 0.94
+param = 2, i = 2, j = 8: params = {'C': 0.01}
+param = 2, i = 2, j = 8: score = 0.94
+param = 3, i = 2, j = 8: params = {'C': 0.01}
+param = 3, i = 2, j = 8: score = 0.94
+param = 4, i = 2, j = 8: params = {'C': 0.01}
+param = 4, i = 2, j = 8: score = 0.94
+param = 5, i = 2, j = 8: params = {'C': 0.01}
+param = 5, i = 2, j = 8: score = 0.94
+-> score on test data = 0.94 (best param = 2)
+
+param = 0, i = 2, j = 9: params = {'C': 0.01}
+param = 0, i = 2, j = 9: score = 0.93
+param = 1, i = 2, j = 9: params = {'C': 0.01}
+param = 1, i = 2, j = 9: score = 0.95
+param = 2, i = 2, j = 9: params = {'C': 0.01}
+param = 2, i = 2, j = 9: score = 0.95
+param = 3, i = 2, j = 9: params = {'C': 0.01}
+param = 3, i = 2, j = 9: score = 0.95
+param = 4, i = 2, j = 9: params = {'C': 0.01}
+param = 4, i = 2, j = 9: score = 0.95
+param = 5, i = 2, j = 9: params = {'C': 0.01}
+param = 5, i = 2, j = 9: score = 0.94
+-> score on test data = 0.95 (best param = 1)
+
+-------------------------------------------------------------
+RESULT for i = 2: 0.9391019
+-------------------------------------------------------------
+
+param = 0, i = 3, j = 0: params = {'C': 0.01}
+param = 0, i = 3, j = 0: score = 0.92
+param = 1, i = 3, j = 0: params = {'C': 0.01}
+param = 1, i = 3, j = 0: score = 0.84
+param = 2, i = 3, j = 0: params = {'C': 0.01}
+param = 2, i = 3, j = 0: score = 0.94
+param = 3, i = 3, j = 0: params = {'C': 0.01}
+param = 3, i = 3, j = 0: score = 0.94
+param = 4, i = 3, j = 0: params = {'C': 0.01}
+param = 4, i = 3, j = 0: score = 0.94
+param = 5, i = 3, j = 0: params = {'C': 0.01}
+param = 5, i = 3, j = 0: score = 0.93
+-> score on test data = 0.94 (best param = 2)
+
+param = 0, i = 3, j = 1: params = {'C': 0.01}
+param = 0, i = 3, j = 1: score = 0.94
+param = 1, i = 3, j = 1: params = {'C': 0.01}
+param = 1, i = 3, j = 1: score = 0.95
+param = 2, i = 3, j = 1: params = {'C': 0.01}
+param = 2, i = 3, j = 1: score = 0.94
+param = 3, i = 3, j = 1: params = {'C': 0.01}
+param = 3, i = 3, j = 1: score = 0.94
+param = 4, i = 3, j = 1: params = {'C': 0.01}
+param = 4, i = 3, j = 1: score = 0.94
+param = 5, i = 3, j = 1: params = {'C': 0.01}
+param = 5, i = 3, j = 1: score = 0.94
+-> score on test data = 0.93 (best param = 1)
+
+param = 0, i = 3, j = 2: params = {'C': 0.01}
+param = 0, i = 3, j = 2: score = 0.94
+param = 1, i = 3, j = 2: params = {'C': 0.01}
+param = 1, i = 3, j = 2: score = 0.94
+param = 2, i = 3, j = 2: params = {'C': 0.01}
+param = 2, i = 3, j = 2: score = 0.94
+param = 3, i = 3, j = 2: params = {'C': 0.01}
+param = 3, i = 3, j = 2: score = 0.94
+param = 4, i = 3, j = 2: params = {'C': 0.01}
+param = 4, i = 3, j = 2: score = 0.94
+param = 5, i = 3, j = 2: params = {'C': 0.01}
+param = 5, i = 3, j = 2: score = 0.94
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 3, j = 3: params = {'C': 0.01}
+param = 0, i = 3, j = 3: score = 0.94
+param = 1, i = 3, j = 3: params = {'C': 0.01}
+param = 1, i = 3, j = 3: score = 0.93
+param = 2, i = 3, j = 3: params = {'C': 0.01}
+param = 2, i = 3, j = 3: score = 0.93
+param = 3, i = 3, j = 3: params = {'C': 0.01}
+param = 3, i = 3, j = 3: score = 0.94
+param = 4, i = 3, j = 3: params = {'C': 0.01}
+param = 4, i = 3, j = 3: score = 0.92
+param = 5, i = 3, j = 3: params = {'C': 0.01}
+param = 5, i = 3, j = 3: score = 0.93
+-> score on test data = 0.86 (best param = 0)
+
+param = 0, i = 3, j = 4: params = {'C': 0.01}
+param = 0, i = 3, j = 4: score = 0.93
+param = 1, i = 3, j = 4: params = {'C': 0.01}
+param = 1, i = 3, j = 4: score = 0.90
+param = 2, i = 3, j = 4: params = {'C': 0.01}
+param = 2, i = 3, j = 4: score = 0.94
+param = 3, i = 3, j = 4: params = {'C': 0.01}
+param = 3, i = 3, j = 4: score = 0.94
+param = 4, i = 3, j = 4: params = {'C': 0.01}
+param = 4, i = 3, j = 4: score = 0.93
+param = 5, i = 3, j = 4: params = {'C': 0.01}
+param = 5, i = 3, j = 4: score = 0.93
+-> score on test data = 0.94 (best param = 2)
+
+param = 0, i = 3, j = 5: params = {'C': 0.01}
+param = 0, i = 3, j = 5: score = 0.93
+param = 1, i = 3, j = 5: params = {'C': 0.01}
+param = 1, i = 3, j = 5: score = 0.94
+param = 2, i = 3, j = 5: params = {'C': 0.01}
+param = 2, i = 3, j = 5: score = 0.94
+param = 3, i = 3, j = 5: params = {'C': 0.01}
+param = 3, i = 3, j = 5: score = 0.94
+param = 4, i = 3, j = 5: params = {'C': 0.01}
+param = 4, i = 3, j = 5: score = 0.85
+param = 5, i = 3, j = 5: params = {'C': 0.01}
+param = 5, i = 3, j = 5: score = 0.93
+-> score on test data = 0.94 (best param = 3)
+
+param = 0, i = 3, j = 6: params = {'C': 0.01}
+param = 0, i = 3, j = 6: score = 0.91
+param = 1, i = 3, j = 6: params = {'C': 0.01}
+param = 1, i = 3, j = 6: score = 0.93
+param = 2, i = 3, j = 6: params = {'C': 0.01}
+param = 2, i = 3, j = 6: score = 0.94
+param = 3, i = 3, j = 6: params = {'C': 0.01}
+param = 3, i = 3, j = 6: score = 0.93
+param = 4, i = 3, j = 6: params = {'C': 0.01}
+param = 4, i = 3, j = 6: score = 0.94
+param = 5, i = 3, j = 6: params = {'C': 0.01}
+param = 5, i = 3, j = 6: score = 0.94
+-> score on test data = 0.94 (best param = 5)
+
+param = 0, i = 3, j = 7: params = {'C': 0.01}
+param = 0, i = 3, j = 7: score = 0.93
+param = 1, i = 3, j = 7: params = {'C': 0.01}
+param = 1, i = 3, j = 7: score = 0.94
+param = 2, i = 3, j = 7: params = {'C': 0.01}
+param = 2, i = 3, j = 7: score = 0.94
+param = 3, i = 3, j = 7: params = {'C': 0.01}
+param = 3, i = 3, j = 7: score = 0.94
+param = 4, i = 3, j = 7: params = {'C': 0.01}
+param = 4, i = 3, j = 7: score = 0.93
+param = 5, i = 3, j = 7: params = {'C': 0.01}
+param = 5, i = 3, j = 7: score = 0.93
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 3, j = 8: params = {'C': 0.01}
+param = 0, i = 3, j = 8: score = 0.93
+param = 1, i = 3, j = 8: params = {'C': 0.01}
+param = 1, i = 3, j = 8: score = 0.94
+param = 2, i = 3, j = 8: params = {'C': 0.01}
+param = 2, i = 3, j = 8: score = 0.94
+param = 3, i = 3, j = 8: params = {'C': 0.01}
+param = 3, i = 3, j = 8: score = 0.93
+param = 4, i = 3, j = 8: params = {'C': 0.01}
+param = 4, i = 3, j = 8: score = 0.94
+param = 5, i = 3, j = 8: params = {'C': 0.01}
+param = 5, i = 3, j = 8: score = 0.93
+-> score on test data = 0.94 (best param = 4)
+
+param = 0, i = 3, j = 9: params = {'C': 0.01}
+param = 0, i = 3, j = 9: score = 0.95
+param = 1, i = 3, j = 9: params = {'C': 0.01}
+param = 1, i = 3, j = 9: score = 0.95
+param = 2, i = 3, j = 9: params = {'C': 0.01}
+param = 2, i = 3, j = 9: score = 0.95
+param = 3, i = 3, j = 9: params = {'C': 0.01}
+param = 3, i = 3, j = 9: score = 0.95
+param = 4, i = 3, j = 9: params = {'C': 0.01}
+param = 4, i = 3, j = 9: score = 0.95
+param = 5, i = 3, j = 9: params = {'C': 0.01}
+param = 5, i = 3, j = 9: score = 0.94
+-> score on test data = 0.95 (best param = 0)
+
+-------------------------------------------------------------
+RESULT for i = 3: 0.9309262
+-------------------------------------------------------------
+
+param = 0, i = 4, j = 0: params = {'C': 0.01}
+param = 0, i = 4, j = 0: score = 0.93
+param = 1, i = 4, j = 0: params = {'C': 0.01}
+param = 1, i = 4, j = 0: score = 0.83
+param = 2, i = 4, j = 0: params = {'C': 0.01}
+param = 2, i = 4, j = 0: score = 0.91
+param = 3, i = 4, j = 0: params = {'C': 0.01}
+param = 3, i = 4, j = 0: score = 0.94
+param = 4, i = 4, j = 0: params = {'C': 0.01}
+param = 4, i = 4, j = 0: score = 0.93
+param = 5, i = 4, j = 0: params = {'C': 0.01}
+param = 5, i = 4, j = 0: score = 0.93
+-> score on test data = 0.93 (best param = 3)
+
+param = 0, i = 4, j = 1: params = {'C': 0.01}
+param = 0, i = 4, j = 1: score = 0.94
+param = 1, i = 4, j = 1: params = {'C': 0.01}
+param = 1, i = 4, j = 1: score = 0.94
+param = 2, i = 4, j = 1: params = {'C': 0.01}
+param = 2, i = 4, j = 1: score = 0.94
+param = 3, i = 4, j = 1: params = {'C': 0.01}
+param = 3, i = 4, j = 1: score = 0.94
+param = 4, i = 4, j = 1: params = {'C': 0.01}
+param = 4, i = 4, j = 1: score = 0.94
+param = 5, i = 4, j = 1: params = {'C': 0.46415888336127797}
+param = 5, i = 4, j = 1: score = 0.90
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 4, j = 2: params = {'C': 0.01}
+param = 0, i = 4, j = 2: score = 0.94
+param = 1, i = 4, j = 2: params = {'C': 0.01}
+param = 1, i = 4, j = 2: score = 0.94
+param = 2, i = 4, j = 2: params = {'C': 0.01}
+param = 2, i = 4, j = 2: score = 0.94
+param = 3, i = 4, j = 2: params = {'C': 0.01}
+param = 3, i = 4, j = 2: score = 0.94
+param = 4, i = 4, j = 2: params = {'C': 0.01}
+param = 4, i = 4, j = 2: score = 0.89
+param = 5, i = 4, j = 2: params = {'C': 0.01}
+param = 5, i = 4, j = 2: score = 0.94
+-> score on test data = 0.94 (best param = 1)
+
+param = 0, i = 4, j = 3: params = {'C': 0.01}
+param = 0, i = 4, j = 3: score = 0.94
+param = 1, i = 4, j = 3: params = {'C': 0.01}
+param = 1, i = 4, j = 3: score = 0.93
+param = 2, i = 4, j = 3: params = {'C': 0.01}
+param = 2, i = 4, j = 3: score = 0.94
+param = 3, i = 4, j = 3: params = {'C': 0.01}
+param = 3, i = 4, j = 3: score = 0.93
+param = 4, i = 4, j = 3: params = {'C': 0.01}
+param = 4, i = 4, j = 3: score = 0.93
+param = 5, i = 4, j = 3: params = {'C': 0.01}
+param = 5, i = 4, j = 3: score = 0.93
+-> score on test data = 0.93 (best param = 2)
+
+param = 0, i = 4, j = 4: params = {'C': 0.01}
+param = 0, i = 4, j = 4: score = 0.92
+param = 1, i = 4, j = 4: params = {'C': 0.01}
+param = 1, i = 4, j = 4: score = 0.93
+param = 2, i = 4, j = 4: params = {'C': 0.01}
+param = 2, i = 4, j = 4: score = 0.93
+param = 3, i = 4, j = 4: params = {'C': 0.01}
+param = 3, i = 4, j = 4: score = 0.88
+param = 4, i = 4, j = 4: params = {'C': 0.01}
+param = 4, i = 4, j = 4: score = 0.94
+param = 5, i = 4, j = 4: params = {'C': 0.01}
+param = 5, i = 4, j = 4: score = 0.94
+-> score on test data = 0.94 (best param = 4)
+
+param = 0, i = 4, j = 5: params = {'C': 0.01}
+param = 0, i = 4, j = 5: score = 0.94
+param = 1, i = 4, j = 5: params = {'C': 0.01}
+param = 1, i = 4, j = 5: score = 0.94
+param = 2, i = 4, j = 5: params = {'C': 0.01}
+param = 2, i = 4, j = 5: score = 0.94
+param = 3, i = 4, j = 5: params = {'C': 0.01}
+param = 3, i = 4, j = 5: score = 0.93
+param = 4, i = 4, j = 5: params = {'C': 0.01}
+param = 4, i = 4, j = 5: score = 0.94
+param = 5, i = 4, j = 5: params = {'C': 0.01}
+param = 5, i = 4, j = 5: score = 0.94
+-> score on test data = 0.94 (best param = 2)
+
+param = 0, i = 4, j = 6: params = {'C': 0.01}
+param = 0, i = 4, j = 6: score = 0.93
+param = 1, i = 4, j = 6: params = {'C': 0.01}
+param = 1, i = 4, j = 6: score = 0.93
+param = 2, i = 4, j = 6: params = {'C': 0.01}
+param = 2, i = 4, j = 6: score = 0.93
+param = 3, i = 4, j = 6: params = {'C': 0.01}
+param = 3, i = 4, j = 6: score = 0.90
+param = 4, i = 4, j = 6: params = {'C': 0.01}
+param = 4, i = 4, j = 6: score = 0.93
+param = 5, i = 4, j = 6: params = {'C': 0.01}
+param = 5, i = 4, j = 6: score = 0.92
+-> score on test data = 0.93 (best param = 1)
+
+param = 0, i = 4, j = 7: params = {'C': 0.01}
+param = 0, i = 4, j = 7: score = 0.94
+param = 1, i = 4, j = 7: params = {'C': 0.01}
+param = 1, i = 4, j = 7: score = 0.95
+param = 2, i = 4, j = 7: params = {'C': 0.01}
+param = 2, i = 4, j = 7: score = 0.95
+param = 3, i = 4, j = 7: params = {'C': 0.01}
+param = 3, i = 4, j = 7: score = 0.94
+param = 4, i = 4, j = 7: params = {'C': 0.01}
+param = 4, i = 4, j = 7: score = 0.94
+param = 5, i = 4, j = 7: params = {'C': 0.01}
+param = 5, i = 4, j = 7: score = 0.94
+-> score on test data = 0.95 (best param = 1)
+
+param = 0, i = 4, j = 8: params = {'C': 0.01}
+param = 0, i = 4, j = 8: score = 0.89
+param = 1, i = 4, j = 8: params = {'C': 0.01}
+param = 1, i = 4, j = 8: score = 0.92
+param = 2, i = 4, j = 8: params = {'C': 0.01}
+param = 2, i = 4, j = 8: score = 0.93
+param = 3, i = 4, j = 8: params = {'C': 0.01}
+param = 3, i = 4, j = 8: score = 0.93
+param = 4, i = 4, j = 8: params = {'C': 0.01}
+param = 4, i = 4, j = 8: score = 0.93
+param = 5, i = 4, j = 8: params = {'C': 0.01}
+param = 5, i = 4, j = 8: score = 0.92
+-> score on test data = 0.94 (best param = 2)
+
+param = 0, i = 4, j = 9: params = {'C': 0.01}
+param = 0, i = 4, j = 9: score = 0.94
+param = 1, i = 4, j = 9: params = {'C': 0.01}
+param = 1, i = 4, j = 9: score = 0.91
+param = 2, i = 4, j = 9: params = {'C': 0.01}
+param = 2, i = 4, j = 9: score = 0.94
+param = 3, i = 4, j = 9: params = {'C': 0.01}
+param = 3, i = 4, j = 9: score = 0.94
+param = 4, i = 4, j = 9: params = {'C': 0.01}
+param = 4, i = 4, j = 9: score = 0.94
+param = 5, i = 4, j = 9: params = {'C': 0.01}
+param = 5, i = 4, j = 9: score = 0.94
+-> score on test data = 0.94 (best param = 3)
+
+-------------------------------------------------------------
+RESULT for i = 4: 0.9382904
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+TOTAL RESULT: 0.933 (+/-0.008) in 106281.2 seconds
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+Parameter: 0
+
+Feature extraction took 1699.1 seconds.
+Feature matrix dimension: (14795, 4530)
+
+COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.01}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.9340317
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.9332877
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9345721
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9337624
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.46415888336127797}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.9150361
+
+RESULT: 0.930 (+/-0.008) in 1585.0 seconds
+
+-------------------------------------------------------------
+Parameter: 1
+
+Feature extraction took 2534.5 seconds.
+Feature matrix dimension: (14795, 746670)
+
+COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.01}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.9380203
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.9397759
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9398439
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9257888
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.9396429
+
+RESULT: 0.937 (+/-0.005) in 5810.0 seconds
+
+-------------------------------------------------------------
+Parameter: 2
+
+Feature extraction took 3946.7 seconds.
+Feature matrix dimension: (14795, 1698312)
+
+COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.01}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.9361269
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.9384260
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9390346
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9212627
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.9377483
+
+RESULT: 0.935 (+/-0.007) in 11434.9 seconds
+
+-------------------------------------------------------------
+Parameter: 3
+
+Feature extraction took 6107.2 seconds.
+Feature matrix dimension: (14795, 2740659)
+
+COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.01}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.9366682
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.9229418
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9369371
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.46415888336127797}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9342346
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.9386958
+
+RESULT: 0.934 (+/-0.006) in 17808.0 seconds
+
+-------------------------------------------------------------
+Parameter: 4
+
+Feature extraction took 8987.9 seconds.
+Feature matrix dimension: (14795, 3663995)
+
+COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.01}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.9357214
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.9378861
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9349781
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.01}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9370066
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.9382226
+
+RESULT: 0.937 (+/-0.001) in 23960.5 seconds
+
+-------------------------------------------------------------
+Parameter: 5
+
+Feature extraction took 12731.0 seconds.
+Feature matrix dimension: (14795, 4587380)
+
+COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER with LINEAR kernel on ANDROID FCG 14795
+
+i = 0, j = 0: params = {'C': 0.01}
+i = 0, j = 1: params = {'C': 0.01}
+i = 0, j = 2: params = {'C': 0.01}
+i = 0, j = 3: params = {'C': 0.01}
+i = 0, j = 4: params = {'C': 0.01}
+i = 0, j = 5: params = {'C': 0.01}
+i = 0, j = 6: params = {'C': 0.01}
+i = 0, j = 7: params = {'C': 0.01}
+i = 0, j = 8: params = {'C': 0.01}
+i = 0, j = 9: params = {'C': 0.01}
+0) score: 0.9351794
+i = 1, j = 0: params = {'C': 0.01}
+i = 1, j = 1: params = {'C': 0.01}
+i = 1, j = 2: params = {'C': 0.01}
+i = 1, j = 3: params = {'C': 0.01}
+i = 1, j = 4: params = {'C': 0.01}
+i = 1, j = 5: params = {'C': 0.01}
+i = 1, j = 6: params = {'C': 0.01}
+i = 1, j = 7: params = {'C': 0.01}
+i = 1, j = 8: params = {'C': 0.01}
+i = 1, j = 9: params = {'C': 0.01}
+1) score: 0.9334913
+i = 2, j = 0: params = {'C': 0.01}
+i = 2, j = 1: params = {'C': 0.01}
+i = 2, j = 2: params = {'C': 0.01}
+i = 2, j = 3: params = {'C': 0.01}
+i = 2, j = 4: params = {'C': 0.01}
+i = 2, j = 5: params = {'C': 0.01}
+i = 2, j = 6: params = {'C': 0.01}
+i = 2, j = 7: params = {'C': 0.01}
+i = 2, j = 8: params = {'C': 0.01}
+i = 2, j = 9: params = {'C': 0.01}
+2) score: 0.9361272
+i = 3, j = 0: params = {'C': 0.01}
+i = 3, j = 1: params = {'C': 0.01}
+i = 3, j = 2: params = {'C': 0.01}
+i = 3, j = 3: params = {'C': 0.01}
+i = 3, j = 4: params = {'C': 0.01}
+i = 3, j = 5: params = {'C': 0.01}
+i = 3, j = 6: params = {'C': 0.01}
+i = 3, j = 7: params = {'C': 0.46415888336127797}
+i = 3, j = 8: params = {'C': 0.01}
+i = 3, j = 9: params = {'C': 0.01}
+3) score: 0.9319353
+i = 4, j = 0: params = {'C': 0.01}
+i = 4, j = 1: params = {'C': 0.01}
+i = 4, j = 2: params = {'C': 0.01}
+i = 4, j = 3: params = {'C': 0.01}
+i = 4, j = 4: params = {'C': 0.01}
+i = 4, j = 5: params = {'C': 0.01}
+i = 4, j = 6: params = {'C': 0.01}
+i = 4, j = 7: params = {'C': 0.01}
+i = 4, j = 8: params = {'C': 0.01}
+i = 4, j = 9: params = {'C': 0.01}
+4) score: 0.9355873
+
+RESULT: 0.934 (+/-0.002) in 31428.6 seconds
+
+
+The evaluation of the emedding method(s) took 211109.5 seconds.
