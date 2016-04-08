@@ -34,18 +34,24 @@ sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 from misc import floyd_warshall, pz
 
 
+def extract_features(graph_meta_data_of_num, param_range = [None]):
+#def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
+#    kernel_mat_comp_start_time = time.time()
+#    
+#    kernel_mat_comp_time_of_param = {}
+#    kernel_mat_of_param = {}    
 
-def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
-    kernel_mat_comp_start_time = time.time()
+    extr_start_time = time.time()
     
-    kernel_mat_comp_time_of_param = {}
-    kernel_mat_of_param = {}    
+    feature_mat_of_param = {}
+    extr_time_of_param = {}
     
+    INF = 2**31 - 1
     
     num_graphs = len(graph_meta_data_of_num)
 #    graph_meta_data = graph_meta_data_of_num.values()
     
-    kernel_mat = np.zeros((num_graphs, num_graphs), dtype = np.float64)
+#    kernel_mat = np.zeros((num_graphs, num_graphs), dtype = np.float64)
     
 
     #=============================================================================
@@ -61,24 +67,25 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
             enumerate(graph_meta_data_of_num.itervalues()):
                 
         # !!
-#        if i % 10 == 0:
-#            print i
+        if i % 10 == 0:
+            print i
         
         # load graph
         G = pz.load(graph_path)
         # determine its adjacency matrix
         A = nx.adj_matrix(G, weight = None).astype('d').toarray()
+#        A = nx.adj_matrix(G, weight = None).toarray()
         
         is_symmetric = not nx.is_directed(G)
         
-        sys.modules['__main__'].A = A
+#        sys.modules['__main__'].A = A
         
 #        adj_mats.append(A)
         
         D = floyd_warshall.floyd_warshall(A, is_symmetric)
         Ds.append(D)
         
-        sys.modules['__main__'].Ds = Ds
+#        sys.modules['__main__'].Ds = Ds
 
         aux = D[np.isfinite(D)].max()
         
@@ -89,29 +96,41 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
             
 #            print 'i =', i, 'j =', j
 #            print 'i =', i, 'j =', j, kernel_mat[i,j]
-    sp = lil_matrix((max_path + 1), num_graphs)
+#    sp = lil_matrix((max_path + 1), num_graphs)
+    feature_mat = lil_matrix((num_graphs, max_path + 1), dtype = np.float64)
     for i in xrange(num_graphs):
         D = Ds[i]
-        sys.modules['__main__'].D = D
+#        sys.modules['__main__'].D = D
         
         I = np.triu(np.isfinite(D))
         
+        # shortest_path_lengths
         Ind = D[I].astype(np.int64)
+#        sys.modules['__main__'].Ind = Ind
         
+        # number of occurences of shortest_path_lengths
         aux = np.bincount(Ind)
+#        sys.modules['__main__'].aux = aux
         
-        sp[Ind, i] = aux[Ind]
+        feature_mat[i, Ind] = aux[Ind]
         
-    kernel_mat = sp.T * sp
+#    kernel_mat = sp.T * sp
 
-    kernel_mat_of_param[None] = kernel_mat
+#    kernel_mat_of_param[None] = kernel_mat
+#    
+#    kernel_mat_comp_end_time = time.time()
+#    kernel_mat_comp_time_of_param[None] = kernel_mat_comp_end_time \
+#                                          - kernel_mat_comp_start_time
+
+    feature_mat_of_param[None] = feature_mat.tocsr()
     
-    kernel_mat_comp_end_time = time.time()
-    kernel_mat_comp_time_of_param[None] = kernel_mat_comp_end_time \
-                                          - kernel_mat_comp_start_time
+    
+    extr_end_time = time.time()
+    extr_time = extr_end_time - extr_start_time
+    
+    extr_time_of_param[None] = extr_time
 
-    return kernel_mat_of_param, kernel_mat_comp_time_of_param
-
+    return feature_mat_of_param, extr_time_of_param
 
 
 #    
@@ -158,12 +177,10 @@ if __name__ == '__main__':
         = dataset_loader.get_graph_meta_data_and_class_lbls(dataset,
                                                             DATASETS_PATH)    
     
-    h_range = range(6)
-    
-    kernel_mat_of_param, kernel_mat_comp_time_of_param =\
-                  compute_kernel_mat(graph_meta_data_of_num, param_range = [None])
+    feature_mat_of_param, extr_time_of_param =\
+                                 extract_features(graph_meta_data_of_num, [None])
                                  
-    kernel_mat = kernel_mat_of_param[None]                                                                
+    feature_mat = feature_mat_of_param[None]                                                                
                                                                    
 
 
@@ -175,8 +192,8 @@ if __name__ == '__main__':
 #                               open('bla.txt', 'w')) 
     
 
-    import scipy.io as spio
-    mat = spio.loadmat('data.mat')
-    type(mat)
-    mat.keys()
-    K_mat = mat['ans']
+#    import scipy.io as spio
+#    mat = spio.loadmat('data.mat')
+#    type(mat)
+#    mat.keys()
+#    K_mat = mat['ans']

@@ -32,13 +32,13 @@ sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
 
 def floyd_warshall(A, sym):
-
+    INF = 2**31 - 1
     
 #    n = size(A,1); % number of nodes
     n = A.shape[0]
     
 #    D=zeros(n,n);
-    D = np.zeros((n, n))
+#    D = np.zeros((n, n), dtype = np.int64)
     
     
 #    if nargin<3 % if the graph is not weighted, then
@@ -52,7 +52,8 @@ def floyd_warshall(A, sym):
 #    D(A+diag(repmat(Inf,n,1))==0)=Inf; % If A(i,j)~=0 and i~=j D(i,j)=Inf;
     # !!
     # repmat(Inf, n, 1)
-    D[A + np.diag(np.tile(np.inf, n)) == 0.] = np.inf
+    D[A + np.diag(np.tile(np.inf, n)) == 0] = np.inf
+#    D[A + np.diag(np.tile(np.inf, n)) == 0] = INF
         
     
 #    D=full(D.*(ones(n)-eye(n))); % set the diagonal to zero
