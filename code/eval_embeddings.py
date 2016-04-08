@@ -153,8 +153,8 @@ OPT_PARAM = True
 # is to be eveluated for its respective parameters (without optimization
 # with respect to the parameter). If EMBEDDING_PARAM_RANGES[embedding_name]
 # == [None] for an embedding, then its performance will be still evaluated.
-#COMPARE_PARAMS = True
-COMPARE_PARAMS = False
+COMPARE_PARAMS = True
+#COMPARE_PARAMS = False
 
 #SEARCH_OPT_SVM_PARAM_IN_PAR = True
 SEARCH_OPT_SVM_PARAM_IN_PAR = False
