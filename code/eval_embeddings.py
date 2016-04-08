@@ -29,6 +29,7 @@ __date__ = "2016-04-07"
 #
 # 01. get feature extraction time of EGK on ANDROID FCG
 # 02. test NH and CSNH on ANDROID FCG 14795
+# 03. test SPK on all datatsets
 
 # at Sylvia-Notebook:
 #
@@ -129,11 +130,11 @@ EMBEDDING_PARAM_RANGES = {
 # sorted by number of graphs in ascending order
 #DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109, FLASH_CFG]
 #DATASETS = [NCI109, FLASH_CFG]
-DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109]
+#DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109]
 #DATASETS = [DD, NCI1, NCI109, FLASH_CFG]
 #DATASETS = [MUTAG, PTC_MR, ENZYMES]
 #DATASETS = [DD, NCI1, NCI109]
-#DATASETS = [MUTAG]
+DATASETS = [MUTAG]
 #DATASETS = [PTC_MR]
 #DATASETS = [ENZYMES]
 #DATASETS = [DD]

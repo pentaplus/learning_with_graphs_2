@@ -1,27 +1,26 @@
 """
 Shortest path kernel.
 
-This module provides the function compute_kernel_mat for the
-computation of the corresponding kernel matrix. It is a translation of
-the MATLAB file RWkernel.m by Karsten Borgwardt and Nino Shervashidze,
+This module provides the function extract_features for the
+corresponding feature extraction. It is a translation of
+the MATLAB file SPkernel.m by Nino Shervashidze,
 which can be downloaded from the following website:
 http://mlcb.is.tuebingen.mpg.de/Mitarbeiter/Nino/Graphkernels/
 """
 
 __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
-__credits__ = ["Karsten Borgwardt", "Nino Shervashidze"]
-__date__ = "2016-02-28"
+__credits__ = ["Nino Shervashidze"]
+__date__ = "2016-04-08"
 
 
 import inspect
 import networkx as nx
-import math
 import numpy as np
 import sys
 import time
 
 from os.path import abspath, dirname, join
-from scipy.sparse import csr_matrix, lil_matrix
+from scipy.sparse import lil_matrix
 
 
 # determine script path
@@ -31,50 +30,80 @@ SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
 # of the script's parent directory
 sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
-from misc import floyd_warshall, pz
+from misc import pz
 
+
+def floyd_warshall(A, sym):
+    # determine number of nodes
+    n = A.shape[0]
+    
+    # initialize distance matrix
+    D = np.multiply(A, A)    
+    
+    # set distance between non-adjacent nodes to infinity
+    D[A + np.diag(np.tile(np.inf, n)) == 0] = np.inf
+    
+    # set distance from each node to itself to zero
+    np.fill_diagonal(D, 0)
+    
+    
+    # iteratively update distances
+    if sym:
+        for k in xrange(n):
+            if k % 10 == 0:
+                print 'k:', k            
+            
+            D_aux = np.tile(D[:, k: k + 1], (1, n))
+            Sum_dist = D_aux + D_aux.T
+            
+#            sys.modules['__main__'].D_aux = D_aux
+#            sys.modules['__main__'].D = D
+#            sys.modules['__main__'].Sum_dist = Sum_dist 
+            
+            D[Sum_dist < D] = Sum_dist[Sum_dist < D]
+    else:
+        for k in xrange(n):
+            if k % 10 == 0:
+                print 'k:', k 
+            D_aux_1 = np.tile(D[:, k: k + 1], (1, n))
+            D_aux_2 = np.tile(D[k, :], (n, 1))
+            Sum_dist = D_aux_1 + D_aux_2
+            D[Sum_dist < D] = Sum_dist[Sum_dist < D]
+            
+    return D
+    
 
 def extract_features(graph_meta_data_of_num, param_range = [None]):
-#def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
-#    kernel_mat_comp_start_time = time.time()
-#    
-#    kernel_mat_comp_time_of_param = {}
-#    kernel_mat_of_param = {}    
 
     extr_start_time = time.time()
     
     feature_mat_of_param = {}
     extr_time_of_param = {}
     
-    INF = 2**31 - 1
-    
     num_graphs = len(graph_meta_data_of_num)
-#    graph_meta_data = graph_meta_data_of_num.values()
     
-#    kernel_mat = np.zeros((num_graphs, num_graphs), dtype = np.float64)
-    
-
-    #=============================================================================
-    # compute kernel matrix over all graphs in the dataset
-    #=============================================================================
     
     Ds = []
         
-    max_path = 0
+    max_shortest_path_len = 0
     
-#    for i in xrange(num_graphs):
+    #=============================================================================
+    # 1) determine (shortest) distance matrices
+    #=============================================================================
     for i, (graph_path, class_lbl) in \
             enumerate(graph_meta_data_of_num.itervalues()):
                 
         # !!
-        if i % 10 == 0:
-            print i
-        
+#        if i % 10 == 0:
+#            print i
+                
         # load graph
         G = pz.load(graph_path)
         # determine its adjacency matrix
         A = nx.adj_matrix(G, weight = None).astype('d').toarray()
 #        A = nx.adj_matrix(G, weight = None).toarray()
+        
+        print 'i:', i, 'nodes count:', G.number_of_nodes()
         
         is_symmetric = not nx.is_directed(G)
         
@@ -82,45 +111,49 @@ def extract_features(graph_meta_data_of_num, param_range = [None]):
         
 #        adj_mats.append(A)
         
-        D = floyd_warshall.floyd_warshall(A, is_symmetric)
+        # determine distance matrix
+        D = floyd_warshall(A, is_symmetric)
         Ds.append(D)
         
 #        sys.modules['__main__'].Ds = Ds
 
-        aux = D[np.isfinite(D)].max()
+        # determine maximum distance between nodes, between which a path exists
+        max_shortest_path_len_in_G = D[np.isfinite(D)].max()
         
-        if aux > max_path:
-            max_path = aux
+        if max_shortest_path_len_in_G > max_shortest_path_len:
+            max_shortest_path_len = max_shortest_path_len_in_G
 #             # !!
 ##            sys.modules['__main__'].kernel_mat = kernel_mat
             
 #            print 'i =', i, 'j =', j
 #            print 'i =', i, 'j =', j, kernel_mat[i,j]
 #    sp = lil_matrix((max_path + 1), num_graphs)
-    feature_mat = lil_matrix((num_graphs, max_path + 1), dtype = np.float64)
+                       
+            
+    # initialize feature matrix
+    feature_mat = lil_matrix((num_graphs, max_shortest_path_len + 1),
+                             dtype = np.float64)
+                             
+    #=============================================================================
+    # 2) determine number of occurences of each shortest path length
+    #=============================================================================
     for i in xrange(num_graphs):
         D = Ds[i]
 #        sys.modules['__main__'].D = D
         
-        I = np.triu(np.isfinite(D))
+        D_triu_finite_indicators = np.triu(np.isfinite(D))
         
         # shortest_path_lengths
-        Ind = D[I].astype(np.int64)
-#        sys.modules['__main__'].Ind = Ind
+        shortest_path_lengths = D[D_triu_finite_indicators].astype(np.int64)
         
-        # number of occurences of shortest_path_lengths
-        aux = np.bincount(Ind)
-#        sys.modules['__main__'].aux = aux
+
+        shortest_path_lengths_counts = np.bincount(shortest_path_lengths)
         
-        feature_mat[i, Ind] = aux[Ind]
+        feature_mat[i, shortest_path_lengths] \
+            = shortest_path_lengths_counts[shortest_path_lengths]
         
 #    kernel_mat = sp.T * sp
 
-#    kernel_mat_of_param[None] = kernel_mat
-#    
-#    kernel_mat_comp_end_time = time.time()
-#    kernel_mat_comp_time_of_param[None] = kernel_mat_comp_end_time \
-#                                          - kernel_mat_comp_start_time
 
     feature_mat_of_param[None] = feature_mat.tocsr()
     
@@ -133,31 +166,6 @@ def extract_features(graph_meta_data_of_num, param_range = [None]):
     return feature_mat_of_param, extr_time_of_param
 
 
-#    
-#    import networkx as nx
-#    from scipy.sparse import csr_matrix
-#    import scipy.io as spio
-#
-#    G = pz.load(graph_meta_data_of_num.values()[0][0])
-#    A = nx.adjacency_matrix(G, weight = None)
-#    
-##    timeit A = nx.adjacency_matrix(G, weight = None) # 2.3 ms
-##    timeit B = A.todense()  183 micros
-#    
-#    A_sprs = csr_matrix(A)
-#    A_sprs
-#    I = np.nonzero(A)
-#    I[0]
-#    
-#    mat = spio.loadmat('data.mat')
-#    
-#    A_mat = mat['A']
-#    
-#    # utils: 24.0, adj_mat calc: 12.7
-#
-#    # load all as dense matrices: 81 sec
-#    # load all as sparse matrices: 75 sec
-
 
 if __name__ == '__main__':
     from misc import dataset_loader
@@ -169,9 +177,10 @@ if __name__ == '__main__':
     from sklearn.metrics.pairwise import pairwise_kernels
     
     DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-    dataset = 'MUTAG'
+#    dataset = 'MUTAG'
 #    dataset = 'PTC(MR)'
 #    dataset = 'FLASH CFG'
+    dataset = 'DD'
     
     graph_meta_data_of_num, class_lbls \
         = dataset_loader.get_graph_meta_data_and_class_lbls(dataset,
