@@ -27,7 +27,7 @@ __date__ = "2016-04-07"
 
 # at Benny-Notebook:
 #
-# 01. get feature extraction times of EGK on all datasets
+# 01. get feature extraction time of EGK on ANDROID FCG
 # 02. test NH and CSNH on ANDROID FCG 14795
 
 # at Sylvia-Notebook:
