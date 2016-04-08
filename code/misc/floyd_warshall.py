@@ -31,14 +31,14 @@ SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
 sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
 
-def floyd_warshall(A):
+def floyd_warshall(A, sym):
 
     
 #    n = size(A,1); % number of nodes
     n = A.shape[0]
     
 #    D=zeros(n,n);
-    D = np.zeros(n, n)
+    D = np.zeros((n, n))
     
     
 #    if nargin<3 % if the graph is not weighted, then
@@ -52,10 +52,11 @@ def floyd_warshall(A):
 #    D(A+diag(repmat(Inf,n,1))==0)=Inf; % If A(i,j)~=0 and i~=j D(i,j)=Inf;
     # !!
     # repmat(Inf, n, 1)
-    D[A + np.diag(np.tile(np.inf, n)) == 0] = np.inf
+    D[A + np.diag(np.tile(np.inf, n)) == 0.] = np.inf
         
     
-    D=full(D.*(ones(n)-eye(n))); % set the diagonal to zero
+#    D=full(D.*(ones(n)-eye(n))); % set the diagonal to zero
+    np.fill_diagonal(D, 0)
     
 #    %t=cputime;
 #    if sym % then it is a bit faster
@@ -65,9 +66,33 @@ def floyd_warshall(A):
 #        D(Sumdist<D)=Sumdist(Sumdist<D);
 #      end
 #    else  
-      for k=1:n
-        Daux1=repmat(full(D(:,k)),1,n);
-        Daux2=repmat(full(D(k,:)),n,1);
-        Sumdist=Daux1+Daux2;
-        D(Sumdist<D)=Sumdist(Sumdist<D);
+    
+    if sym:
+        for k in xrange(n):
+            D_aux = np.tile(D[:, k: k + 1], (1, n))
+            Sum_dist = D_aux + D_aux.T
+            
+#            sys.modules['__main__'].D_aux = D_aux
+#            sys.modules['__main__'].D = D
+#            sys.modules['__main__'].Sum_dist = Sum_dist 
+            
+            D[Sum_dist < D] = Sum_dist[Sum_dist < D]
+    else:
+        for k in xrange(n):
+            D_aux_1 = np.tile(D[:, k: k + 1], (1, n))
+            D_aux_2 = np.tile(D[k, :], (n, 1))
+            Sum_dist = D_aux_1 + D_aux_2
+            D[Sum_dist < D] = Sum_dist[Sum_dist < D]
+            
+    return D
+
+
+if __name__ == '__main__':
+    D = floyd_warshall(A, True)
+    #D2 = floyd_warshall(A, False)
+    
+    
+    
+    #import scipy.io as sio
+    #sio.savemat('D2.mat', {'D': D})
 

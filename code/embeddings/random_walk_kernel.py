@@ -11,7 +11,6 @@ __date__ = "2016-03-28"
 
 import inspect
 import networkx as nx
-import math
 import numpy as np
 import sys
 import time

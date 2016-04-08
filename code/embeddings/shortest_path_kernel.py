@@ -21,6 +21,7 @@ import sys
 import time
 
 from os.path import abspath, dirname, join
+from scipy.sparse import csr_matrix, lil_matrix
 
 
 # determine script path
@@ -30,7 +31,7 @@ SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
 # of the script's parent directory
 sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
-from misc import pz
+from misc import floyd_warshall, pz
 
 
 
@@ -48,9 +49,12 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
     
 
     #=============================================================================
-    # 1) precompute the (sparse) adjacency matrices of the graphs in the dataset
+    # compute kernel matrix over all graphs in the dataset
     #=============================================================================
-    adj_mats = []
+    
+    Ds = []
+        
+    max_path = 0
     
 #    for i in xrange(num_graphs):
     for i, (graph_path, class_lbl) in \
@@ -63,39 +67,42 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
         # load graph
         G = pz.load(graph_path)
         # determine its adjacency matrix
-        A = nx.adj_matrix(G, weight = None)
+        A = nx.adj_matrix(G, weight = None).astype('d').toarray()
         
-        adj_mats.append(A)
+        is_symmetric = not nx.is_directed(G)
         
-    
-    #=============================================================================
-    # 2) compute kernel matrix over all graphs in the dataset
-    #=============================================================================
-    for i in xrange(num_graphs):
-        A_i = adj_mats[i].todense()
+        sys.modules['__main__'].A = A
+        
+#        adj_mats.append(A)
+        
+        D = floyd_warshall.floyd_warshall(A, is_symmetric)
+        Ds.append(D)
+        
+        sys.modules['__main__'].Ds = Ds
 
-        for j in xrange(i, num_graphs):
-            A_j = adj_mats[j].todense()
-            
-            # !!
-#            sys.modules['__main__'].A_j = A_j
-            
-            # apply preconditioned conjugate gradient method
-            b = np.ones((A_i.shape[0] * A_j.shape[0], 1))
-            
-                
-            
-            kernel_mat[i,j] = np.sum(x)
-            if i != j:
-                kernel_mat[j,i] = kernel_mat[i,j]
-            
+        aux = D[np.isfinite(D)].max()
+        
+        if aux > max_path:
+            max_path = aux
 #             # !!
 ##            sys.modules['__main__'].kernel_mat = kernel_mat
             
 #            print 'i =', i, 'j =', j
-            print 'i =', i, 'j =', j, kernel_mat[i,j]
-
-    
+#            print 'i =', i, 'j =', j, kernel_mat[i,j]
+    sp = lil_matrix((max_path + 1), num_graphs)
+    for i in xrange(num_graphs):
+        D = Ds[i]
+        sys.modules['__main__'].D = D
+        
+        I = np.triu(np.isfinite(D))
+        
+        Ind = D[I].astype(np.int64)
+        
+        aux = np.bincount(Ind)
+        
+        sp[Ind, i] = aux[Ind]
+        
+    kernel_mat = sp.T * sp
 
     kernel_mat_of_param[None] = kernel_mat
     

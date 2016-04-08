@@ -224,6 +224,16 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
                     if j > 0:
                         speed *= 2
             
+            
+            inner_loop_end_time = time.time()
+            inner_loop_time = inner_loop_end_time - inner_loop_start_time
+            for node_del_frac in sorted(node_del_fracs):
+                if j >= submat_col_count_of_node_del_frac[node_del_frac]:
+                    time_to_subtract_of_param[node_del_frac] \
+                        += inner_loop_time
+                else:
+                    break
+            
             # determine the node number, which corresponds to the node with
             # smallest degree, and remove the corresponding row and column of
             # the (original) adjacency matrix of G
@@ -232,13 +242,13 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
                 if A.shape[0] <= 2:
                     break                
                 
+                inner_loop_start_time = time.time()
+                
                 node_num_smallest_deg = node_num_degree_pairs[k][0]
                 
                 del_idx = upd_row_idx_of_orig_row_idx[node_num_smallest_deg]        
                 
                 A = del_row_and_col_at_idx(A, del_idx)
-                
-
                 
                 upd_row_idx_of_orig_row_idx = update_row_idxs(
                     upd_row_idx_of_orig_row_idx,
