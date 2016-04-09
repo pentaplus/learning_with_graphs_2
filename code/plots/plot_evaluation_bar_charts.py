@@ -1,6 +1,3 @@
-# 1. RW
-# 2. EGK
-
 """
 Plot bar charts representing the results of the embedding methods.
 
@@ -43,7 +40,7 @@ COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER \
     = 'count_sensitive_neighborhood_hash_all_iter'
 GRAPHLET_KERNEL_3 = 'graphlet_kernel_3'
 GRAPHLET_KERNEL_4 = 'graphlet_kernel_4'
-LABEL_COUNTER = 'label_counter'
+SHORTEST_PATH_KERNEL = 'shortest_path_kernel'
 RANDOM_WALK_KERNEL = 'random_walk_kernel'
 EIGEN_KERNEL = 'eigen_kernel'
 
@@ -72,6 +69,7 @@ EMBEDDING_ABBRVS = {
     GRAPHLET_KERNEL_3: '3-GK',
     GRAPHLET_KERNEL_4: '4-GK',
     RANDOM_WALK_KERNEL: 'RW',
+    SHORTEST_PATH_KERNEL: 'SP',
     EIGEN_KERNEL: 'EGK'}
     
     
@@ -124,6 +122,9 @@ DATA_SD = np.array(
      [GRAPHLET_KERNEL_4, MUTAG, 86.4, 1.0, 1370.8/10 + 0.7],
      [GRAPHLET_KERNEL_4, PTC_MR, 54.4, 1.7, 4668.8/10 + 1.5],
      [GRAPHLET_KERNEL_4, ENZYMES, 17.6, 1.4, 41190.1/10 + 8.6],
+     [SHORTEST_PATH_KERNEL, MUTAG, 90.0, 0.0, 36000.0/10 + 100.0],
+     [SHORTEST_PATH_KERNEL, PTC_MR, 90.0, 0.0, 36000.0/10 + 100.0],
+     [SHORTEST_PATH_KERNEL, ENZYMES, 90.0, 0.0, 36000.0/10 + 100.0],
      [RANDOM_WALK_KERNEL, MUTAG,  83.4, 2.7, 15.4/10 + 11.2],
      [RANDOM_WALK_KERNEL, PTC_MR, 53.5, 1.4, 55.7/10 + 57.9],
      [RANDOM_WALK_KERNEL, ENZYMES, 14.8, 0.8, 33.1/10 + 231.4],
@@ -167,6 +168,11 @@ DATA_LD = np.array(
      [GRAPHLET_KERNEL_4, NCI109, 54.3, 1.1, 132.2/10 + 22.9],
      [GRAPHLET_KERNEL_4, FLASH_CFG, 66.1, 4.1, 72.3/10 + 125.1],
      [GRAPHLET_KERNEL_4, ANDROID_FCG, 65.8, 5.4, 284.2/10 + 7386.7],
+     [SHORTEST_PATH_KERNEL, DD, 90.0, 0.0, 36000.0/10 + 100.0],
+     [SHORTEST_PATH_KERNEL, NCI1, 90.0, 0.0, 36000.0/10 + 100.0],
+     [SHORTEST_PATH_KERNEL, NCI109, 90.0, 0.0, 36000.0/10 + 100.0],
+     [SHORTEST_PATH_KERNEL, FLASH_CFG, 90.0, 0.0, 36000.0/10 + 100.0],
+     [SHORTEST_PATH_KERNEL, ANDROID_FCG, 90.0, 0.0, 3600.0/10 + 100.0],
      [RANDOM_WALK_KERNEL, DD, 73.8, 0.2, 28.5/10 + 37552.2],
      [RANDOM_WALK_KERNEL, NCI1, 55.8, 0.9, 110.1/10 + 9604.3],
      [RANDOM_WALK_KERNEL, NCI109, 55.2, 1.1, 115.7/10 + 9578.5],
@@ -180,8 +186,8 @@ DATA_LD = np.array(
      
       
 # order according to the sequence of the embeddings in the data matrices
-COLORS = ['#00008F', '#0020FF', '#00AFFF', '#40FFBF', '#CFFF30', '#FF9F00',
-          '#FF1000', '#800000']
+COLORS = ['#00008F', '#0020FF', '#00AFFF', '#40FFBF', '#87FF77', '#CFFF30',
+          '#FF9F00', '#FF1000', '#800000']
           
 # #87FF77 can be used between #40FFBF and #CFFF30
          
