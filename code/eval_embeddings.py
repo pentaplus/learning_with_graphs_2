@@ -13,25 +13,25 @@ from __future__ import division
 
 
 __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
-__date__ = "2016-04-07"
+__date__ = "2016-04-09"
 
 
 # planed procedure:
 #
 # at Ben-PC:
 # !!!
-# 01. finish the implementation of the Eigen kernel
-# 02. optimize coding style
-# 10. document RWkernel, PCG, graphlet_kernel and get_lamda
+# 01. optimize coding style
+# 02. document RWkernel, PCG, graphlet_kernel and get_lamda
 # 
 
 # at Benny-Notebook:
 #
-# 01. get feature extraction time of EGK on ANDROID FCG
+# 01. test SPK on all datatsets
 # 02. test NH and CSNH on ANDROID FCG 14795
-# 03. test SPK on all datatsets
 
 # at Sylvia-Notebook:
+#
+# 01. test SPK on FLASH CFG and ANDROID FCG
 #
 # 01. WL on ANDROID FCG 14795 (feature extraction took ca. 5 h, 0.94)
 # 02. EGK on ANDROID FCG 14795 (feature extraction took ca. 14 h, 0.91)
@@ -130,11 +130,11 @@ EMBEDDING_PARAM_RANGES = {
 # sorted by number of graphs in ascending order
 #DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109, FLASH_CFG]
 #DATASETS = [NCI109, FLASH_CFG]
-#DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109]
+DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109]
 #DATASETS = [DD, NCI1, NCI109, FLASH_CFG]
 #DATASETS = [MUTAG, PTC_MR, ENZYMES]
 #DATASETS = [DD, NCI1, NCI109]
-DATASETS = [MUTAG]
+#DATASETS = [MUTAG]
 #DATASETS = [PTC_MR]
 #DATASETS = [ENZYMES]
 #DATASETS = [DD]
@@ -157,8 +157,8 @@ OPT_PARAM = True
 COMPARE_PARAMS = True
 #COMPARE_PARAMS = False
 
-#SEARCH_OPT_SVM_PARAM_IN_PAR = True
-SEARCH_OPT_SVM_PARAM_IN_PAR = False
+SEARCH_OPT_SVM_PARAM_IN_PAR = True
+#SEARCH_OPT_SVM_PARAM_IN_PAR = False
 
 EXPER_NUM_ITER = 10
 #EXPER_NUM_ITER = 5

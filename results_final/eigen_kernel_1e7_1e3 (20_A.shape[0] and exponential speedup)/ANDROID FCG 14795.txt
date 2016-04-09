@@ -17,7 +17,7 @@ LINEAR (OPT_PARAM)
 ------------------------------------------
 Parameter: 0.16666666666666666
 
-Feature extraction took 59154.0 seconds.
+Feature extraction took 14951.6 seconds.
 Feature matrix dimension: (14795, 307)
 
 LINEAR
@@ -25,7 +25,7 @@ LINEAR
 ------------------------------------------
 Parameter: 0.33333333333333337
 
-Feature extraction took 59154.0 seconds.
+Feature extraction took 28330.0 seconds.
 Feature matrix dimension: (14795, 615)
 
 LINEAR
@@ -33,7 +33,7 @@ LINEAR
 ------------------------------------------
 Parameter: 0.5
 
-Feature extraction took 59154.0 seconds.
+Feature extraction took 39367.0 seconds.
 Feature matrix dimension: (14795, 923)
 
 LINEAR
@@ -41,7 +41,7 @@ LINEAR
 ------------------------------------------
 Parameter: 0.66666666666666663
 
-Feature extraction took 59154.0 seconds.
+Feature extraction took 48818.0 seconds.
 Feature matrix dimension: (14795, 1231)
 
 LINEAR
@@ -49,7 +49,7 @@ LINEAR
 ------------------------------------------
 Parameter: 0.83333333333333337
 
-Feature extraction took 59154.0 seconds.
+Feature extraction took 56604.0 seconds.
 Feature matrix dimension: (14795, 1539)
 
 LINEAR
@@ -57,7 +57,7 @@ LINEAR
 ------------------------------------------
 Parameter: 1.0
 
-Feature extraction took 59154.0 seconds.
+Feature extraction took 62868.8 seconds.
 Feature matrix dimension: (14795, 1847)
 
 LINEAR
