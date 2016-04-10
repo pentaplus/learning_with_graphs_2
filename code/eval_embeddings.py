@@ -26,8 +26,9 @@ __date__ = "2016-04-09"
 
 # at Benny-Notebook:
 #
-# 01. test SPK on all datatsets
-# 02. test NH and CSNH on ANDROID FCG 14795
+# 01. test SPK on FLASH CFG and ANDROID FCG
+# 02. test CSNH on DD
+# 03. test NH and CSNH on ANDROID FCG 14795
 
 # at Sylvia-Notebook:
 #
