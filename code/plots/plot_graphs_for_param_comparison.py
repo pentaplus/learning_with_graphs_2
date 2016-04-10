@@ -323,7 +323,7 @@ DATA = np.array(
     
           
 BLUE = '#3F3D99'
-          
+GREY = '#080808'
          
 
 # embeddings ordered according to their sequence in the data matrix
@@ -341,6 +341,7 @@ figsize = (5.9, 6.32)
 #for dataset in [MUTAG]:
 for dataset in DATASETS:
     fig, axes_mat = plt.subplots(nrows = 3, ncols = 3, figsize = figsize)
+     
 
     ax_of_mode_of_embedding = dict()
     for i, embedding in enumerate(EMBEDDINGS):
@@ -367,6 +368,10 @@ for dataset in DATASETS:
             
             ax = ax_of_mode_of_embedding[embedding][mode]
             plt.sca(ax)
+            
+#            plt.grid(axis = 'y')            
+#            plt.grid(color = GREY)
+            plt.grid(color = '0.5')
             
             plt.tick_params(axis = 'both', which = 'major', length = 3)
             plt.tick_params(axis = 'both', which = 'minor', length = 2)
@@ -434,7 +439,10 @@ for dataset in DATASETS:
                 
             if mode == FEATURES_COUNT:
                 plt.yscale('log')
-                
+    
+    
+            if embedding == EIGEN_KERNEL and mode == FEATURES_COUNT:
+                plt.grid(which = 'minor', color = '0.5')
                 
     plt.tight_layout(w_pad = 2, h_pad = 4.7, rect = (0, 0.05, 1, 1))
 #            plt.tight_layout(w_pad = 2, h_pad = 2, rect = (0, 0.2, 1, 1))

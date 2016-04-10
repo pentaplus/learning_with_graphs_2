@@ -17,6 +17,7 @@ import matplotlib as mpl
 import numpy as np
 import sys
 
+from itertools import chain
 from os.path import abspath, dirname, join
 
 # determine script path
@@ -261,15 +262,26 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
     fig.canvas.draw()
     xtick_labels = [item.get_text() for item in ax.get_xticklabels()]
     
+    
+    if mode == SCORES:
+        from matplotlib.ticker import MultipleLocator
+        major_locator = MultipleLocator(5)
+        ax.yaxis.set_major_locator(major_locator)
+    plt.grid(axis = 'y', color = '0.5', alpha = 0.5)
+#    plt.grid(axis = 'y', color = '0.8')
+    
     if mode == SCORES:
         ax.set_ylim([0, 120])
         
-        y = np.linspace(0, 100, 11).astype(int)
+        y = np.linspace(0, 100, 21).astype(int)
         #plt.yticks(y, datasets, fontsize = FONT_SIZE)
         
         plt.tick_params(axis = 'x', which = 'both', bottom = 'off', top = 'off')
-            
-        plt.yticks(y)
+        
+        y_labels = chain.from_iterable(zip(np.linspace(0, 100, 11).astype(int),
+                                           11*['']))        
+        
+        plt.yticks(y, y_labels)
     else:
         # mode == RUNTIMES
         plt.yscale('log')
@@ -284,8 +296,8 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
             + [10*60, 20*60, 30*60] + range(60*60, 12*60*60, 60*60) \
             + [12*60*60, 24*60*60]
             
-        y_labels = ['1 sec'] + ['']*8 + ['10 sec'] + ['']*4 + ['1 min'] \
-                   + ['']*8 + ['10 min', '', '30 min', '1 h'] + ['']*10 \
+        y_labels = ['1 sec'] + 8*[''] + ['10 sec'] + 4*[''] + ['1 min'] \
+                   + 8*[''] + ['10 min', '', '30 min', '1 h'] + 10*[''] \
                    + ['12 h', '1 day']
 
         plt.yticks(y, y_labels)
@@ -321,6 +333,7 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
 #        # location specified by bbox_to_anchor
 #        ax.legend(handles, labels, bbox_to_anchor = bbox_to_anchor, ncol = ncol,
 #                  prop = {'size': LEGEND_FONT_SIZE})
+
     
     plt.tight_layout(0.5)
     
