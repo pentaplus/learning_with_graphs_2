@@ -33,6 +33,7 @@ from misc import utils, pz
 
 def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
                      all_iter = False):
+                         
     extr_start_time = time.time()
     
     feature_mat_of_param = {}
@@ -41,7 +42,6 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
     
     h_max = max(h_range)                         
                         
-#    BIT_LBL_LEN = 16
     BIT_LBL_LEN = 24
     
     # rotate left
@@ -73,13 +73,12 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
     # 64-bit integers
     label_map = {}
     
-    
     #=============================================================================
     # 1) extract features iterating over all graphs in the dataset
     #=============================================================================
     for h in h_range:
-        for graph_num, (graph_path, class_lbl) in\
-                                               graph_meta_data_of_num.iteritems():
+        for graph_num, (graph_path, class_lbl) in \
+                graph_meta_data_of_num.iteritems():
             # !!        
             if graph_num % 100 == 0:
                 print 'h = ' + str(h) + ', graph_num = ' + str(graph_num)
@@ -106,8 +105,8 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
                     has_elem, nbrs_iter = utils.has_elem(G.neighbors_iter(v))
                     if not has_elem:
                         # node v has no neighbors
-                        next_upd_lbls_dict[graph_num][v] =\
-                                                       upd_lbls_dict[graph_num][v]
+                        next_upd_lbls_dict[graph_num][v] \
+                            = upd_lbls_dict[graph_num][v]
                         continue
                     
                     if not count_sensitive:
@@ -208,17 +207,18 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
 	
         for graph_num in graph_meta_data_of_num.iterkeys():
             for bit_lbl, bit_lbl_count in\
-                                      itools.izip(features_dict[graph_num],
-                                                  feature_counts_dict[graph_num]):
-				  if not bit_lbl in compr_func:
-					  compr_func[bit_lbl] = next_compr_lbl
-					  compr_lbl = next_compr_lbl
-					  next_compr_lbl += 1
-				  else:
-					  compr_lbl = compr_func[bit_lbl]
+                    itools.izip(features_dict[graph_num],
+                                feature_counts_dict[graph_num]):
+                                
+                if not bit_lbl in compr_func:
+                    compr_func[bit_lbl] = next_compr_lbl
+                    compr_lbl = next_compr_lbl
+                    next_compr_lbl += 1
+                else:
+                    compr_lbl = compr_func[bit_lbl]
 					
-				  features.append(compr_lbl)
-				  feature_counts.append(bit_lbl_count)
+                features.append(compr_lbl)
+                feature_counts.append(bit_lbl_count)
 				
 				
             feature_ptr.append(feature_ptr[-1] + len(features_dict[graph_num]))
@@ -256,38 +256,4 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
                 idx_of_lbl_dict = defaultdict(dict)
 
     return feature_mat_of_param, extr_time_of_param
-    
-
-# !!
-if __name__ == '__main__':
-    from misc import dataset_loader
-        
-    DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-    dataset = 'MUTAG'
-    
-    graph_meta_data_of_num, class_lbls \
-        = dataset_loader.get_graph_meta_data_and_class_lbls(dataset,
-                                                            DATASETS_PATH)    
-    
-    # h = 0: 56900    586
-    # h = 1: 55892    828
-    # h = 2: 63964    947
-    # h = 3: 62689   1010
-    # h = 4: 65162    929
-    # h = 5: 64494    979
-    # h = 6: 61520    964
-    # h = 7: 63481   1009
-    # h = 8: 63804    970
-    # h = 9: 63322   1003
-    # h =10: 62836    950
-    
-    h_range = range(6)
-    start = time.time()
-    feature_mat_of_param, extr_time_of_param =\
-                         extract_features(graph_meta_data_of_num, h_range,
-                                          count_sensitive = True, all_iter = True)
-    end = time.time()
-    print 'h_range = %s: %.3f' % (h_range, end - start)
-    
-    print '%r' % feature_mat_of_param
     

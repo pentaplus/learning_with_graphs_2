@@ -77,8 +77,8 @@ def extract_features(graph_meta_data_of_num, graphlet_size = 4):
     
         if graphlet_size == 3:
             # count 3-graphlets
-            # counts[i] finally holds the number of the graphlet g_(i + 1),
-            # i = 0,...,3 (see Figure !!) 
+            # The array counts finally holds the counts of the respective
+            # graphlets of size 3.
             counts = np.zeros(4, np.float64)
             
             weights = np.array([6, 4, 2], np.float64) 
@@ -105,8 +105,8 @@ def extract_features(graph_meta_data_of_num, graphlet_size = 4):
         
         elif graphlet_size == 4:
             # count 4-graphlets
-            # c[i] finally holds the number of the graphlet g_(i + 1),
-            # i = 0,...,10 (see Figure !!)
+            # The array counts finally holds the counts of the respective
+            # graphlets of size 4.
             counts = np.zeros(11, np.float64)
             
             weights = np.array([1/12, 1/10, 1/8, 1/6, 1/8, 1/6, 1/6, 1/4, 1/4,
@@ -210,26 +210,4 @@ def extract_features(graph_meta_data_of_num, graphlet_size = 4):
     extr_time_of_param[None] = extr_end_time - extr_start_time
 
     return feature_mat_of_param, extr_time_of_param
-
-
-if __name__ == '__main__':
-    
-    from misc import dataset_loader as loader
-    
-    DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-    dataset = 'MUTAG'
-#    dataset = 'DD'
-#    dataset = 'ENZYMES'
-#    dataset = 'NCI1'
-#    dataset = 'NCI109'
-    graph_meta_data_of_num, class_lbls \
-        = loader.get_graph_meta_data_and_class_lbls(dataset, DATASETS_PATH)
-    
-    
-    start = time.time()
-    feature_mat_of_param, extr_time_of_param = \
-            extract_features(graph_meta_data_of_num, 4)
-    end = time.time()
-    print end - start
-    
 

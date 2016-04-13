@@ -1,3 +1,11 @@
+"""
+Several utilities.
+"""
+
+__author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
+__date__ = "2016-03-14"
+
+
 import networkx as nx
 import os
 import shutil
@@ -32,7 +40,7 @@ def calc_hash_of_array(array):
     
 def check_for_pz_folder():
     if isdir('pz'):
-        shutil.rmtree('pz') # !!
+        shutil.rmtree('pz')
         return        
         
         user_input = raw_input('The directory \'pz\' already exists. '
@@ -57,11 +65,6 @@ def fatal_error(msg, fid = None):
         fid.close()
     
     sys.exit(1)
-    
-
-# !!   
-def get_adjacency_matrix(G):
-    return (nx.to_numpy_matrix(G) != 0).astype(int)
 
 
 def has_elem(it): 
@@ -94,10 +97,3 @@ def write(string, result_file):
     result_file.write(string)
         
     
-
-        
-
-
-#    for k in d.iterkeys():
-#        d[k] = {}
-#    return

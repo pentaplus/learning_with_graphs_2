@@ -49,7 +49,6 @@ def optimize_embedding_param(clf, feature_mat_of_param, class_lbls,
             best_score_on_train_data = 0.0
             opt_clf = None
 
-#            for param, feature_mat in feature_mat_of_param.iteritems():
             for param in sorted(feature_mat_of_param.iterkeys()):
                 feature_mat = feature_mat_of_param[param]
 
@@ -167,11 +166,6 @@ def cross_val(grid_clf, data_mat, class_lbls, embedding_is_implicit,
         
             scores_on_test_data.append(score_on_test_data)
 
-            # !!
-#            x = 0
-#            clf2 = grid_clf.estimator
-#            scores_on_test_data = cross_val_score(clf2, data_mat, class_lbls,
-#                                                  cv = outer_cv)
                                                   
         mean_score_on_test_data = np.mean(scores_on_test_data) 
         mean_scores_on_test_data.append(mean_score_on_test_data)

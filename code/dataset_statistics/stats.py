@@ -104,7 +104,6 @@ else:
     print 'max_e: %d' % max_e
 print 'avg_deg: %.2f' % avg_deg
 print 'max_deg:', max_deg
-#print 'min_deg:', min_deg
 print 'isolated:', number_of_isolated_nodes, '\n'
 
 t1 = time.time()
