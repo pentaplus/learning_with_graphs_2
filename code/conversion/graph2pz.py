@@ -6,10 +6,24 @@ __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
 __date__ = "2016-04-13"
 
 
+import inspect
 import networkx as nx
 import os
-import pz
-from os.path import splitext
+import sys
+
+from os.path import abspath, dirname, join, splitext
+
+
+# determine script path
+SCRIPT_PATH = inspect.getframeinfo(inspect.currentframe()).filename
+SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
+# modify the search path for modules in order to access modules in subfolders
+# of the script's parent directory
+sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
+
+from misc import pz
+
+
 
 MUTAG = 'MUTAG'
 ENZYMES = 'ENZYMES'
@@ -58,9 +72,9 @@ for graph_num in graph_numbers:
     mode = FIND_NODE_LABELS_LINE
 
     with open(str(graph_num) + '.graph', 'r') as f:
-        # ------------------------------------------------------------------------
+        # ========================================================================
         # 1) parse graph file
-        # ------------------------------------------------------------------------
+        # ========================================================================
         for line in f:
             line = line.rstrip()
             
@@ -105,9 +119,9 @@ for graph_num in graph_numbers:
                 weight_list_int = map(int, weight_list_str)
                 weight_lists.append(weight_list_int)
     
-    # ----------------------------------------------------------------------------
+    # ============================================================================
     # 2) create a networkx graph corresponding to the parsed graph
-    # ----------------------------------------------------------------------------
+    # ============================================================================
     
     # create an empty graph (according to the description of the datasets covered
     # in this script all corresponding graphs are undirected)        

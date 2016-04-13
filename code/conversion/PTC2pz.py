@@ -9,7 +9,6 @@ __date__ = "2016-03-14"
 import inspect
 import networkx as nx
 import os
-import pz
 import sys
 
 from os.path import abspath, dirname, join
@@ -21,7 +20,7 @@ SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
 # of the script's parent directory
 sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
-from misc import utils
+from misc import pz, utils
     
 
 def read_line(fid):
@@ -187,9 +186,9 @@ counter = 0
 cur_class_label_line = read_line(fid)
 
 while True:
-    # ----------------------------------------------------------------------------
+    # ============================================================================
     # 1) parse graph
-    # ----------------------------------------------------------------------------    
+    # ============================================================================   
     cur_class_label = read_class_label(cur_class_label_line, counter)
         
     check_graph_no(fid, counter)
@@ -201,9 +200,9 @@ while True:
                                                        cur_nodes_count, fid)
     
     
-    # ----------------------------------------------------------------------------
+    # ============================================================================
     # 2) create a networkx graph corresponding to the parsed graph
-    # ----------------------------------------------------------------------------
+    # ============================================================================
     cur_path = path_class_1 if cur_class_label == 1 else path_class_minus_1
     file_path = os.path.join(cur_path, str(counter) + '.pz')
     
