@@ -32,7 +32,10 @@ graph_meta_data_of_num, class_lbls \
     = dataset_loader.get_graph_meta_data_and_class_lbls(dataset, DATASETS_PATH)
 
 f = open('python_edges_count_of_each_graph.csv', 'w')    
+
 for graph_num, (graph_path, class_lbl) in graph_meta_data_of_num.iteritems():
     G = pz.load(graph_path)
     f.write(str(graph_num) + '; ' + str(2*G.number_of_edges()) + '\n')
+
 f.close()
+

@@ -12,7 +12,6 @@ __date__ = "2016-02-28"
 
 import inspect
 import numpy as np
-import pz
 import re
 import sys
 
@@ -91,12 +90,11 @@ def get_graph_meta_data_and_class_lbls(dataset, datasets_path):
                 continue
             
             graph_num = int(m.group(0))
-            # load graph with number graph_num
             graph_path = join(path_to_graphs_of_cur_class, graph_file)
             graph_meta_data_of_num[graph_num] = (graph_path, class_lbl)
             
-    graph_meta_data_of_num =\
-            OrderedDict(sorted(graph_meta_data_of_num.iteritems()))
+    graph_meta_data_of_num \
+        = OrderedDict(sorted(graph_meta_data_of_num.iteritems()))
                            
     class_lbls = get_class_lbls(graph_meta_data_of_num)
     
@@ -112,27 +110,3 @@ def get_graphs_of_class_dict(graph_meta_data_of_num):
     return graphs_of_class
     
     
-    
-if __name__ == '__main__':
-    DATASET_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-#    dataset = 'MUTAG'
-#    dataset = 'PTC(MR)'
-    dataset = 'ANDROID FCG 14795'
-    
-    graph_meta_data_of_num, class_lbls \
-        = get_graph_meta_data_and_class_lbls(dataset, DATASET_PATH)
-                                                             
-    G = pz.load(graph_meta_data_of_num[0][0])
-    
-    
-#G = pz.load(graph_meta_data_of_num[13669][0])
-#G.number_of_nodes()
-#
-#G = pz.load(graph_meta_data_of_num[13670][0])
-#G.number_of_nodes()
-#
-#pz.load(graph_meta_data_of_num[14182][0]).number_of_nodes()
-#
-#G = pz.load('121563fa0518ed7bf843f08958ea1cab302a304dd990ff792bba893ebf716fdf.fcgnx.pckl')
-
-

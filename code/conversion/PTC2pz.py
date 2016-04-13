@@ -1,3 +1,11 @@
+"""
+Conversion of graphs from the dataset PTC(MR) to networkx graphs.
+"""
+
+__author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
+__date__ = "2016-03-14"
+
+
 import inspect
 import networkx as nx
 import os
@@ -25,7 +33,8 @@ def is_int(s):
         int(s)
         return True
     except ValueError:
-        return False    
+        return False
+        
 
 def read_class_label(cur_class_label_line, counter):        
     cur_class_label_line_list = cur_class_label_line.split()
@@ -63,7 +72,7 @@ def check_graph_no(fid, counter):
         utils.fatal_error('graph no line does not start with \'t\'.', fid)
     if graph_no_line_list[1] != '#':
         utils.fatal_error('the second character of a graph no line is not \'#\'.',
-                    fid)
+                          fid)
     if not is_int(graph_no_line_list[2]):        
         utils.fatal_error('graph no is not an integer.', fid)
         
@@ -160,7 +169,7 @@ def read_edge_list(first_edge_line, cur_nodes_count, fid):
         cur_edges.append(cur_edge)
     
 
-# main ---------------------------------------------------------------------------
+# main program
 utils.check_for_pz_folder()
     
 path_class_1 = os.path.join('pz', 'class 1')
@@ -224,5 +233,4 @@ while True:
 
 
 fid.close()        
-
 

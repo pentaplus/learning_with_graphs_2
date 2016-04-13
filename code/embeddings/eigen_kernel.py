@@ -18,11 +18,9 @@ import time
 
 from collections import defaultdict
 from itertools import izip
-from numpy.linalg import eigvalsh
 from operator import itemgetter
 from os.path import abspath, dirname, join
-from scipy.sparse import csr_matrix, lil_matrix
-from scipy.sparse.linalg import eigs, eigsh
+from scipy.sparse.linalg import eigsh
 from scipy.sparse.linalg.eigen.arpack.arpack import ArpackError, \
     ArpackNoConvergence
 
@@ -34,7 +32,7 @@ SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
 # of the script's parent directory
 sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
-from misc import utils, pz
+from misc import pz
 
 
 def get_avg_nodes_count(graph_meta_data_of_num):
@@ -43,17 +41,7 @@ def get_avg_nodes_count(graph_meta_data_of_num):
         G = pz.load(graph_path)
         node_counts.append(G.number_of_nodes())
         
-    return np.mean(node_counts)
-    
-    
-def get_max_nodes_count(graph_meta_data_of_num):
-    node_counts = []
-    for graph_path, class_lbl in graph_meta_data_of_num.itervalues():
-        G = pz.load(graph_path)
-        node_counts.append(G.number_of_nodes())
-    
-    return max(node_counts)    
-#    return np.mean(node_counts)
+    return np.mean(node_counts) 
     
     
 def get_node_num_degree_pairs(G):
@@ -81,17 +69,16 @@ def del_row_and_col_at_idx(mat, idx):
     # delete column at index idx
     col_count = mat.shape[1]
     remaining_col_idxs = range(idx) + range(idx + 1, col_count)
-#    lil_matrix(csr_matrix(A)[:,remaining_col_idxs])    
-    mat = mat[:,remaining_col_idxs]
+    mat = mat[:, remaining_col_idxs]
     
     # delete row at index idx
     n = mat.indptr[idx + 1] - mat.indptr[idx]
     if n > 0:
-        mat.data[mat.indptr[idx]:-n] = mat.data[mat.indptr[idx + 1]:]
+        mat.data[mat.indptr[idx]: -n] = mat.data[mat.indptr[idx + 1]:]
         mat.data = mat.data[:-n]
-        mat.indices[mat.indptr[idx]:-n] = mat.indices[mat.indptr[idx + 1]:]
+        mat.indices[mat.indptr[idx]: -n] = mat.indices[mat.indptr[idx + 1]:]
         mat.indices = mat.indices[:-n]
-    mat.indptr[idx:-1] = mat.indptr[idx + 1:]
+    mat.indptr[idx: -1] = mat.indptr[idx + 1:]
     mat.indptr[idx:] -= n
     mat.indptr = mat.indptr[:-1]
     mat._shape = (mat._shape[0] - 1, mat._shape[1])
@@ -111,8 +98,6 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
     num_graphs = len(graph_meta_data_of_num)
     
     avg_nodes_count = get_avg_nodes_count(graph_meta_data_of_num)
-#    max_nodes_count = get_max_nodes_count(graph_meta_data_of_num)
-#    avg_nodes_count = get_max_nodes_count(graph_meta_data_of_num)
 
     feature_mat = np.zeros((num_graphs, int(avg_nodes_count)),
                            dtype = np.float64)
@@ -122,8 +107,6 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
         submat_col_count_of_node_del_frac[node_del_frac] \
             = int(node_del_frac * avg_nodes_count)
             
-#    first_eig_val_no_conv = False
-    
     conv_count = 0
     no_conv_count = 0
         
@@ -140,12 +123,7 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
         # load graph
         G = pz.load(graph_path)
 
-#        import sys
-#        sys.modules['__main__'].G = G
-          
-        
         # determine its adjacency matrix
-#        A = utils.get_adjacency_matrix(G)
         A = nx.adj_matrix(G, weight = None).astype('d')
         
         # calculate adjacency matrix of the undirected version of G
@@ -153,9 +131,6 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
             A = A + A.T
             A[A > 1] = 1
             
-#        import sys
-#        sys.modules['__main__'].A = A      
-        
         nodes_count = len(G.node)
         upd_row_idx_of_orig_row_idx = dict(izip(xrange(nodes_count),
                                                 xrange(nodes_count)))
@@ -163,48 +138,30 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
         # get pairs (node_num, degree) sorted by degree in ascending order                                        
         node_num_degree_pairs = get_node_num_degree_pairs(G)
         
-        
-
         j = 0
         last_j = -1
         speed = 1
         
         while j < min(nodes_count, int(avg_nodes_count)):
-#        while j < nodes_count:
-            sys.stdout.write('i = ' + str(i) + ' (|V| = ' + str(nodes_count)\
+            sys.stdout.write('i = ' + str(i) + ' (|V| = ' + str(nodes_count) \
                              + '), j = ' + str(j) + ': ')        
             
             inner_loop_start_time = time.time()
             
-            # store largest eigenvalue of A in feature matrix
-#            feature_mat[i,j] = eigvalsh(A)[-1]
-            
+            # add largest eigenvalue of A to the i-th feature vector
             try:
                 feature_mat[i, j] = eigsh(A, which = 'LA', k = 1,
                                           maxiter = 20*A.shape[0],
                                           return_eigenvectors = False)
 
-                                         
-                                         
-#                feature_mat[i,j] = eigs(A, which = 'LR', k = 1,
-#                                        maxiter = 20*A.shape[0],
-#                                        return_eigenvectors = False)
-                
                 # algorithm converged
                 print(str(feature_mat[i,j]))
-                
-#                if first_eig_val_no_conv:
-#                    feature_mat[i, :j] = feature_mat[i, j]
-#                    first_eig_val_no_conv = False
                 
                 if j == 0:
                     last_j = 0
                     
                 conv_count += 1
             except (ArpackError, ArpackNoConvergence):
-#                if j == 0:
-#                    first_eig_val_no_conv = True
-#                else:
                 if j > 0:
                     feature_mat[i, j] = feature_mat[i, j - 1]
                 print(str(feature_mat[i, j - 1]) + ' [NO CONVERGENCE]')
@@ -216,12 +173,17 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
                 if j > 0:
                     speed *= 2
             else:
+                # "interpolate" at the skipped dimensions of the i-th feature
+                # vector
                 feature_mat[i, last_j + 1: j] = feature_mat[i, j]
                 if abs(feature_mat[i, j] - feature_mat[i, last_j]) > 1e-5:
                     last_j = j
                     speed = 1
                 else:
+                    # abs(feature_mat[i, j] - feature_mat[i, last_j]) <= 1e-5
                     if j > 0:
+                        # double the speed in order to avoid unnecessary
+                        # eigenvalue computations
                         speed *= 2
             
             
@@ -237,7 +199,6 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
             # determine the node number, which corresponds to the node with
             # smallest degree, and remove the corresponding row and column of
             # the (original) adjacency matrix of G
-            # !! better mathematical term
             for k in xrange(j, min(j + speed, nodes_count, int(avg_nodes_count))):
                 if A.shape[0] <= 2:
                     break                
@@ -269,35 +230,12 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
             
             if (j < min(nodes_count, int(avg_nodes_count)) - 1) \
                     and (j + speed) >= min(nodes_count, int(avg_nodes_count)):
-                
+                # "interpolate" at the last dimensions of the i-th feature vector
                 feature_mat[i, j + 1:] = feature_mat[i, j]
                 
                 
             j += speed
         
-        # !!
-#        import sys
-#        sys.modules['__main__'].G = G
-#        sys.modules['__main__'].A = A
-#        sys.modules['__main__'].F = feature_mat
-        
-#        x = 0
-#        eigvalsh(A)
-#
-#        for j in xrange(feature_mat.shape[1]):
-#            largest_eigen_val = eigvalsh(A)[-1]
-        
-        
-        # feature_mat is of type csr_matrix and has the following form:
-        # [feature vector of the first graph,
-        #  feature vector of the second graph,
-        #                .
-        #                .
-        #  feature vector of the last graph]
-#        feature_mat = csr_matrix((np.array(feature_counts), np.array(features),
-#                                  np.array(feature_ptr)),
-#                                  shape = (len(graph_meta_data_of_num),
-#                                  len(compr_func)), dtype = np.float64)
         
     extr_end_time = time.time()
     extr_time = extr_end_time - extr_start_time
@@ -310,7 +248,7 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
         submat_col_count = submat_col_count_of_node_del_frac[node_del_frac]
         
         feature_mat_of_param[node_del_frac] \
-            = feature_mat[:,0:submat_col_count]
+            = feature_mat[:, :submat_col_count]
     
         mat_constr_end_time = time.time()
         mat_constr_time = mat_constr_end_time - mat_constr_start_time 
@@ -320,52 +258,9 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
   
         mat_constr_times.append(mat_constr_time)
             
-#    x = 0
     
     print('\nConvergence ratio: %.3f\n'
           % (conv_count / (conv_count + no_conv_count)))
    
     return feature_mat_of_param, extr_time_of_param
 
-
-
-# !!
-if __name__ == '__main__':
-    from misc import dataset_loader as loader
-    
-    DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-    dataset = 'MUTAG'
-#    dataset = 'ENZYMES'
-#    dataset = 'DD'
-#    dataset = 'FLASH CFG'
-    
-    graph_meta_data_of_num, class_lbls \
-        = loader.get_graph_meta_data_and_class_lbls(dataset, DATASETS_PATH)    
-    
-    node_del_fracs = np.linspace(1/6, 1, 6)
-    
-    feature_mat_of_param, extr_time_of_param \
-        = extract_features(graph_meta_data_of_num, node_del_fracs)
-#                                 
-#    feature_mat = feature_mat_of_param[None]                                                                
-                                                                   
-
-    
-    
-#A = np.delete(A, (2), axis = 0)
-#A = np.delete(A, (2), axis = 1)
-
-#try:
-#    5/0
-#    print('jo')
-#except ZeroDivisionError:
-#    print('aha')
-
-#try:
-#    5/0
-#    x = [1]
-#    print 'bla'
-#    y = x[1]
-##except (IndexError):
-#except (IndexError, ZeroDivisionError):
-#    print('okay')

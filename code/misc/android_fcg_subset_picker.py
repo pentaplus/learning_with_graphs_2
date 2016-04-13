@@ -31,6 +31,7 @@ sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
 from misc import dataset_loader, utils
 
+
 CLASS_0_SIZE = 135791
 CLASS_1_SIZE = 12158
 
@@ -76,4 +77,3 @@ for class_lbl, class_folder in folder_of_class.iteritems():
         if copied_graph_files_count % 10 == 0:
             print "Graph files copied: %d" % copied_graph_files_count
             
-

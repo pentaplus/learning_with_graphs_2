@@ -67,8 +67,8 @@ def parse_block(line, G, id_to_num_mapper, line_num):
 
     
 def parse_cond(line, G, id_to_num_mapper, line_num):
-    cond_with_meta_data_reg_exp =\
-                                 'cond\s+@-?\d{5,}\s+(\S+)\s+\([ms]:\S+\)\s+(\S+)'
+    cond_with_meta_data_reg_exp \
+        = 'cond\s+@-?\d{5,}\s+(\S+)\s+\([ms]:\S+\)\s+(\S+)'
     cond_without_meta_data_reg_exp = 'cond\s+@-?\d{5,}\s+(\S+)\s+(\S+)'
     
     m = re.match(cond_with_meta_data_reg_exp, line)
@@ -158,9 +158,6 @@ for folder in folder_of_class.itervalues():
                 
                 line = line.rstrip()
                 
-#                if basename(f.name).startswith('000c6b') and line_num + 1 == 87:
-#                    x = 0
-                
                 if line.startswith('block'):
                     parse_block(line, G, id_to_num_mapper, line_num + 1)
                 elif line.startswith('cond'):
@@ -173,27 +170,3 @@ for folder in folder_of_class.itervalues():
                 
             pz.save(G, join(target_class_path, base_file_name + '.pz'))
 
-
-
-#TEST = True 
-##TEST = False
-#if TEST:
-#    sys.path.append(join(SCRIPT_FOLDER_PATH, '..', '..'))
-#    from misc import dataset_loader, pz, utils
-#    
-#    file_names = os.listdir('.')
-#    file_name = file_names[0]
-#    G = pz.load(file_name)
-#    
-#    problematic_nodes = []
-#    counter = 0
-#    for node_num, label_dict in G.node.iteritems():
-#        label = label_dict['label']
-#        if label not in ['b', 'c', 'f', 'r']:
-#            problematic_nodes.append(node_num)
-#        else:
-#            counter += 1
-#    
-#    if len(G.node) == counter:
-#        print 'It holds: len(G.node) == counter'
-#        

@@ -27,8 +27,8 @@ from misc import utils
 DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
 
 ANDROID_FCG_14795_PATH = join(DATASETS_PATH,
-                              'ANDROID FCG 14795 (2 classes, 14795 directed graphs, '
-                              'unlabeled edges)',
+                              'ANDROID FCG 14795 (2 classes, 14795 directed '
+                              'graphs, unlabeled edges)',
                               'pz')
                                 
 FLASH_CFG_PATH = join(DATASETS_PATH,
@@ -59,6 +59,5 @@ with open(join(DATASET_PATH, 'hash_num_map.txt'), 'w') as f:
             
             if graph_num % 10 == 0:
                 print('graph_num: %d' % graph_num)
-
 
     

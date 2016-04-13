@@ -1,3 +1,11 @@
+"""
+Conversion of graphs from a plaintext format to networkx graphs.
+"""
+
+__author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
+__date__ = "2016-04-13"
+
+
 import networkx as nx
 import os
 import pz
@@ -9,13 +17,11 @@ NCI1 = 'NCI1'
 NCI109 =  'NCI109'
 DD = 'DD'
 
-# choose dataset -----------------------------------------------------------------
 #DATASET = MUTAG
 DATASET = ENZYMES
 #DATASET = NCI1
 #DATASET = NCI109
 #DATASET = DD
-# --------------------------------------------------------------------------------
 
 FIND_NODE_LABELS_LINE = 0
 PARSE_NODE_LABELS = 1
@@ -23,13 +29,11 @@ FIND_ADJ_LIST_LINE = 2
 PARSE_ADJ_LIST = 3
 PARSE_EDGE_LBLS_FOR_MUTAG = 4
 PARSE_EDGE_WEIGHTS_FOR_NCI = 5
-
    
 
 def read_node_labels(node_labels_line):
     # splitting on whitespaces
     return node_labels_line.split()
-
 
 
 files = os.listdir('.')
@@ -152,3 +156,5 @@ for graph_num in graph_numbers:
     
         
     pz.save(G, str(graph_num) + ".pz")
+    
+    

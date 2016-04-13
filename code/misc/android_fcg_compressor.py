@@ -19,7 +19,6 @@ import sys
 from os.path import abspath, dirname, join
 
 
-
 # determine script path
 SCRIPT_PATH = inspect.getframeinfo(inspect.currentframe()).filename
 SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
@@ -88,15 +87,12 @@ with open(join(SOURCE_CLASSES_PATH, 'hash_num_map.txt'), 'w') as f:
                 node_id = '\n'.join(node_id_tuple)
                 node_num = id_to_num_mapper.map_id_to_num(node_id)
                 
-#                G_compr.edge[node_num] = {}
-                
                 for node_neigh_id_tuple, edge_label_dict in \
                         edge_label_dict_of_node_neigh_id_tuple.iteritems():
                             
                     node_neigh_id = '\n'.join(node_neigh_id_tuple)
                     node_neigh_num = id_to_num_mapper.map_id_to_num(node_neigh_id)
                     
-#                    G_compr.edge[node_num][node_neigh_num] = edge_label_dict
                     G_compr.add_edge(node_num, node_neigh_num, **edge_label_dict)
                     
                     

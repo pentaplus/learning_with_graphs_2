@@ -169,10 +169,10 @@ EXPER_NUM_ITER = 5
 #EXPER_NUM_ITER = 1
 
 # maximum number of iterations for small datasets (having less than 1000 samples)
-CLF_MAX_ITER_SD = 1e7 # final value (take care of perfectionism!!!)
+CLF_MAX_ITER_SD = 1e7
 
 # maximum number of iterations for large datasets (having more than 1000 samples)
-CLF_MAX_ITER_LD = 1e3 # final value (take care of perfectionism!!!)
+CLF_MAX_ITER_LD = 1e3
 
 # number of folds used in cross validation for performance evaluation
 NUM_OUTER_FOLDS = 10
@@ -189,32 +189,26 @@ NUM_CROSS_VAL_JOBS = 4
 
 
 def extract_features(graph_meta_data_of_num, embedding, param_range, result_file):
-    print '-------------------------------------------------------------\n'
+    print('-------------------------------------------------------------\n')
     result_file.write('------------------------------------------\n\n')
 
     feat_extr_start_time = time.time()
 
-    feature_mat_of_param, extr_time_of_param =\
-                   embedding.extract_features(graph_meta_data_of_num, param_range)
+    feature_mat_of_param, extr_time_of_param \
+        = embedding.extract_features(graph_meta_data_of_num, param_range)
                    
-#    import sys
-#    sys.modules['__main__'].F = feature_mat_of_param[None]
-    
-#    kernel_mat_of_param = {None: F}
-#    kernel_mat_comp_time_of_param = {None: 0}
-
     feat_extr_end_time = time.time()
     feat_extr_time = feat_extr_end_time - feat_extr_start_time
-    utils.write('Graph loading and feature exraction took %.1f seconds.\n' %\
-                                                      feat_extr_time, result_file)
-    print ''
+    utils.write('Graph loading and feature exraction took %.1f seconds.\n'
+                % feat_extr_time, result_file)
+    print('')
 
     return feature_mat_of_param, extr_time_of_param
     
     
 def compute_kernel_matrix(graph_meta_data_of_num, embedding, param_range,
                           result_file):
-    print '-------------------------------------------------------------\n'
+    print('-------------------------------------------------------------\n')
     result_file.write('------------------------------------------\n\n')
 
     kernel_mat_comp_start_time = time.time()
@@ -224,9 +218,9 @@ def compute_kernel_matrix(graph_meta_data_of_num, embedding, param_range,
 
     kernel_mat_comp_end_time = time.time()
     kernel_mat_comp_time = kernel_mat_comp_end_time - kernel_mat_comp_start_time
-    utils.write('The computation of the kernel matrix took %.1f seconds.\n' %\
-                                                kernel_mat_comp_time, result_file)
-    print ''
+    utils.write('The computation of the kernel matrix took %.1f seconds.\n'
+                % kernel_mat_comp_time, result_file)
+    print('')
 
     return kernel_mat_of_param, kernel_mat_comp_time_of_param
         
@@ -266,7 +260,7 @@ def get_params(graph_meta_data_of_num, embedding_name):
             kernel = 'linear/rbf'
 
     return dataset_is_large, embedding_is_implicit, use_liblinear, kernel, \
-        svm_param_grid, clf_max_iter, num_inner_folds
+           svm_param_grid, clf_max_iter, num_inner_folds
     
 
 def get_svm_param_grid_str(svm_param_grid):
@@ -313,8 +307,8 @@ def write_param_info(use_liblinear, embedding_is_implicit, svm_param_grid,
         utils.write('CLF_MAX_ITER: UNLIMITED\n', result_file)
     else:
         utils.write('CLF_MAX_ITER: %.e\n' % clf_max_iter, result_file)
-    utils.write('SEARCH_OPT_SVM_PARAM_IN_PAR: %s\n' \
-        % SEARCH_OPT_SVM_PARAM_IN_PAR.__str__().upper(), result_file)
+    utils.write('SEARCH_OPT_SVM_PARAM_IN_PAR: %s\n'
+                % SEARCH_OPT_SVM_PARAM_IN_PAR.__str__().upper(), result_file)
     sys.stdout.write('\n')
     
 
@@ -325,7 +319,7 @@ def init_grid_clf(embedding_is_implicit, dataset_is_large, svm_param_grid,
     
     For multiclass classification the One-Versus-Rest scheme is applied,
     i.e., in case of N different classes N classifiers are trained in
-    total. !! further details
+    total.
     """
     if dataset_is_large:
         if embedding_is_implicit:
@@ -340,11 +334,9 @@ def init_grid_clf(embedding_is_implicit, dataset_is_large, svm_param_grid,
         if embedding_is_implicit:
             clf = svm.SVC(kernel = 'precomputed', max_iter = clf_max_iter,
                           decision_function_shape = 'ovr')
-#                          decision_function_shape = 'ovo')
         else:
             clf = svm.SVC(max_iter = clf_max_iter,
                           decision_function_shape = 'ovr')
-#                          decision_function_shape = 'ovo')
     
     if SEARCH_OPT_SVM_PARAM_IN_PAR:
         grid_clf = GridSearchCV(clf, svm_param_grid, cv = num_inner_folds,
@@ -359,34 +351,33 @@ def init_grid_clf(embedding_is_implicit, dataset_is_large, svm_param_grid,
 def write_eval_info(dataset, embedding_name, kernel, mode = None):
     mode_str = ' (' + mode + ')' if mode else ''
     
-    print ('%s with %s kernel%s on %s\n') %\
-               (embedding_name.upper(), kernel.upper(), mode_str.upper(), dataset)
+    print('%s with %s kernel%s on %s\n' % (embedding_name.upper(), kernel.upper(),
+                                           mode_str.upper(), dataset))
            
 
 def write_feature_mat_dim_and_extr_time(param, feature_mat_of_param,
                                         extr_time_of_param, result_file):
-    print '-------------------------------------------------------------'
+    print('-------------------------------------------------------------')
     result_file.write('------------------------------------------\n')
     utils.write('Parameter: %r\n\n' % param, result_file)
-    utils.write('Feature extraction took %.1f seconds.\n' %\
-                extr_time_of_param[param], result_file)
-    utils.write('Feature matrix dimension: %s\n' %\
-                                (feature_mat_of_param[param].shape,), result_file)
+    utils.write('Feature extraction took %.1f seconds.\n'
+                % extr_time_of_param[param], result_file)
+    utils.write('Feature matrix dimension: %s\n'
+                % (feature_mat_of_param[param].shape,), result_file)
     sys.stdout.write('\n')
     
     
 def write_kernel_mat_dim_and_kernel_comp_time(param, kernel_mat_of_param,
                                               kernel_mat_comp_time_of_param,
                                               result_file):
-    print '-------------------------------------------------------------'
+    print('-------------------------------------------------------------')
     result_file.write('------------------------------------------\n')
     utils.write('Parameter: %r\n\n' % param, result_file)
-    utils.write('The computation of the kernel matrix took %.1f seconds.\n' %\
-                kernel_mat_comp_time_of_param[param], result_file)
-    utils.write('Kernel matrix dimension: %s\n' %\
-                                 (kernel_mat_of_param[param].shape,), result_file)
+    utils.write('The computation of the kernel matrix took %.1f seconds.\n'
+                % kernel_mat_comp_time_of_param[param], result_file)
+    utils.write('Kernel matrix dimension: %s\n'
+                % (kernel_mat_of_param[param].shape,), result_file)
     sys.stdout.write('\n')
-    
     
 
 script_exec_start_time = time.time()
@@ -426,29 +417,17 @@ for dataset in DATASETS:
         #    the kernel matrix
         #=========================================================================
         if not embedding_is_implicit:
-            # !!
-#            pass
             feature_mat_of_param, extr_time_of_param \
                 = extract_features(graph_meta_data_of_num, embedding, param_range,
                                    result_file)
         else:
-            kernel_mat_of_param, kernel_mat_comp_time_of_param =\
-                          compute_kernel_matrix(graph_meta_data_of_num, embedding,
-                                                param_range, result_file)
+            kernel_mat_of_param, kernel_mat_comp_time_of_param \
+                = compute_kernel_matrix(graph_meta_data_of_num, embedding, 
+                                        param_range, result_file)
                                                 
         # initialize SVM classifier
         grid_clf = init_grid_clf(embedding_is_implicit, dataset_is_large,
-                                 svm_param_grid, clf_max_iter, num_inner_folds)
-
-# !!                                 
-#        feature_mat_of_param = F
-#        extr_time_of_param = {}
-#        extr_time_of_param[0.2] = 0
-#        extr_time_of_param[0.4] = 0
-#        extr_time_of_param[0.6] = 0
-#        extr_time_of_param[0.8] = 0
-#        extr_time_of_param[1] = 0
-                
+                                 svm_param_grid, clf_max_iter, num_inner_folds)               
         
         if OPT_PARAM and len(param_range) > 1:
             #=====================================================================
@@ -488,9 +467,10 @@ for dataset in DATASETS:
                                                         extr_time_of_param,
                                                         result_file)
                 else:
-                    write_kernel_mat_dim_and_kernel_comp_time(param,\
-                               kernel_mat_of_param, kernel_mat_comp_time_of_param,
-                               result_file)
+                    write_kernel_mat_dim_and_kernel_comp_time(
+                        param,
+                        kernel_mat_of_param, kernel_mat_comp_time_of_param,
+                        result_file)
                
                 result_file.write('\n%s\n' % kernel.upper())
                 
@@ -503,22 +483,18 @@ for dataset in DATASETS:
                                                EXPER_NUM_ITER, NUM_OUTER_FOLDS,
                                                result_file)
                 else:
-#                    kernel_mat == feature_mat.dot(feature_mat.T) # !!
-#                    kernel_mat = pairwise_kernels(feature_mat)
                     kernel_mat = kernel_mat_of_param[param]
                     cross_validation.cross_val(grid_clf, kernel_mat, class_lbls,
                                                embedding_is_implicit,
                                                EXPER_NUM_ITER, NUM_OUTER_FOLDS,
                                                result_file)
 
-            
         result_file.close()
+        
 
 script_exec_end_time = time.time()
 script_exec_time = script_exec_end_time - script_exec_start_time
 
-print '\nThe evaluation of the emedding method(s) took %.1f seconds.' %\
-                                                                  script_exec_time
-                                                                  
-                                                                  
+print('\nThe evaluation of the emedding method(s) took %.1f seconds.'
+      % script_exec_time)
                                                                   

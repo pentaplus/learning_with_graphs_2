@@ -28,26 +28,4 @@ from embeddings import graphlet_kernel_main
 def extract_features(graph_meta_data_of_num, param_range = [None]):
     return graphlet_kernel_main.extract_features(graph_meta_data_of_num, 3)
     
-
-# !!
-if __name__ == '__main__':
-    import time
-    from misc import dataset_loader
-        
-    DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-    dataset = 'MUTAG'
-    
-    graph_meta_data_of_num, class_lbls \
-        = dataset_loader.get_graph_meta_data_and_class_lbls(dataset,
-                                                            DATASETS_PATH)
-    
-    start = time.time()
-    feature_mat_of_param, extr_time_of_param =\
-                                 extract_features(graph_meta_data_of_num, [None])
-    
-    end = time.time()
-    
-    print '%r' % feature_mat_of_param
-    
-    
-        
+     

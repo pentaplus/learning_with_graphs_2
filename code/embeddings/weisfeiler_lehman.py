@@ -72,8 +72,9 @@ def extract_features(graph_meta_data_of_num, h_range):
     # 1) extract features iterating over all graphs in the dataset
     #=============================================================================
     for h in h_range:
-        for graph_num, (graph_path, class_lbl) in\
-                                               graph_meta_data_of_num.iteritems():
+        for graph_num, (graph_path, class_lbl) in \
+                graph_meta_data_of_num.iteritems():
+                    
             # !!        
             if graph_num % 100 == 0:
                 print 'h = ' + str(h) + ', graph_num = ' + str(graph_num)
@@ -91,8 +92,8 @@ def extract_features(graph_meta_data_of_num, h_range):
                     has_elem, nbrs_iter = utils.has_elem(G.neighbors_iter(v))
                     if not has_elem:
                         # node v has no neighbors
-                        next_upd_lbls_dict[graph_num][v] =\
-                                                       upd_lbls_dict[graph_num][v]
+                        next_upd_lbls_dict[graph_num][v] \
+                            = upd_lbls_dict[graph_num][v]
                         continue
             
                     # determine the list of labels of the nodes adjacent to v
@@ -206,76 +207,3 @@ def extract_features(graph_meta_data_of_num, h_range):
    
     return feature_mat_of_param, extr_time_of_param
 
-
-
-# !!
-if __name__ == '__main__':
-    from misc import dataset_loader
-    from performance_evaluation import cross_validation
-    
-#    from sklearn.cross_validation import KFold
-    from sklearn.svm import SVC
-#    from sklearn.cross_validation import cross_val_score
-    from sklearn.metrics.pairwise import pairwise_kernels
-    
-    DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-    dataset = 'MUTAG'
-#    dataset = 'PTC(MR)'
-    
-    graph_meta_data_of_num, class_lbls \
-        = dataset_loader.get_graph_meta_data_and_class_lbls(dataset,
-                                                            DATASETS_PATH)    
-    
-    h_range = range(6)
-    
-    feature_mat_of_param, extr_time_of_param \
-        = extract_features(graph_meta_data_of_num, h_range)
-                                 
-    feature_mat = feature_mat_of_param[1]                                                                
-                                                                   
-
-
-    clf = SVC(kernel = 'precomputed')
-
-    # kernel_mat == feature_mat.dot(feature_mat.T)
-    kernel_mat = pairwise_kernels(feature_mat)
-    
-    
-#    clf.fit(pairwise_kernels(feature_mat), class_lbls)
-#    clf.fit(feature_mat.dot(feature_mat.T), class_lbls)
-    
-#    cv = KFold(len(class_lbls), 10, shuffle = True)    
-    
-#    cross_val_score(clf, pairwise_kernels(feature_mat), class_lbls, cv = 10)
-#    scores = cross_val_score(clf, feature_mat.dot(feature_mat.T),
-#                             class_lbls, cv = cv)
-#    print np.average(scores)
-    
-    
-    cross_validation.cross_val(clf, kernel_mat, class_lbls, 10, 10,
-                               open('bla.txt', 'w'))   
-
-
-    
-#    X = []
-#    for i in xrange(len(graph_meta_data_of_num)):
-#        X.append([i])
-#    X = np.array(X)
-#        
-#    
-#    data = ['aab', 'aaabb']
-#        
-#    def my_kernel(X, Y):
-#        '''This function is used to pre-compute the kernel matrix from data matrices;
-#           that matrix should be an array of shape (n_samples, n_samples).'''
-#    #    print 'X', X
-#    #    print 'X type', type(X)
-#    #    print 'X size', X.shape
-#    #    print 'Y', Y
-#    #    print 'Y type', type(Y)
-#    #    print 'Y size', Y.shape
-#        i = int(X[0,0])
-#        j = int(Y[1,0])
-#    #    return data[i].count('a')*data[j].count('a') +\
-#    #           data[i].count('b')*data[j].count('b')
-#        return np.array([[1, 2], [2,3]])

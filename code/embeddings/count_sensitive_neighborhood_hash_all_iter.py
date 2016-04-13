@@ -32,28 +32,3 @@ def extract_features(graph_meta_data_of_num, h_range):
                                                    count_sensitive = True,
                                                    all_iter = True)
     
-
-# !!
-if __name__ == '__main__':
-    import time
-    from misc import dataset_loader
-        
-    DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
-    dataset = 'MUTAG'
-    
-    graph_meta_data_of_num, class_lbls \
-        = dataset_loader.get_graph_meta_data_and_class_lbls(dataset,
-                                                            DATASETS_PATH)
-    
-    h_range = range(6)
-    start = time.time()
-    feature_mat_of_param, extr_time_of_param =\
-                                 extract_features(graph_meta_data_of_num, h_range)
-    
-    end = time.time()
-    print 'h_range = %s: %.3f' % (h_range, end - start)
-    
-    print '%r' % feature_mat_of_param
-    
-    
- 
