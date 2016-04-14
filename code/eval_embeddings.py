@@ -1,28 +1,27 @@
 """
 Evaluation of embedding methods.
 
-This module provides functions for evaluating the performance of four
-explecit two implicit graph embedding methods. The explicit ones are the
+This module provides functions for evaluating the performance of one
+implicit and five explecit embedding methods. The random walk kernel
+is the implicit embedding, while the explicit ones comprise the
 Weisfeiler-Lehman subtree kernel, the neighborhood hash kernel (in three
-variants) and the !!. The implicit embeddings comprise the random walk
-kernel and the !!. The classification accuracies and runtimes are
-evaluated on the following 8 datasets: MUTAG, PTC(MR), ENZYMES, DD,
-NCI1, NCI109, FLASH CFG, and ANDROID FCG.
+variants), the graphlet kernel (in two variants), the shortest path
+kernel and the Eigen graph kernel.
+The classification accuracies and runtimes are evaluated on the
+following 8 datasets: MUTAG, PTC(MR), ENZYMES, DD, NCI1, NCI109,
+FLASH CFG, and ANDROID FCG.
 """
 from __future__ import division
 
 
 __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
-__date__ = "2016-04-09"
+__date__ = "2016-04-14"
 
 
 # planed procedure:
 #
 # at Ben-PC:
-# !!!
-# 01. optimize coding style
-# 02. document RWkernel, PCG, graphlet_kernel and get_lamda
-# 
+
 
 # at Benny-Notebook:
 #
@@ -33,13 +32,9 @@ __date__ = "2016-04-09"
 
 # at Sylvia-Notebook:
 #
-# 02. test SPK on ANDROID FCG (!!!)
-# 03. test WL and CSNH_all_iter on ANDROID FCG 14795
-#
-# 01. WL on ANDROID FCG 14795 (feature extraction took ca. 5 h, 0.94)
-# 02. EGK on ANDROID FCG 14795 (feature extraction took ca. 14 h, 0.91)
-# 03. RW on ANDROID FCG 14795 (feature extraction took ca. x h, x)
-# 04. GK-3 on ANDROID FCG 14795 (feature extraction took ca. x h, x)
+# 01. test SPK on ANDROID FCG (!!!)
+# 02. test CSNH_all_iter on ANDROID FCG 14795 with bit arrays of length 32 bit 
+
 
 
 import numpy as np
@@ -68,17 +63,15 @@ from performance_evaluation import cross_validation
 DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', 'datasets')
 
 # embeddings
-WEISFEILER_LEHMAN = 'weisfeiler_lehman'
-NEIGHBORHOOD_HASH = 'neighborhood_hash'
-COUNT_SENSITIVE_NEIGHBORHOOD_HASH = 'count_sensitive_neighborhood_hash'
-COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER =\
-                                      'count_sensitive_neighborhood_hash_all_iter'
-GRAPHLET_KERNEL_3 = 'graphlet_kernel_3'
-GRAPHLET_KERNEL_4 = 'graphlet_kernel_4'
-SHORTEST_PATH_KERNEL = 'shortest_path_kernel'
-LABEL_COUNTER = 'label_counter'
-RANDOM_WALK_KERNEL = 'random_walk_kernel'
-EIGEN_KERNEL = 'eigen_kernel'
+WL = 'weisfeiler_lehman'
+NH = 'neighborhood_hash'
+CSNH = 'count_sensitive_neighborhood_hash'
+CSNH_ALL = 'count_sensitive_neighborhood_hash_all_iter'
+GK_3 = 'graphlet_kernel_3'
+GK_4 = 'graphlet_kernel_4'
+SP = 'shortest_path_kernel'
+RW = 'random_walk_kernel'
+EGK = 'eigen_kernel'
 
 # datasets
 MUTAG = 'MUTAG'
@@ -94,40 +87,40 @@ ANDROID_FCG_14795 = 'ANDROID FCG 14795'
 #=================================================================================
 # parameter definitions
 #=================================================================================
-#EMBEDDING_NAMES = [WEISFEILER_LEHMAN, COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER,
-#                   EIGEN_KERNEL, RANDOM_WALK_KERNEL, GRAPHLET_KERNEL_3]
-#EMBEDDING_NAMES = [EIGEN_KERNEL, RANDOM_WALK_KERNEL, GRAPHLET_KERNEL_3]
-#EMBEDDING_NAMES = [WEISFEILER_LEHMAN]
-#EMBEDDING_NAMES = [WEISFEILER_LEHMAN, GRAPHLET_KERNEL_3, GRAPHLET_KERNEL_4]
-EMBEDDING_NAMES = [WEISFEILER_LEHMAN, COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER]
-#EMBEDDING_NAMES = [WEISFEILER_LEHMAN, COUNT_SENSITIVE_NEIGHBORHOOD_HASH,
-#                   COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER]
-#EMBEDDING_NAMES = [WEISFEILER_LEHMAN, NEIGHBORHOOD_HASH]
-#EMBEDDING_NAMES = [COUNT_SENSITIVE_NEIGHBORHOOD_HASH]
-#EMBEDDING_NAMES = [COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER]
-#EMBEDDING_NAMES = [NEIGHBORHOOD_HASH, COUNT_SENSITIVE_NEIGHBORHOOD_HASH,
-#                   COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER]
-#EMBEDDING_NAMES = [GRAPHLET_KERNEL_3]
-#EMBEDDING_NAMES = [GRAPHLET_KERNEL_4]
-#EMBEDDING_NAMES = [GRAPHLET_KERNEL_3, GRAPHLET_KERNEL_4]
-#EMBEDDING_NAMES = [RANDOM_WALK_KERNEL]
-#EMBEDDING_NAMES = [EIGEN_KERNEL]
-#EMBEDDING_NAMES = [SHORTEST_PATH_KERNEL]
+#EMBEDDING_NAMES = [WL, CSNH_ALL,
+#                   EGK, RW, GK_3]
+#EMBEDDING_NAMES = [EGK, RW, GK_3]
+#EMBEDDING_NAMES = [WL]
+#EMBEDDING_NAMES = [WL, GK_3, GK_4]
+EMBEDDING_NAMES = [WL, CSNH_ALL]
+#EMBEDDING_NAMES = [WL, CSNH,
+#                   CSNH_ALL]
+#EMBEDDING_NAMES = [WL, NH]
+#EMBEDDING_NAMES = [CSNH]
+#EMBEDDING_NAMES = [CSNH_ALL]
+#EMBEDDING_NAMES = [NH, CSNH,
+#                   CSNH_ALL]
+#EMBEDDING_NAMES = [GK_3]
+#EMBEDDING_NAMES = [GK_4]
+#EMBEDDING_NAMES = [GK_3, GK_4]
+#EMBEDDING_NAMES = [RW]
+#EMBEDDING_NAMES = [EGK]
+#EMBEDDING_NAMES = [SP]
                    
 
 
 # keys are indices of the list EMBEDDING_NAMES, values are the respective
 # parameters
 EMBEDDING_PARAM_RANGES = {
-    WEISFEILER_LEHMAN: range(6),
-    NEIGHBORHOOD_HASH: range(6),
-    COUNT_SENSITIVE_NEIGHBORHOOD_HASH: range(6),
-    COUNT_SENSITIVE_NEIGHBORHOOD_HASH_ALL_ITER: range(6),
-    GRAPHLET_KERNEL_3: [None],
-    GRAPHLET_KERNEL_4: [None],
-    SHORTEST_PATH_KERNEL: [None],
-    RANDOM_WALK_KERNEL: [None],
-    EIGEN_KERNEL: np.linspace(1/6, 1, 6)}
+    WL: range(6),
+    NH: range(6),
+    CSNH: range(6),
+    CSNH_ALL: range(6),
+    GK_3: [None],
+    GK_4: [None],
+    SP: [None],
+    RW: [None],
+    EGK: np.linspace(1/6, 1, 6)}
 
 
 # sorted by number of graphs in ascending order
@@ -237,7 +230,7 @@ def get_params(graph_meta_data_of_num, embedding_name):
         clf_max_iter = CLF_MAX_ITER_SD
         num_inner_folds = NUM_INNER_FOLDS_SD
         
-    implicit_embeddings = [RANDOM_WALK_KERNEL]
+    implicit_embeddings = [RW]
     
     if embedding_name in implicit_embeddings:
         embedding_is_implicit = True
