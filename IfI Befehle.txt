@@ -1,6 +1,6 @@
 cd Masterarbeit/downloads/graphkernels/datasets/
 
-load('MUTAG')
+load MUTAG
 cd ../unlabeled
 RWkernel(MUTAG, -2)
 

@@ -358,7 +358,7 @@ for dataset in DATASETS:
             ax = ax_of_mode_of_embedding[embedding][mode]
             plt.sca(ax)
             
-            plt.grid(color = '0.5')
+            plt.grid(color = '0.5', alpha = 0.5)
             
             plt.tick_params(axis = 'both', which = 'major', length = 3)
             plt.tick_params(axis = 'both', which = 'minor', length = 2)

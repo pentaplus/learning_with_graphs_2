@@ -18,6 +18,7 @@ import numpy as np
 import sys
 
 from itertools import chain
+from matplotlib.ticker import MultipleLocator
 from os.path import abspath, dirname, join
 
 # determine script path
@@ -245,7 +246,6 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
     
     
     if mode == SCORES:
-        from matplotlib.ticker import MultipleLocator
         major_locator = MultipleLocator(5)
         ax.yaxis.set_major_locator(major_locator)
     plt.grid(axis = 'y', color = '0.5', alpha = 0.5)
