@@ -427,7 +427,7 @@ for dataset in DATASETS:
                 plt.yscale('log')
     
             if embedding == EK and mode == FEATURES_COUNT:
-                plt.grid(which = 'minor', color = '0.5')
+                plt.grid(which = 'minor', color = '0.5', alpha = 0.5)
                 
     plt.tight_layout(w_pad = 2, h_pad = 4.7, rect = (0, 0.05, 1, 1))
 
