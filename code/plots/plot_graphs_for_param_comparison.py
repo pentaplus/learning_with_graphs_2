@@ -447,7 +447,7 @@ for dataset in DATASETS:
             
     y = y_second_ax_bottom - y_offset
     ax.text(0.5, y, '\\normalsize \\textbf{(b)} \\textit{Count-sensitive '
-            'neigborhood hash kernel}', horizontalalignment = 'center',
+            'neighborhood hash kernel}', horizontalalignment = 'center',
             verticalalignment = 'center', transform = fig.transFigure)
 
     y = y_third_ax_bottom - y_offset
