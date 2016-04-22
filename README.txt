@@ -13,9 +13,9 @@ can be specified that are to be evaluated. Furthermore, the datasets can be
 determined, on which the embeddings will run. See the comments within
 "code/eval_embeddings.py" for more information.
 
-The classification accuracies and runtimes are evaluated on the following eight
-datasets: MUTAG, PTC(MR), ENZYMES, DD, NCI1, NCI109, FLASH CFG, and ANDROID
-FCG. The datasets are contained in the folder "datasets".
+The classification accuracies and runtimes were evaluated on the following
+eight datasets: MUTAG, PTC(MR), ENZYMES, DD, NCI1, NCI109, FLASH CFG, and
+ANDROID FCG. The datasets are contained in the folder "datasets".
 
 The results of the experiments presented in the master's thesis can be found in
 the folder "results_final".
