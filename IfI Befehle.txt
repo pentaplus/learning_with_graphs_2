@@ -1,8 +1,0 @@
-cd Masterarbeit/downloads/graphkernels/datasets/
-
-load MUTAG
-cd ../unlabeled
-RWkernel(MUTAG, -2)
-
-387
-499
