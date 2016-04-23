@@ -1,0 +1,21 @@
+LIBRARY: LIBLINEAR
+EMBEDDING TYPE: EXPLICIT
+EXPER_NUM_ITER: 10
+SVM_PARAM_GRID: {C: (1.0e-02, 4.6e-01, 2.2e+01, 1.0e+03)}
+NUM_CROSS_VAL_JOBS: 4
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 2
+CLF_MAX_ITER: 1e+03
+SEARCH_OPT_SVM_PARAM_IN_PAR: TRUE
+------------------------------------------
+
+Graph loading and feature exraction took 22.7 seconds.
+
+------------------------------------------
+Parameter: None
+
+Feature extraction took 22.7 seconds.
+Feature matrix dimension: (4110, 11)
+
+LINEAR
+0.511 (+/-0.018) in 132.0 seconds

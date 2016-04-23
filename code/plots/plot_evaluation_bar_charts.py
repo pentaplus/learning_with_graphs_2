@@ -127,38 +127,40 @@ DATA_SD = np.array(
      [EGK, PTC_MR, 61.9, 1.0, 130.4/10 + 62.5],
      [EGK, ENZYMES, 25.7, 1.1, 803.2/10 + 99.6]])
      
-
+# The scores and runtimes for ANDROID_FCG are composed from two runs,
+# where each run encompasses 5 repetitions (the results for the second
+# run can be found in the folder "results_final\Android FCG logs")
 DATA_LD = np.array(
     [[WL, DD, 79.1, 0.5, 2170.2/10 + 31.9],
      [WL, NCI1, 86.0, 0.2, 2603.8/10 + 17.6],
      [WL, NCI109, 86.3, 0.1, 2636.1/10 + 17.4],
      [WL, FLASH_CFG, 85.9, 0.4, 676.3/10 + 129.2],
-     [WL, ANDROID_FCG, 93.9, 0.1, 105315.5/10 + 12295.0],
+     [WL, ANDROID_FCG, 93.9, 0.1, (105315.5 + 104838.5)/10 + 12295.0],
      [NH, DD, 76.8, 0.9, 253.7/10 + 22.2],
      [NH, NCI1, 79.1, 0.3, 655.6/10 + 16.7],
      [NH, NCI109, 79.1, 0.3, 684.1/10 + 15.3],
      [NH, FLASH_CFG, 83.9, 2.4, 405.2/10 + 117.8],
-     [NH, ANDROID_FCG, 94.6, 0.1, 27575.8/10 + 7507.8],
+     [NH, ANDROID_FCG, 94.6, 0.1, (27575.8 + 28380.9)/10 + 7507.8],
      [CSNH, DD, 76.3, 1.1, 263.5/10 + 37.9],
      [CSNH, NCI1, 83.9, 0.2, 742.0/10 + 19.9],
      [CSNH, NCI109, 83.4, 0.4, 761.7/10 + 20.1],
      [CSNH, FLASH_CFG, 85.4, 0.5, 425.3/10 + 142.6],
-     [CSNH, ANDROID_FCG, 94.6, 0.1, 31028.3/10 + 7779.1], 
+     [CSNH, ANDROID_FCG, 94.6, 0.1, (31028.3 + 29955.7)/10 + 7779.1], 
      [CSNH_ALL, DD, 78.5, 1.0, 2265.1/10 + 42.9],
      [CSNH_ALL, NCI1, 85.1, 0.1, 2297.1/10 + 19.8],
      [CSNH_ALL, NCI109, 85.0, 0.1, 2272.7/10 + 20.4],
      [CSNH_ALL, FLASH_CFG, 86.2, 0.4, 666.8/10 + 143.0],
-     [CSNH_ALL, ANDROID_FCG, 93.3, 0.8, 106281.2/10 + 12801.0],
+     [CSNH_ALL, ANDROID_FCG, 93.6, 0.6, (106281.2 + 103615.5)/10 + 12801.0],
      [GK_3, DD, 55.1, 4.2, 29.1/10 + 21.1],
      [GK_3, NCI1, 54.7, 2.0, 89.7/10 + 4.5],
      [GK_3, NCI109, 53.3, 1.7, 94.5/10 + 4.6],
      [GK_3, FLASH_CFG, 65.1, 4.4, 47.0/10 + 38.7],
-     [GK_3, ANDROID_FCG, 64.8, 7.6, 182.5/10 + 608.8],
+     [GK_3, ANDROID_FCG, 62.1, 6.5, (182.5 + 188.9)/10 + 608.8],
      [GK_4, DD, 46.6, 3.3, 38.3/10 + 311.0],
      [GK_4, NCI1, 51.1, 1.8, 132.0/10 + 22.7],
      [GK_4, NCI109, 54.3, 1.1, 132.2/10 + 22.9],
      [GK_4, FLASH_CFG, 66.1, 4.1, 72.3/10 + 125.1],
-     [GK_4, ANDROID_FCG, 65.8, 5.4, 284.2/10 + 7386.7],
+     [GK_4, ANDROID_FCG, 64.3, 6.9, (284.2 + 288.3)/10 + 7386.7],
      [SP, DD, 67.4, 2.0, 52.3/10 + 5269.1],
      [SP, NCI1, 65.1, 0.9, 167.6/10 + 12.4],
      [SP, NCI109, 64.5, 0.9, 165.4/10 + 12.2],
@@ -173,7 +175,7 @@ DATA_LD = np.array(
      [EGK, NCI1, 64.4, 0.2, 929.7/10 + 898.1],
      [EGK, NCI109, 64.5, 0.3, 964.3/10 + 879.0],
      [EGK, FLASH_CFG, 79.7, 2.6, 2596.1/10 + 3387.9],
-     [EGK, ANDROID_FCG, 89.9, 2.2, 35149.8/10 + 59154.0]])
+     [EGK, ANDROID_FCG, 88.5, 2.7, (35149.8 + 34944.0)/10 + 59154.0]])
      
       
 # order according to the sequence of the embeddings in the data matrices
