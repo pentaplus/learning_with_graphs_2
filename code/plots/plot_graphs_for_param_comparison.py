@@ -8,7 +8,7 @@ respective methods and the length of the feature vectors.
 from __future__ import division
 
 __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
-__date__ = "2016-04-03"
+__date__ = "2016-04-23"
 
 
 import inspect

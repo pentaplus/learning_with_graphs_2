@@ -25,16 +25,11 @@ __date__ = "2016-04-14"
 
 # at Benny-Notebook:
 #
-# 01. test WL and CSNH_all_iter on ANDROID FCG 14795 (further 5 iterations)
-# 02. test EGK on ANDROID FCG 14795 (further 5 iterations)
-# 03. test NH and CSNH on ANDROID FCG 14795 (further 5 iterations)
-# 04. test 3-GK and 4-GK on ANDROID FCG 14795 (further 5 iterations)
+# 01. test SPK on ANDROID FCG (!!!)
+
 
 # at Sylvia-Notebook:
 #
-# 01. test SPK on ANDROID FCG (!!!)
-# 02. test CSNH_all_iter on ANDROID FCG 14795 with bit arrays of length 32 bit 
-
 
 
 import numpy as np

@@ -1,14 +1,15 @@
 """
 Plot bar charts representing the results of the embedding methods.
 
-The plots show the classification accuracy and the runtime of the
-respective methods.
+The plots show the classification accuracy and the runtime as well as
+the ratio classification accuracy per runtime for the respective
+methods.
 """
 
 from __future__ import division
 
 __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
-__date__ = "2016-03-19"
+__date__ = "2016-04-30"
 
 
 import inspect
@@ -60,6 +61,7 @@ LARGE = 'large'
 
 SCORES = 'scores'
 RUNTIMES = 'runtimes'
+EFFICIENCY_RATIOS = 'efficiency_ratios'
 
 
 EMBEDDING_ABBRVS = {
@@ -80,7 +82,9 @@ LEGEND_FONT_SIZE = 6
     
 DATASET_TYPES = [SMALL, LARGE]
 
-MODES = [SCORES, RUNTIMES]
+# !!
+#MODES = [SCORES, RUNTIMES]
+MODES = [EFFICIENCY_RATIOS]
 
 
 mpl.use("pgf")
@@ -186,7 +190,7 @@ COLORS = ['#00008F', '#0020FF', '#00AFFF', '#40FFBF', '#87FF77', '#CFFF30',
 for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):         
     data = DATA_SD if dataset_type == SMALL else DATA_LD
     
-    figsize = (5.58, 3) if mode == SCORES else (5.8, 3)
+    figsize = (5.58, 3) if mode in [SCORES, EFFICIENCY_RATIOS] else (5.8, 3)
     fig = plt.figure(figsize = figsize)
     ax = fig.add_subplot(111)
     
@@ -210,6 +214,8 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
 
         runtimes = []
         
+        eff_ratios = []
+        
         for j in xrange(len(datasets)):
             position = j + 1 - (1 - space)/2 + i * width
             positions.append(position)                
@@ -220,20 +226,31 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
                 
                 scores.append(score)
                 std_devs.append(std_dev)
-            else:
-                # mode == RUNTIMES
+            elif mode == RUNTIMES:
                 runtime = float(data[i * len(datasets) + j][4])
                 runtimes.append(runtime)
+            else:
+                # mode == EFFICIENCY_RATIOS
+                score, std_dev = tuple(
+                    data[i * len(datasets) + j][2:4].astype(float))
+                    
+                runtime = float(data[i * len(datasets) + j][4])
+                
+                eff_ratio = score / runtime
+                eff_ratios.append(eff_ratio)
 
         
         if mode == SCORES:                      
             ax.bar(positions, scores, width = width, color = COLORS[i],
                    yerr = std_devs, ecolor = 'black',
                    label = EMBEDDING_ABBRVS[embeddings[i]])
-        else:
-            # mode == RUNTIMES
+        elif mode == RUNTIMES:
             ax.bar(positions, runtimes, width = width, color = COLORS[i],
                    label = EMBEDDING_ABBRVS[embeddings[i]])
+        else:
+            # mode == EFFICIENCY_RATIOS
+            ax.bar(positions, eff_ratios, width = width, color = COLORS[i],
+                   label = EMBEDDING_ABBRVS[embeddings[i]])            
                
     
     ax.set_xlim(0.5 - space/2, len(datasets) + 0.5 + space/2)
@@ -263,8 +280,7 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
                                            11*['']))        
         
         plt.yticks(y, y_labels)
-    else:
-        # mode == RUNTIMES
+    elif mode == RUNTIMES:
         plt.yscale('log')
         
         ax.set_ylim([1, 1.5*24*60*60])
@@ -282,30 +298,25 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
                    + ['12 h', '1 day']
 
         plt.yticks(y, y_labels)
-    
+    else:
+        # mode == EFFICIENCY_RATIOS
+        plt.yscale('log')
+        
+        if dataset_type == SMALL:
+            ax.set_ylim([0, 150])
+        else:
+            # dataset_type == LARGE
+            ax.set_ylim([0, 15])
+        
+        plt.tick_params(axis = 'x', which = 'both', bottom = 'off', top = 'off')
+        
+        plt.grid(axis = 'y', which = 'minor', color = '0.5', alpha = 0.5)
+        
     
     # plot legend
     handles, labels = ax.get_legend_handles_labels()
-
-    if mode == SCORES:
-        if dataset_type == SMALL:
-            loc = 9
-            ncol = 5
-        else:
-            # dataset_type == LARGE
-            loc = 9
-            ncol = 5
-    else:
-        # mode == RUNTIMES
-        if dataset_type == SMALL:
-            loc = 9
-            ncol = 5
-        else:
-            # dataset_type == LARGE
-            loc = 9
-            ncol = 5
     
-    ax.legend(handles, labels, loc = loc, ncol = ncol,
+    ax.legend(handles, labels, loc = 9, ncol = 5,
               prop = {'size': LEGEND_FONT_SIZE})
     
     plt.tight_layout(0.5)
