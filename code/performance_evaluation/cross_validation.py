@@ -53,7 +53,8 @@ def optimize_embedding_param(clf, feature_mat_of_param, class_lbls,
                 feature_mat = feature_mat_of_param[param]
 
                 if isinstance(clf, GridSearchCV):
-                    clf.fit(feature_mat[train_indices], class_lbls[train_indices])
+                    clf.fit(feature_mat[train_indices],
+                            class_lbls[train_indices])
                     
                     sub_clf = clf.best_estimator_
                     
@@ -63,8 +64,10 @@ def optimize_embedding_param(clf, feature_mat_of_param, class_lbls,
                     elif isinstance(param, float):
                         print('param = %.2f, i = %d, j = %d: params = %s'
                               % (param, i, j, clf.best_params_))                        
-                    score_on_train_data = sub_clf.score(feature_mat[test_indices],
-                                                        class_lbls[test_indices])
+                    score_on_train_data = sub_clf.score(
+                        feature_mat[test_indices],
+                        class_lbls[test_indices])
+                        
                     if score_on_train_data > best_score_on_train_data:
                         opt_clf = clf
                 else:
@@ -106,7 +109,8 @@ def optimize_embedding_param(clf, feature_mat_of_param, class_lbls,
 
         print('-------------------------------------------------------------')
         print('RESULT for i = %d: %.7f' % (i, mean_score_on_test_data))
-        print('-------------------------------------------------------------\n')                                           
+        print('-------------------------------------------------------------'
+              '\n')                                           
                                                         
     cross_val_end_time = time.time()
     cross_val_time = cross_val_end_time - cross_val_start_time
@@ -144,7 +148,8 @@ def cross_val(grid_clf, data_mat, class_lbls, embedding_is_implicit,
         for j, (train_indices, test_indices) in enumerate(outer_cv):
             if not embedding_is_implicit:
                 # explicit embedding
-                grid_clf.fit(data_mat[train_indices], class_lbls[train_indices])
+                grid_clf.fit(data_mat[train_indices],
+                             class_lbls[train_indices])
             else:
                 # implicit embedding
                 grid_clf.fit(data_mat[np.ix_(train_indices, train_indices)],
@@ -152,7 +157,8 @@ def cross_val(grid_clf, data_mat, class_lbls, embedding_is_implicit,
                 
             opt_clf = grid_clf.best_estimator_
                 
-            print('i = %d, j = %d: params = %s' % (i, j, grid_clf.best_params_))
+            print('i = %d, j = %d: params = %s' % (i, j,
+                                                   grid_clf.best_params_))
             
             if not embedding_is_implicit:
                 # explicit embedding                 

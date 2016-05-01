@@ -18,19 +18,6 @@ __author__ = "Benjamin Plock <benjamin.plock@stud.uni-goettingen.de>"
 __date__ = "2016-04-14"
 
 
-# planed procedure:
-#
-# at Ben-PC:
-
-
-# at Benny-Notebook:
-#
-# 01. test SPK on ANDROID FCG (!!!)
-
-
-# at Sylvia-Notebook:
-#
-
 
 import numpy as np
 import importlib
@@ -52,9 +39,9 @@ from misc import dataset_loader, utils
 from performance_evaluation import cross_validation
 
 
-#=================================================================================
+#==============================================================================
 # constants
-#=================================================================================
+#==============================================================================
 DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', 'datasets')
 
 # embeddings
@@ -79,29 +66,19 @@ FLASH_CFG = 'FLASH CFG'
 ANDROID_FCG_14795 = 'ANDROID FCG 14795'
 
 
-#=================================================================================
+#==============================================================================
 # parameter definitions
-#=================================================================================
-#EMBEDDING_NAMES = [WL, CSNH_ALL,
-#                   EGK, RW, GK_3]
-#EMBEDDING_NAMES = [EGK, RW, GK_3]
-#EMBEDDING_NAMES = [WL]
-#EMBEDDING_NAMES = [WL, GK_3, GK_4]
-EMBEDDING_NAMES = [WL, CSNH_ALL]
-#EMBEDDING_NAMES = [WL, CSNH,
-#                   CSNH_ALL]
-#EMBEDDING_NAMES = [WL, NH]
+#==============================================================================
+#EMBEDDING_NAMES = [WL, NH, CSNH, CSNH_ALL, GK_3, GK4, RW, SP, EGK]
+EMBEDDING_NAMES = [WL]
+#EMBEDDING_NAMES = [NH]
 #EMBEDDING_NAMES = [CSNH]
 #EMBEDDING_NAMES = [CSNH_ALL]
-#EMBEDDING_NAMES = [NH, CSNH,
-#                   CSNH_ALL]
 #EMBEDDING_NAMES = [GK_3]
 #EMBEDDING_NAMES = [GK_4]
-#EMBEDDING_NAMES = [GK_3, GK_4]
 #EMBEDDING_NAMES = [RW]
-#EMBEDDING_NAMES = [EGK]
 #EMBEDDING_NAMES = [SP]
-                   
+#EMBEDDING_NAMES = [EGK]
 
 
 # keys are indices of the list EMBEDDING_NAMES, values are the respective
@@ -120,24 +97,19 @@ EMBEDDING_PARAM_RANGES = {
 
 # sorted by number of graphs in ascending order
 #DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109, FLASH_CFG]
-#DATASETS = [NCI109, FLASH_CFG]
-#DATASETS = [MUTAG, PTC_MR, ENZYMES, DD, NCI1, NCI109]
-#DATASETS = [DD, NCI1, NCI109, FLASH_CFG]
-#DATASETS = [MUTAG, PTC_MR, ENZYMES]
-#DATASETS = [DD, NCI1, NCI109]
-#DATASETS = [MUTAG]
+DATASETS = [MUTAG]
 #DATASETS = [PTC_MR]
 #DATASETS = [ENZYMES]
 #DATASETS = [DD]
 #DATASETS = [NCI1]
 #DATASETS = [NCI109]
 #DATASETS = [FLASH_CFG]
-DATASETS = [ANDROID_FCG_14795]
+#DATASETS = [ANDROID_FCG_14795]
 
 # OPT_PARAM specifies whether the performance of the chosen embeddings
 # is to be eveluated, whereby at first the best embedding parameter is searched
-# for. This is only possible for embddings with more than one embedding parameter,
-# i.e., len(EMBEDDING_PARAM_RANGES[embedding_name]) > 1
+# for. This is only possible for embddings with more than one embedding
+# parameter, i.e., len(EMBEDDING_PARAM_RANGES[embedding_name]) > 1
 OPT_PARAM = True
 #OPT_PARAM = False
 
@@ -151,32 +123,32 @@ COMPARE_PARAMS = True
 SEARCH_OPT_SVM_PARAM_IN_PAR = True
 #SEARCH_OPT_SVM_PARAM_IN_PAR = False
 
+EXPER_NUM_ITER = 1
 #EXPER_NUM_ITER = 10
-EXPER_NUM_ITER = 5
-#EXPER_NUM_ITER = 3
-#EXPER_NUM_ITER = 1
 
-# maximum number of iterations for small datasets (having less than 1000 samples)
+# maximum number of iterations for small datasets (having less than 1000
+# samples)
 CLF_MAX_ITER_SD = 1e7
 
-# maximum number of iterations for large datasets (having more than 1000 samples)
+# maximum number of iterations for large datasets (having more than 1000
+# samples)
 CLF_MAX_ITER_LD = 1e3
 
 # number of folds used in cross validation for performance evaluation
 NUM_OUTER_FOLDS = 10
 
 # number of folds used in cross validation on training data for small datasets
-# (i.e., less than 1000 samples)
 NUM_INNER_FOLDS_SD = 3
 
 # number of folds used in cross validation on training data for large datasets
-# (i.e., more than 1000 samples)
 NUM_INNER_FOLDS_LD = 2
 
 NUM_CROSS_VAL_JOBS = 4
 
 
-def extract_features(graph_meta_data_of_num, embedding, param_range, result_file):
+def extract_features(graph_meta_data_of_num, embedding, param_range,
+                     result_file):
+
     print('-------------------------------------------------------------\n')
     result_file.write('------------------------------------------\n\n')
 
@@ -184,7 +156,7 @@ def extract_features(graph_meta_data_of_num, embedding, param_range, result_file
 
     feature_mat_of_param, extr_time_of_param \
         = embedding.extract_features(graph_meta_data_of_num, param_range)
-                   
+
     feat_extr_end_time = time.time()
     feat_extr_time = feat_extr_end_time - feat_extr_start_time
     utils.write('Graph loading and feature exraction took %.1f seconds.\n'
@@ -192,10 +164,11 @@ def extract_features(graph_meta_data_of_num, embedding, param_range, result_file
     print('')
 
     return feature_mat_of_param, extr_time_of_param
-    
-    
+
+
 def compute_kernel_matrix(graph_meta_data_of_num, embedding, param_range,
                           result_file):
+
     print('-------------------------------------------------------------\n')
     result_file.write('------------------------------------------\n\n')
 
@@ -211,7 +184,7 @@ def compute_kernel_matrix(graph_meta_data_of_num, embedding, param_range,
     print('')
 
     return kernel_mat_of_param, kernel_mat_comp_time_of_param
-        
+
 
 def get_params(graph_meta_data_of_num, embedding_name):
     num_samples = len(graph_meta_data_of_num)
@@ -224,9 +197,9 @@ def get_params(graph_meta_data_of_num, embedding_name):
         dataset_is_large = False
         clf_max_iter = CLF_MAX_ITER_SD
         num_inner_folds = NUM_INNER_FOLDS_SD
-        
+
     implicit_embeddings = [RW]
-    
+
     if embedding_name in implicit_embeddings:
         embedding_is_implicit = True
         # use library LIBSVM
@@ -239,7 +212,8 @@ def get_params(graph_meta_data_of_num, embedding_name):
         if dataset_is_large:
             # use library LIBLINEAR
             use_liblinear = True
-            svm_param_grid = {'C': tuple(np.logspace(-2, 3, NUM_CROSS_VAL_JOBS))}
+            svm_param_grid = {'C': tuple(np.logspace(-2, 3,
+                                                     NUM_CROSS_VAL_JOBS))}
             kernel = 'linear'
         else:
             # use library LIBSVM
@@ -248,8 +222,8 @@ def get_params(graph_meta_data_of_num, embedding_name):
             kernel = 'linear/rbf'
 
     return dataset_is_large, embedding_is_implicit, use_liblinear, kernel, \
-           svm_param_grid, clf_max_iter, num_inner_folds
-    
+        svm_param_grid, clf_max_iter, num_inner_folds
+
 
 def get_svm_param_grid_str(svm_param_grid):
     kernel_is_given = 'kernel' in svm_param_grid.iterkeys()
@@ -265,18 +239,19 @@ def get_svm_param_grid_str(svm_param_grid):
         svm_param_grid_str += ', '
     if C_is_given:
         if isinstance(svm_param_grid['C'], (list, tuple)):
-            C_values_str = ['%.1e' % C_value for C_value in svm_param_grid['C']]
+            C_values_str = ['%.1e' % C_value for C_value in \
+                            svm_param_grid['C']]
             svm_param_grid_str += 'C: (' + ', '.join(C_values_str) + ')'
         else:
             svm_param_grid_str += 'C: %.1e' % svm_param_grid['C']
     svm_param_grid_str += '}'
-    
+
     return svm_param_grid_str
-    
+
 
 def write_param_info(use_liblinear, embedding_is_implicit, svm_param_grid,
                      clf_max_iter, num_inner_folds, result_file):
-                         
+
     if use_liblinear:
         utils.write('LIBRARY: LIBLINEAR\n', result_file)
     else:
@@ -284,10 +259,10 @@ def write_param_info(use_liblinear, embedding_is_implicit, svm_param_grid,
     if embedding_is_implicit:
         utils.write('EMBEDDING TYPE: IMPLICIT\n', result_file)
     else:
-        utils.write('EMBEDDING TYPE: EXPLICIT\n', result_file) 
+        utils.write('EMBEDDING TYPE: EXPLICIT\n', result_file)
     utils.write('EXPER_NUM_ITER: %d\n' % EXPER_NUM_ITER, result_file)
-    utils.write('SVM_PARAM_GRID: %s\n' % get_svm_param_grid_str(svm_param_grid),
-                result_file)
+    utils.write('SVM_PARAM_GRID: %s\n' % \
+                get_svm_param_grid_str(svm_param_grid), result_file)
     utils.write('NUM_CROSS_VAL_JOBS: %d\n' % NUM_CROSS_VAL_JOBS, result_file)
     utils.write('NUM_OUTER_FOLDS: %d\n' % NUM_OUTER_FOLDS, result_file)
     utils.write('NUM_INNER_FOLDS: %d\n' % num_inner_folds, result_file)
@@ -298,13 +273,13 @@ def write_param_info(use_liblinear, embedding_is_implicit, svm_param_grid,
     utils.write('SEARCH_OPT_SVM_PARAM_IN_PAR: %s\n'
                 % SEARCH_OPT_SVM_PARAM_IN_PAR.__str__().upper(), result_file)
     sys.stdout.write('\n')
-    
+
 
 def init_grid_clf(embedding_is_implicit, dataset_is_large, svm_param_grid,
                   clf_max_iter, num_inner_folds):
     """
     Initialize classifier.
-    
+
     For multiclass classification the One-Versus-Rest scheme is applied,
     i.e., in case of N different classes N classifiers are trained in
     total.
@@ -315,7 +290,7 @@ def init_grid_clf(embedding_is_implicit, dataset_is_large, svm_param_grid,
             clf = svm.SVC(kernel = 'precomputed', max_iter = clf_max_iter,
                           decision_function_shape = 'ovr')
         else:
-            # library LIBLINEAR is used            
+            # library LIBLINEAR is used
             clf = svm.LinearSVC(max_iter = clf_max_iter)
     else:
         # library LIBSVM is used
@@ -325,26 +300,28 @@ def init_grid_clf(embedding_is_implicit, dataset_is_large, svm_param_grid,
         else:
             clf = svm.SVC(max_iter = clf_max_iter,
                           decision_function_shape = 'ovr')
-    
+
     if SEARCH_OPT_SVM_PARAM_IN_PAR:
         grid_clf = GridSearchCV(clf, svm_param_grid, cv = num_inner_folds,
                                 n_jobs = NUM_CROSS_VAL_JOBS,
                                 pre_dispatch = '2*n_jobs')
     else:
         grid_clf = GridSearchCV(clf, svm_param_grid, cv = num_inner_folds)
-    
-    return grid_clf        
-        
-    
+
+    return grid_clf
+
+
 def write_eval_info(dataset, embedding_name, kernel, mode = None):
     mode_str = ' (' + mode + ')' if mode else ''
-    
-    print('%s with %s kernel%s on %s\n' % (embedding_name.upper(), kernel.upper(),
-                                           mode_str.upper(), dataset))
-           
+
+    print('%s with %s kernel%s on %s\n' % (embedding_name.upper(),
+                                           kernel.upper(), mode_str.upper(),
+                                           dataset))
+
 
 def write_feature_mat_dim_and_extr_time(param, feature_mat_of_param,
                                         extr_time_of_param, result_file):
+
     print('-------------------------------------------------------------')
     result_file.write('------------------------------------------\n')
     utils.write('Parameter: %r\n\n' % param, result_file)
@@ -353,11 +330,12 @@ def write_feature_mat_dim_and_extr_time(param, feature_mat_of_param,
     utils.write('Feature matrix dimension: %s\n'
                 % (feature_mat_of_param[param].shape,), result_file)
     sys.stdout.write('\n')
-    
-    
+
+
 def write_kernel_mat_dim_and_kernel_comp_time(param, kernel_mat_of_param,
                                               kernel_mat_comp_time_of_param,
                                               result_file):
+
     print('-------------------------------------------------------------')
     result_file.write('------------------------------------------\n')
     utils.write('Parameter: %r\n\n' % param, result_file)
@@ -366,88 +344,89 @@ def write_kernel_mat_dim_and_kernel_comp_time(param, kernel_mat_of_param,
     utils.write('Kernel matrix dimension: %s\n'
                 % (kernel_mat_of_param[param].shape,), result_file)
     sys.stdout.write('\n')
-    
+
 
 script_exec_start_time = time.time()
 
 for dataset in DATASETS:
-    #=============================================================================
+    #==========================================================================
     # 1) retrieve graph meta data and class lables
-    #=============================================================================
+    #==========================================================================
     graph_meta_data_of_num, class_lbls \
         = dataset_loader.get_graph_meta_data_and_class_lbls(dataset,
                                                             DATASETS_PATH)
-    
+
     for embedding_name in EMBEDDING_NAMES:
-        # set parameters depending on whether or not the number of samples within 
-        # the dataset is larger than 1000 and depending on wether the embedding is
-        # implict or explicit
+        # set parameters depending on whether or not the number of samples
+        # within the dataset is larger than 1000 and depending on wether the
+        # embedding is implict or explicit
         embedding = importlib.import_module('embeddings.' + embedding_name)
-        
+
         # initialize parameters
         dataset_is_large, embedding_is_implicit, use_liblinear, kernel, \
             svm_param_grid, clf_max_iter, num_inner_folds = get_params(
                 graph_meta_data_of_num,
                 embedding_name)
-        
+
         param_range = EMBEDDING_PARAM_RANGES[embedding_name]
-        
+
         result_path = join(SCRIPT_FOLDER_PATH, '..', 'results', embedding_name)
         utils.makedir(result_path)
         result_file = open(join(result_path, dataset + '.txt'), 'w')
-        
+
         write_param_info(use_liblinear, embedding_is_implicit, svm_param_grid,
                          clf_max_iter, num_inner_folds, result_file)
-        
 
-        #=========================================================================
-        # 2) extract features if embedding is an explicit embedding, else compute
-        #    the kernel matrix
-        #=========================================================================
+
+        #======================================================================
+        # 2) extract features if embedding is an explicit embedding, else
+        #    compute the kernel matrix
+        #======================================================================
         if not embedding_is_implicit:
             feature_mat_of_param, extr_time_of_param \
-                = extract_features(graph_meta_data_of_num, embedding, param_range,
-                                   result_file)
+                = extract_features(graph_meta_data_of_num, embedding,
+                                   param_range, result_file)
         else:
             kernel_mat_of_param, kernel_mat_comp_time_of_param \
-                = compute_kernel_matrix(graph_meta_data_of_num, embedding, 
+                = compute_kernel_matrix(graph_meta_data_of_num, embedding,
                                         param_range, result_file)
-                                                
+
         # initialize SVM classifier
         grid_clf = init_grid_clf(embedding_is_implicit, dataset_is_large,
-                                 svm_param_grid, clf_max_iter, num_inner_folds)               
-        
+                                 svm_param_grid, clf_max_iter, num_inner_folds)
+
         if OPT_PARAM and len(param_range) > 1:
-            #=====================================================================
+            #==================================================================
             # 3) evaluate the embedding's performance with optimized embedding
             #    parameter (this is only done for explicit embeddings)
-            #=====================================================================
+            #==================================================================
             mode = 'opt_param'
-            
+
             result_file.write('\n%s (%s)\n' % (kernel.upper(), mode.upper()))
-            
+
             write_eval_info(dataset, embedding_name, kernel, mode)
-            
+
             cross_validation.optimize_embedding_param(grid_clf,
                                                       feature_mat_of_param,
-                                                      class_lbls, EXPER_NUM_ITER,
+                                                      class_lbls,
+                                                      EXPER_NUM_ITER,
                                                       NUM_OUTER_FOLDS,
                                                       num_inner_folds,
-                                                      result_file)                                           
+                                                      result_file)
         if not COMPARE_PARAMS:
             result_file.close()
             continue
-        
-        
+
+
         if OPT_PARAM:
             result_file.write('\n')
-                
-                                                                
+
+
         if COMPARE_PARAMS:
-            #=====================================================================
+            #==================================================================
             # 4) evaluate the embedding's performance for each embedding
             #    parameter
-            #=====================================================================
+            #==================================================================
             for param in param_range:
                 if not embedding_is_implicit:
                     write_feature_mat_dim_and_extr_time(param,
@@ -457,32 +436,35 @@ for dataset in DATASETS:
                 else:
                     write_kernel_mat_dim_and_kernel_comp_time(
                         param,
-                        kernel_mat_of_param, kernel_mat_comp_time_of_param,
+                        kernel_mat_of_param,
+                        kernel_mat_comp_time_of_param,
                         result_file)
-               
+
                 result_file.write('\n%s\n' % kernel.upper())
-                
+
                 write_eval_info(dataset, embedding_name, kernel)
-                
+
                 if not embedding_is_implicit:
                     feature_mat = feature_mat_of_param[param]
-                    cross_validation.cross_val(grid_clf, feature_mat, class_lbls,
+                    cross_validation.cross_val(grid_clf, feature_mat,
+                                               class_lbls,
                                                embedding_is_implicit,
                                                EXPER_NUM_ITER, NUM_OUTER_FOLDS,
                                                result_file)
                 else:
                     kernel_mat = kernel_mat_of_param[param]
-                    cross_validation.cross_val(grid_clf, kernel_mat, class_lbls,
+                    cross_validation.cross_val(grid_clf, kernel_mat,
+                                               class_lbls,
                                                embedding_is_implicit,
                                                EXPER_NUM_ITER, NUM_OUTER_FOLDS,
                                                result_file)
 
         result_file.close()
-        
+
 
 script_exec_end_time = time.time()
 script_exec_time = script_exec_end_time - script_exec_start_time
 
 print('\nThe evaluation of the emedding method(s) took %.1f seconds.'
       % script_exec_time)
-                                                                  
+

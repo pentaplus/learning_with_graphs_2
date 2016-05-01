@@ -72,9 +72,9 @@ for graph_num in graph_numbers:
     mode = FIND_NODE_LABELS_LINE
 
     with open(str(graph_num) + '.graph', 'r') as f:
-        # ========================================================================
+        # =====================================================================
         # 1) parse graph file
-        # ========================================================================
+        # =====================================================================
         for line in f:
             line = line.rstrip()
             
@@ -119,12 +119,12 @@ for graph_num in graph_numbers:
                 weight_list_int = map(int, weight_list_str)
                 weight_lists.append(weight_list_int)
     
-    # ============================================================================
+    # =========================================================================
     # 2) create a networkx graph corresponding to the parsed graph
-    # ============================================================================
+    # =========================================================================
     
-    # create an empty graph (according to the description of the datasets covered
-    # in this script all corresponding graphs are undirected)        
+    # create an empty graph (according to the description of the datasets
+    # covered in this script all corresponding graphs are undirected)        
     G = nx.Graph()
     
     # add nodes to the graph

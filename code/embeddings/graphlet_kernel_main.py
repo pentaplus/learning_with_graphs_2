@@ -60,9 +60,9 @@ def extract_features(graph_meta_data_of_num, graphlet_size = 4):
     feature_mat = np.zeros((graphs_count, graphlets_count), dtype = np.float64)
     
     
-    #=============================================================================
+    #==========================================================================
     # extract features iterating over all graphs in the dataset
-    #=============================================================================
+    #==========================================================================
     for i, (graph_path, class_lbl) in \
             enumerate(graph_meta_data_of_num.itervalues()):
                 

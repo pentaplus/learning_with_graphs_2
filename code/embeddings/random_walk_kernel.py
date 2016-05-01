@@ -60,9 +60,10 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
     # decaying factor LAMBDA for down_weighting longer walks
     LAMBDA = -4
 
-    #=============================================================================
-    # 1) precompute the (sparse) adjacency matrices of the graphs in the dataset
-    #=============================================================================
+    #==========================================================================
+    # 1) precompute the (sparse) adjacency matrices of the graphs in the
+    #    dataset
+    #==========================================================================
     adj_mats = []
     
     
@@ -81,9 +82,9 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
         adj_mats.append(A)
         
     
-    #=============================================================================
+    #==========================================================================
     # 2) compute kernel matrix over all graphs in the dataset
-    #=============================================================================
+    #==========================================================================
     for i in xrange(num_graphs):
         A_i = adj_mats[i].todense()
 
@@ -91,14 +92,14 @@ def compute_kernel_mat(graph_meta_data_of_num, param_range = [None]):
             A_j = adj_mats[j].todense()
             
             # apply preconditioned conjugate gradient method in order to solve
-            # (I - lambda_*A_x) * x = 1_vec, where A_x is the adjacency matrix of
-            # the direct product graph of G_i and G_j, I is the identity matrix
-            # and 1_vec is vector with all entries set to 1.
+            # (I - lambda_*A_x) * x = 1_vec, where A_x is the adjacency matrix
+            # of the direct product graph of G_i and G_j, I is the identity
+            # matrix and 1_vec is vector with all entries set to 1.
             b = np.ones((A_i.shape[0] * A_j.shape[0], 1))
             
             x, flag, rel_res, iter_, res_vec \
-                = pcg.pcg(lambda x: mat_vec_product(x, A_i, A_j, LAMBDA), b, 1e-6,
-                          20)
+                = pcg.pcg(lambda x: mat_vec_product(x, A_i, A_j, LAMBDA), b,
+                          1e-6, 20)
             
             kernel_mat[i,j] = np.sum(x)
             if i != j:

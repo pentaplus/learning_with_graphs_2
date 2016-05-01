@@ -9,7 +9,6 @@ __date__ = "2016-03-18"
 import inspect
 import numpy as np
 import sys
-import time
 
 from os.path import abspath, dirname, join
 
@@ -22,8 +21,6 @@ sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
 from misc import dataset_loader, pz
 
-
-t0 = time.time()
 
 DATASETS_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', 'datasets')
 
@@ -38,20 +35,21 @@ ANDROID_FCG_14795 = 'ANDROID FCG 14795'
 FLASH_CFG = 'FLASH CFG'
 
 
-#DATASET = MUTAG
+DATASET = MUTAG
 #DATASET = PTC(MR)
 #DATASET = ENZYMES
 #DATASET = DD
 #DATASET = NCI1
 #DATASET = NCI109
 #DATASET = FLASH_CFG
-DATASET = ANDROID_FCG_14795
+#DATASET = ANDROID_FCG_14795
 
 
 graph_meta_data_of_num, class_lbls \
     = dataset_loader.get_graph_meta_data_and_class_lbls(DATASET, DATASETS_PATH)
     
-graphs_of_class = dataset_loader.get_graphs_of_class_dict(graph_meta_data_of_num)
+graphs_of_class = dataset_loader.get_graphs_of_class_dict(
+    graph_meta_data_of_num)
 
 classes = graphs_of_class.keys()
 
@@ -105,9 +103,4 @@ else:
 print 'avg_deg: %.2f' % avg_deg
 print 'max_deg:', max_deg
 print 'isolated:', number_of_isolated_nodes, '\n'
-
-t1 = time.time()
-total = t1 - t0
-
-print 'The execution took %.2f seconds.' % total
 

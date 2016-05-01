@@ -1,85 +1,64 @@
 LIBRARY: LIBLINEAR
-NUM_ITER: 10
-NUM_INNER_FOLDS: 4
-CLF_MAX_ITER: 1000
+EMBEDDING TYPE: EXPLICIT
+EXPER_NUM_ITER: 10
+SVM_PARAM_GRID: {C: (1.0e-02, 4.6e-01, 2.2e+01, 1.0e+03)}
+NUM_CROSS_VAL_JOBS: 4
+NUM_OUTER_FOLDS: 10
+NUM_INNER_FOLDS: 2
+CLF_MAX_ITER: 1e+03
+SEARCH_OPT_SVM_PARAM_IN_PAR: TRUE
+------------------------------------------
+
+Graph loading and feature exraction took 19.9 seconds.
 
 LINEAR (OPT_PARAM)
-KFold: 0.825 (+/-0.003) in 1684.0 seconds
+0.839 (+/-0.002) in 742.0 seconds
 
--------------------------------------------------------------
-Parameter: 0 
+------------------------------------------
+Parameter: 0
 
-Feature extraction took 0.2 seconds.
-
-LINEAR
-KFold: 0.615 (+/-0.009) in 25.8 seconds
--------------------------------------------------------------
-Parameter: 1 
-
-Feature extraction took 1.2 seconds.
+Feature extraction took 2.7 seconds.
+Feature matrix dimension: (4110, 37)
 
 LINEAR
-KFold: 0.737 (+/-0.002) in 36.3 seconds
--------------------------------------------------------------
-Parameter: 2 
+0.648 (+/-0.004) in 95.8 seconds
+------------------------------------------
+Parameter: 1
 
-Feature extraction took 2.8 seconds.
-
-LINEAR
-KFold: 0.792 (+/-0.003) in 40.3 seconds
--------------------------------------------------------------
-Parameter: 3 
-
-Feature extraction took 4.2 seconds.
+Feature extraction took 6.3 seconds.
+Feature matrix dimension: (4110, 230)
 
 LINEAR
-KFold: 0.794 (+/-0.003) in 33.2 seconds
--------------------------------------------------------------
-Parameter: 4 
+0.736 (+/-0.004) in 115.6 seconds
+------------------------------------------
+Parameter: 2
 
-Feature extraction took 4.4 seconds.
-
-LINEAR
-KFold: 0.817 (+/-0.003) in 40.9 seconds
--------------------------------------------------------------
-Parameter: 5 
-
-Feature extraction took 6.9 seconds.
+Feature extraction took 9.5 seconds.
+Feature matrix dimension: (4110, 1560)
 
 LINEAR
-KFold: 0.827 (+/-0.003) in 49.8 seconds
--------------------------------------------------------------
-Parameter: 6 
+0.791 (+/-0.002) in 94.7 seconds
+------------------------------------------
+Parameter: 3
 
-Feature extraction took 7.6 seconds.
-
-LINEAR
-KFold: 0.824 (+/-0.002) in 60.6 seconds
--------------------------------------------------------------
-Parameter: 7 
-
-Feature extraction took 8.9 seconds.
+Feature extraction took 13.1 seconds.
+Feature matrix dimension: (4110, 8343)
 
 LINEAR
-KFold: 0.816 (+/-0.004) in 63.3 seconds
--------------------------------------------------------------
-Parameter: 8 
+0.819 (+/-0.001) in 90.2 seconds
+------------------------------------------
+Parameter: 4
 
-Feature extraction took 10.6 seconds.
-
-LINEAR
-KFold: 0.790 (+/-0.003) in 65.6 seconds
--------------------------------------------------------------
-Parameter: 9 
-
-Feature extraction took 12.6 seconds.
+Feature extraction took 16.8 seconds.
+Feature matrix dimension: (4110, 17567)
 
 LINEAR
-KFold: 0.755 (+/-0.002) in 62.8 seconds
--------------------------------------------------------------
-Parameter: 10 
+0.835 (+/-0.003) in 113.4 seconds
+------------------------------------------
+Parameter: 5
 
-Feature extraction took 13.2 seconds.
+Feature extraction took 19.7 seconds.
+Feature matrix dimension: (4110, 28656)
 
 LINEAR
-KFold: 0.741 (+/-0.002) in 60.0 seconds
+0.831 (+/-0.002) in 126.7 seconds

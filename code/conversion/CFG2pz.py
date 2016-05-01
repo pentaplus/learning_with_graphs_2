@@ -43,7 +43,8 @@ class Id_to_num_mapper():
 
 def parse_block(line, G, id_to_num_mapper, line_num):
     block_with_succ = False
-    block_with_succ_reg_exp = 'block\s+@-?\d{5,}\s+(\S+)\s+\([ms]:\S+\)\s+(\S+)'
+    block_with_succ_reg_exp = ('block\s+@-?\d{5,}\s+(\S+)\s+\([ms]:\S+\)\s+'
+                               '(\S+)')
     block_without_succ_reg_exp = 'block\s+@-?\d{5,}\s+(\S+)\s+\([ms]:\S+\)'
     
     m = re.match(block_with_succ_reg_exp, line)
@@ -145,9 +146,10 @@ for folder in folder_of_class.itervalues():
         
         with open(join(source_class_path, file_name)) as f:
             print '\n' + str(file_num) + ': ' + basename(f.name) + ':'
-            # --------------------------------------------------------------------
-            # parse graph file and create a corresponding directed networkx graph
-            # --------------------------------------------------------------------
+            # -----------------------------------------------------------------
+            # parse graph file and create a corresponding directed networkx
+            # graph
+            # -----------------------------------------------------------------
             G = nx.DiGraph()
             
             id_to_num_mapper = Id_to_num_mapper()

@@ -70,8 +70,9 @@ def check_graph_no(fid, counter):
     if graph_no_line_list[0] != 't':
         utils.fatal_error('graph no line does not start with \'t\'.', fid)
     if graph_no_line_list[1] != '#':
-        utils.fatal_error('the second character of a graph no line is not \'#\'.',
-                          fid)
+        utils.fatal_error('the second character of a graph no line is not '
+                          '\'#\'.', fid)
+                          
     if not is_int(graph_no_line_list[2]):        
         utils.fatal_error('graph no is not an integer.', fid)
         
@@ -186,9 +187,9 @@ counter = 0
 cur_class_label_line = read_line(fid)
 
 while True:
-    # ============================================================================
+    # =========================================================================
     # 1) parse graph
-    # ============================================================================   
+    # =========================================================================   
     cur_class_label = read_class_label(cur_class_label_line, counter)
         
     check_graph_no(fid, counter)
@@ -200,9 +201,9 @@ while True:
                                                        cur_nodes_count, fid)
     
     
-    # ============================================================================
+    # =========================================================================
     # 2) create a networkx graph corresponding to the parsed graph
-    # ============================================================================
+    # =========================================================================
     cur_path = path_class_1 if cur_class_label == 1 else path_class_minus_1
     file_path = os.path.join(cur_path, str(counter) + '.pz')
     

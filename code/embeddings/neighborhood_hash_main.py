@@ -47,14 +47,15 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
     # rotate left
     rot_left = lambda val, r_bits: \
         (val << r_bits % BIT_LBL_LEN) & (2**BIT_LBL_LEN - 1) | \
-        ((val & (2**BIT_LBL_LEN - 1)) >> (BIT_LBL_LEN - (r_bits % BIT_LBL_LEN)))
+        ((val & (2**BIT_LBL_LEN - 1)) >> (BIT_LBL_LEN \
+                                          - (r_bits % BIT_LBL_LEN)))
     
     # the keys are graph numbers and the values are lists of features
     features_dict = defaultdict(list)
     
-    # the keys are graph numbers and the values are lists which contain the number
-    # of occurences of the features corresponding to the feature at the same index
-    # in the feature list in features_dict, that is
+    # the keys are graph numbers and the values are lists which contain the
+    # number of occurences of the features corresponding to the feature at the
+    # same index in the feature list in features_dict, that is
     # feature_counts_dict[graph_number][i] == number of occurences of feature
     # features_dict[graph_number][i]
     feature_counts_dict = defaultdict(list)
@@ -69,13 +70,13 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
     next_upd_lbls_dict = defaultdict(dict)
     upd_lbls_dict = defaultdict(dict)
     
-    # keys are the node labels which are stored in the dataset and the values are
-    # 64-bit integers
+    # keys are the node labels which are stored in the dataset and the values
+    # are 64-bit integers
     label_map = {}
     
-    #=============================================================================
+    #==========================================================================
     # 1) extract features iterating over all graphs in the dataset
-    #=============================================================================
+    #==========================================================================
     for h in h_range:
         for graph_num, (graph_path, class_lbl) in \
                 graph_meta_data_of_num.iteritems():
@@ -115,7 +116,8 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
                         for v_nbr in nbrs_iter:
                             new_bit_lbl ^= upd_lbls_dict[graph_num][v_nbr]
                     else:
-                        # determine the list of labels of the nodes adjacent to v
+                        # determine the list of labels of the nodes adjacent to
+                        # v
                         nbrs_lbls = []
                         for v_nbr in nbrs_iter:
                             nbrs_lbls.append(upd_lbls_dict[graph_num][v_nbr])
@@ -177,10 +179,10 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
                     feature_counts_dict[graph_num][idx] += 1
                     
         
-        #=========================================================================
-        # 2) compress bit labels and construct data matrix whose i-th row equals
-        #    the i-th feature vector
-        #=========================================================================
+        #======================================================================
+        # 2) compress bit labels and construct data matrix whose i-th row
+        #    equals the i-th feature vector
+        #======================================================================
         mat_constr_start_time = time.time()
         
         # list containing the features of all graphs
@@ -191,17 +193,17 @@ def extract_features(graph_meta_data_of_num, h_range, count_sensitive = True,
 		
         # list indicating to which graph (= row in feature_mat) the features in
         # the list features belong. The difference
-        # feature_ptr[i+1] - feature_ptr[i] equals the number of specified entries
-        # for row i. Consequently, the number of rows of feature_mat equals
-        # len(feature_ptr) - 1.
+        # feature_ptr[i+1] - feature_ptr[i] equals the number of specified
+        # entries for row i. Consequently, the number of rows of feature_mat
+        # equals len(feature_ptr) - 1.
         feature_ptr = [0]
 		
         # keys are the bit labels and the values are new compressed labels
         compr_func = {}
 		
-        # next_compr_lbl is used for assigning new compressed labels to the nodes.
-        # These build the features (= columns in feature_mat), which are used for
-        # the explicit graph graph embedding.
+        # next_compr_lbl is used for assigning new compressed labels to the
+        # nodes. These build the features (= columns in feature_mat), which are
+        # used for the explicit graph graph embedding.
         next_compr_lbl = 0
 		
 	

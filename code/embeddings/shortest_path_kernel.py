@@ -82,9 +82,9 @@ def extract_features(graph_meta_data_of_num, param_range = [None]):
         
     max_shortest_path_len = 0
     
-    #=============================================================================
+    #==========================================================================
     # 1) determine (shortest) distance matrices
-    #=============================================================================
+    #==========================================================================
     for i, (graph_path, class_lbl) in \
             enumerate(graph_meta_data_of_num.itervalues()):
                 
@@ -112,9 +112,9 @@ def extract_features(graph_meta_data_of_num, param_range = [None]):
     feature_mat = lil_matrix((num_graphs, max_shortest_path_len + 1),
                              dtype = np.float64)
                              
-    #=============================================================================
+    #==========================================================================
     # 2) determine number of occurences of each shortest path length
-    #=============================================================================
+    #==========================================================================
     for i in xrange(num_graphs):
         D = Ds[i]
         

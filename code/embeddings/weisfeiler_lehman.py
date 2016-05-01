@@ -41,9 +41,9 @@ def extract_features(graph_meta_data_of_num, h_range):
     # the keys are graph numbers and the values are lists of features   
     features_dict = defaultdict(list)
     
-    # the keys are graph numbers and the values are lists which contain the number
-    # of occurences of the features corresponding to the feature at the same index
-    # in the feature list in features_dict, that is
+    # the keys are graph numbers and the values are lists which contain the
+    # number of occurences of the features corresponding to the feature at the
+    # same index in the feature list in features_dict, that is
     # feature_counts_dict[graph_number][i] == number of occurences of feature
     # features_dict[graph_number][i]
     feature_counts_dict = defaultdict(list)
@@ -58,8 +58,8 @@ def extract_features(graph_meta_data_of_num, h_range):
     next_upd_lbls_dict = defaultdict(dict)
     upd_lbls_dict = defaultdict(dict)
     
-    # keys are the node labels which are stored in the dataset and the values are
-    # new compressed labels
+    # keys are the node labels which are stored in the dataset and the values
+    # are new compressed labels
     compr_func = {}
     
     # next_compr_lbl is used for assigning new compressed labels to the nodes
@@ -68,17 +68,13 @@ def extract_features(graph_meta_data_of_num, h_range):
     next_compr_lbl = 0
     
     
-    #=============================================================================
+    #==========================================================================
     # 1) extract features iterating over all graphs in the dataset
-    #=============================================================================
+    #==========================================================================
     for h in h_range:
         for graph_num, (graph_path, class_lbl) in \
                 graph_meta_data_of_num.iteritems():
                     
-            # !!        
-            if graph_num % 100 == 0:
-                print 'h = ' + str(h) + ', graph_num = ' + str(graph_num)
-                                               
             # load graph
             G = pz.load(graph_path)
                 
@@ -151,10 +147,10 @@ def extract_features(graph_meta_data_of_num, h_range):
                     # == new_compr_lbl
                     next_upd_lbls_dict[graph_num][v] = new_compr_lbl
         
-        #=========================================================================
-        # 2) construct data matrix whose i-th row equals the i-th feature vector,
-        #    which comprises the features of the first r iterations
-        #=========================================================================
+        #======================================================================
+        # 2) construct data matrix whose i-th row equals the i-th feature
+        # vector, which comprises the features of the first r iterations
+        #======================================================================
         mat_constr_start_time = time.time()        
         
         # list containing the features of all graphs
@@ -165,9 +161,9 @@ def extract_features(graph_meta_data_of_num, h_range):
         
         # list indicating to which graph (= row in feature_mat) the features in
         # the list features belong. The difference
-        # feature_ptr[i+1] - feature_ptr[i] equals the number of specified entries
-        # for row i. Consequently, the number of rows of feature_mat equals
-        # len(feature_ptr) - 1.
+        # feature_ptr[i+1] - feature_ptr[i] equals the number of specified
+        # entries for row i. Consequently, the number of rows of feature_mat
+        # equals len(feature_ptr) - 1.
         feature_ptr = [0]
         
         

@@ -46,7 +46,7 @@ ax.axes.get_yaxis().set_visible(False)
 
 
 
-# nc1_class0_1 and nci109_class0_1 (21 nodes and 21 edges) =======================
+# nc1_class0_1 and nci109_class0_1 (21 nodes and 21 edges) ====================
 
 # k controls the distance between the nodes and varies between 0 and 1
 # iterations is the number of times simulated annealing is run
@@ -56,11 +56,11 @@ ax.axes.get_yaxis().set_visible(False)
 #nx.draw_networkx_nodes(G, pos, node_size = 50, node_color = 'r')
 #nx.draw_networkx_edges(G, pos, alpha = 0.4)
 
-# ================================================================================
+# =============================================================================
 
 
 
-# mutag_class1_1 (23 nodes and 27 edges) =========================================
+# mutag_class1_1 (23 nodes and 27 edges) ======================================
 
 
 labels = {}
@@ -77,11 +77,11 @@ nx.draw_networkx_labels(G, pos, labels, font_size = 9, font_color = DARK_BLUE,
                         
 plt.savefig(os.path.join("drawings", GRAPH_NAME + "_NEW.svg"), dpi = 10000)
 
-# ================================================================================
+# =============================================================================
 
 
 
-# enzymes_class1_201 (29 nodes and 53 edges) =====================================
+# enzymes_class1_201 (29 nodes and 53 edges) ==================================
 
 
 #pos = nx.spring_layout(G, k = 0.065, iterations = 10000)
@@ -89,11 +89,11 @@ plt.savefig(os.path.join("drawings", GRAPH_NAME + "_NEW.svg"), dpi = 10000)
 #nx.draw_networkx_nodes(G, pos, node_size = 20, node_color = 'r')
 #nx.draw_networkx_edges(G, pos, alpha = 0.4)
 
-# ================================================================================
+# =============================================================================
 
 
 
-# dd_class1_1 (327 nodes and 899 edges) ==========================================
+# dd_class1_1 (327 nodes and 899 edges) =======================================
 
 
 #pos = nx.spring_layout(G, k = 0.015, iterations = 500)
@@ -101,7 +101,7 @@ plt.savefig(os.path.join("drawings", GRAPH_NAME + "_NEW.svg"), dpi = 10000)
 #nx.draw_networkx_nodes(G, pos, node_size = 5, node_color = 'r')
 #nx.draw_networkx_edges(G, pos, alpha = 0.4)
 
-# ================================================================================
+# =============================================================================
 
 
 # plt.savefig(os.path.join("drawings", GRAPH_NAME + ".svg"), dpi = 10000)

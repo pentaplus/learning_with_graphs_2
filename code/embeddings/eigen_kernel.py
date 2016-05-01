@@ -110,16 +110,12 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
     conv_count = 0
     no_conv_count = 0
         
-    #=============================================================================
+    #==========================================================================
     # 1) extract features iterating over all graphs in the dataset
-    #=============================================================================
+    #==========================================================================
     for i, (graph_path, class_lbl) in \
             enumerate(graph_meta_data_of_num.itervalues()):
-        
-        # !!
-#        if i % 10 == 0:
-#            print i
-        
+                
         # load graph
         G = pz.load(graph_path)
 
@@ -199,7 +195,9 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
             # determine the node number, which corresponds to the node with
             # smallest degree, and remove the corresponding row and column of
             # the (original) adjacency matrix of G
-            for k in xrange(j, min(j + speed, nodes_count, int(avg_nodes_count))):
+            for k in xrange(j, min(j + speed, nodes_count,
+                                   int(avg_nodes_count))):
+                                       
                 if A.shape[0] <= 2:
                     break                
                 
@@ -230,7 +228,8 @@ def extract_features(graph_meta_data_of_num, node_del_fracs):
             
             if (j < min(nodes_count, int(avg_nodes_count)) - 1) \
                     and (j + speed) >= min(nodes_count, int(avg_nodes_count)):
-                # "interpolate" at the last dimensions of the i-th feature vector
+                # "interpolate" at the last dimensions of the i-th feature
+                # vector
                 feature_mat[i, j + 1:] = feature_mat[i, j]
                 
                 

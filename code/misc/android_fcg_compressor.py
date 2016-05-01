@@ -91,9 +91,11 @@ with open(join(SOURCE_CLASSES_PATH, 'hash_num_map.txt'), 'w') as f:
                         edge_label_dict_of_node_neigh_id_tuple.iteritems():
                             
                     node_neigh_id = '\n'.join(node_neigh_id_tuple)
-                    node_neigh_num = id_to_num_mapper.map_id_to_num(node_neigh_id)
+                    node_neigh_num = id_to_num_mapper.map_id_to_num(
+                        node_neigh_id)
                     
-                    G_compr.add_edge(node_num, node_neigh_num, **edge_label_dict)
+                    G_compr.add_edge(node_num, node_neigh_num,
+                                     **edge_label_dict)
                     
                     
             pz.save(G_compr, join(target_class_path, graph_file_name))
