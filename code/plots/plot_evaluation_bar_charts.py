@@ -30,9 +30,9 @@ SCRIPT_FOLDER_PATH = dirname(abspath(SCRIPT_PATH))
 sys.path.append(join(SCRIPT_FOLDER_PATH, '..'))
 
 
-#=================================================================================
+#==============================================================================
 # constants
-#=================================================================================
+#==============================================================================
 TARGET_PATH = join(SCRIPT_FOLDER_PATH, '..', '..', '..', 'tex', 'figures')
 
 # embeddings
@@ -274,7 +274,8 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
         
         y = np.linspace(0, 100, 21).astype(int)
         
-        plt.tick_params(axis = 'x', which = 'both', bottom = 'off', top = 'off')
+        plt.tick_params(axis = 'x', which = 'both', bottom = 'off',
+                        top = 'off')
         
         y_labels = chain.from_iterable(zip(np.linspace(0, 100, 11).astype(int),
                                            11*['']))        
@@ -285,9 +286,11 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
         
         ax.set_ylim([1, 1.5*24*60*60])
         
-        plt.tick_params(axis = 'x', which = 'both', bottom = 'off', top = 'off')
+        plt.tick_params(axis = 'x', which = 'both', bottom = 'off',
+                        top = 'off')
         
-        plt.tick_params(axis = 'y', which = 'minor', left = 'off', right = 'off')
+        plt.tick_params(axis = 'y', which = 'minor', left = 'off',
+                        right = 'off')
         
         y = range(1, 10, 1) + range(10, 60, 10) + range(60, 10*60, 60) \
             + [10*60, 20*60, 30*60] + range(60*60, 12*60*60, 60*60) \
@@ -308,7 +311,8 @@ for dataset_type, mode in itertools.product(DATASET_TYPES, MODES):
             # dataset_type == LARGE
             ax.set_ylim([0, 15])
         
-        plt.tick_params(axis = 'x', which = 'both', bottom = 'off', top = 'off')
+        plt.tick_params(axis = 'x', which = 'both', bottom = 'off',
+                        top = 'off')
         
         plt.grid(axis = 'y', which = 'minor', color = '0.5', alpha = 0.5)
         

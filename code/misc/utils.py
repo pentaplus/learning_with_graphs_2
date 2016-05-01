@@ -53,8 +53,8 @@ def check_for_pz_folder():
             if user_input == 'n':
                 sys.exit(1)
             
-            user_input = raw_input('Invalid input! The directory \'pz\' already '
-                                   'exists. Do you want to delete it '
+            user_input = raw_input('Invalid input! The directory \'pz\' '
+                                   'already exists. Do you want to delete it '
                                    '(y/n)? ').strip()
         
 

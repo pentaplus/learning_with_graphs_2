@@ -104,7 +104,9 @@ def get_graph_meta_data_and_class_lbls(dataset, datasets_path):
 def get_graphs_of_class_dict(graph_meta_data_of_num):
     graphs_of_class = defaultdict(list)
 
-    for graph_num, (graph_path, class_lbl) in graph_meta_data_of_num.iteritems():
+    for graph_num, (graph_path, class_lbl) in \
+            graph_meta_data_of_num.iteritems():
+                
         graphs_of_class[class_lbl].append((graph_num, graph_path))
         
     return graphs_of_class

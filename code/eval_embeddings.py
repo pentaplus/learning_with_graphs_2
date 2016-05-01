@@ -178,7 +178,9 @@ def compute_kernel_matrix(graph_meta_data_of_num, embedding, param_range,
         = embedding.compute_kernel_mat(graph_meta_data_of_num, param_range)
 
     kernel_mat_comp_end_time = time.time()
-    kernel_mat_comp_time = kernel_mat_comp_end_time - kernel_mat_comp_start_time
+    kernel_mat_comp_time = kernel_mat_comp_end_time - \
+        kernel_mat_comp_start_time
+        
     utils.write('The computation of the kernel matrix took %.1f seconds.\n'
                 % kernel_mat_comp_time, result_file)
     print('')

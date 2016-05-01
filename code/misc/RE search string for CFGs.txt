@@ -1,1 +1,0 @@
-(^(fct|block|cond|ref)\s+|\n\s*\n)
